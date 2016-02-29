@@ -2,6 +2,7 @@ var group__func__categories =
 [
     [ "Computer Vision", "group__cv__mat.htm", "group__cv__mat" ],
     [ "Functions to create and modify Arrays", "group__array__mat.htm", "group__array__mat" ],
+    [ "Functions to work with internal array layout", "group__internal__func.htm", "group__internal__func" ],
     [ "Image Processing", "group__image__mat.htm", "group__image__mat" ],
     [ "Input and Output functions", "group__io__mat.htm", "group__io__mat" ],
     [ "Interface Functions", "group__external.htm", "group__external" ],

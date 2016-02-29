@@ -17,6 +17,7 @@ var examples =
     [ "graphics/conway.cpp", "graphics_2conway_8cpp-example.htm", null ],
     [ "graphics/conway_pretty.cpp", "graphics_2conway_pretty_8cpp-example.htm", null ],
     [ "graphics/fractal.cpp", "graphics_2fractal_8cpp-example.htm", null ],
+    [ "graphics/gravity_sim.cpp", "graphics_2gravity_sim_8cpp-example.htm", null ],
     [ "graphics/histogram.cpp", "graphics_2histogram_8cpp-example.htm", null ],
     [ "graphics/plot2d.cpp", "graphics_2plot2d_8cpp-example.htm", null ],
     [ "graphics/plot3.cpp", "graphics_2plot3_8cpp-example.htm", null ],
