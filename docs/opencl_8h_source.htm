@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>opencl.h (2016-02-28 11:46:26 -0500, (build c51f42a)) Source File</title>
+<title>opencl.h (2016-03-16 20:05:50 -0400, (build f53efc3)) Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -83,7 +83,7 @@ $(document).ready(function(){initNavTree('opencl_8h_source.htm','');});
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">opencl.h (2016-02-28 11:46:26 -0500, (build c51f42a))</div>  </div>
+<div class="title">opencl.h (2016-03-16 20:05:50 -0400, (build f53efc3))</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="opencl_8h.htm">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*******************************************************</span></div>
@@ -334,10 +334,10 @@ $(document).ready(function(){initNavTree('opencl_8h_source.htm','');});
 <div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;<span class="preprocessor">#if !defined(AF_OPENCL)</span></div>
 <div class="line"><a name="l00451"></a><span class="lineno"><a class="line" href="classaf_1_1array.htm#ac0d2f78e5fed75c93dcbe533c1605dc9">  451</a></span>&#160;<span class="keyword">template</span>&lt;&gt; <a class="code" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> cl_mem *<a class="code" href="group__device__func__device.htm#ga93c855ccd22d37cf90d32aef5ac75030">array::device</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    cl_mem *mem = <span class="keyword">new</span> cl_mem;</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <a class="code" href="defines_8h.htm#a82b94dc53bbd100a0e8ca9dd356aaf4f">af_err</a> err = <a class="code" href="group__device__func__mem.htm#ga58fda2d491cd27f31108e699b5aef506">af_get_device_ptr</a>((<span class="keywordtype">void</span> **)mem, <span class="keyword">get</span>());</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    cl_mem *mem_ptr = <span class="keyword">new</span> cl_mem;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <a class="code" href="defines_8h.htm#a82b94dc53bbd100a0e8ca9dd356aaf4f">af_err</a> err = <a class="code" href="group__device__func__mem.htm#ga58fda2d491cd27f31108e699b5aef506">af_get_device_ptr</a>((<span class="keywordtype">void</span> **)mem_ptr, <span class="keyword">get</span>());</div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    <span class="keywordflow">if</span> (err != <a class="code" href="defines_8h.htm#a82b94dc53bbd100a0e8ca9dd356aaf4fa2e56d1f9585788fed8fbe3a321bddd76">AF_SUCCESS</a>) <span class="keywordflow">throw</span> <a class="code" href="classaf_1_1exception.htm">af::exception</a>(<span class="stringliteral">&quot;Failed to get cl_mem from array object&quot;</span>);</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    <span class="keywordflow">return</span> mem;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    <span class="keywordflow">return</span> mem_ptr;</div>
 <div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;}</div>
 <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;</div>

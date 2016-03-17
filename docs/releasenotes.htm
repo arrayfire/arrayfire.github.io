@@ -86,7 +86,37 @@ $(document).ready(function(){initNavTree('releasenotes.htm','');});
 <div class="title">Release Notes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>v3.3.0 </h1>
+<div class="textblock"><h1>v3.3.1 </h1>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Fixes to <a class="el" href="group__device__func__device.htm#ga93c855ccd22d37cf90d32aef5ac75030">af::array::device()</a><ul>
+<li>CPU Backend: <a href="https://github.com/arrayfire/arrayfire/issues/1316">evaluate arrays</a> before returning pointer with asynchronous calls in CPU backend.</li>
+<li>OpenCL Backend: <a href="https://github.com/arrayfire/arrayfire/issues/1324">fix segfaults</a> when requested for device pointers on empty arrays.</li>
+</ul>
+</li>
+<li>Fixed <a class="el" href="group__arith__func__mod.htm#ga5d7b2765f4b08919b5329c18ab6be5a1">af::array::operator%()</a> from using <a href="https://github.com/arrayfire/arrayfire/issues/1318">rem to mod</a>.</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1321">array destruction</a> when backends are switched in Unified API.</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1331">indexing</a> after <a class="el" href="group__manip__func__moddims.htm#ga382a69ec85a6beea79e95aeaef591073">af::moddims()</a> is called.</li>
+<li>Fixes FFT calls for CUDA and OpenCL backends when used on <a href="https://github.com/arrayfire/arrayfire/issues/1332">multiple devices</a>.</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/commit/32965ef">unresolved external</a> for some functions from <a class="el" href="classaf_1_1array_1_1array__proxy.htm">af::array::array_proxy</a> class.</li>
+</ul>
+<h2>Build </h2>
+<ul>
+<li>CMake compiles files in alphabetical order.</li>
+<li>CMake fixes for BLAS and LAPACK on some Linux distributions.</li>
+</ul>
+<h2>Improvements </h2>
+<ul>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1323">OpenCL FFT performance</a> regression.</li>
+<li><a class="el" href="group__device__func__device.htm#ga93c855ccd22d37cf90d32aef5ac75030">af::array::device()</a> on OpenCL backend <a href="https://github.com/arrayfire/arrayfire/issues/1311">returns</a> <code>cl_mem</code> instead of <code>(void*)cl::Buffer*</code>.</li>
+<li>In Unified backend, <a href="https://github.com/arrayfire/arrayfire/issues/1312">load versioned libraries</a> at runtime.</li>
+</ul>
+<h2>Documentation </h2>
+<ul>
+<li>Reorganized, cleaner README file.</li>
+<li>Replaced non-free lena image in assets with free-to-distribute lena image.</li>
+</ul>
+<h1>v3.3.0 </h1>
 <h2>Major Updates </h2>
 <ul>
 <li>CPU backend supports aysnchronous execution.</li>
