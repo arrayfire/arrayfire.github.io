@@ -86,7 +86,45 @@ $(document).ready(function(){initNavTree('releasenotes.htm','');});
 <div class="title">Release Notes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>v3.3.1 </h1>
+<div class="textblock"><h1>v3.3.2 </h1>
+<h2>Improvements </h2>
+<ul>
+<li>Family of <a class="el" href="group__sort__mat.htm">Sort</a> functions now support <a href="https://github.com/arrayfire/arrayfire/pull/1373">higher order dimensions</a>.</li>
+<li>Improved performance of batched sort on dim 0 for all <a class="el" href="group__sort__mat.htm">Sort</a> functions.</li>
+<li><a class="el" href="group__stat__func__median.htm">Median</a> now also supports higher order dimensions.</li>
+</ul>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Fixes to <a href="https://github.com/arrayfire/arrayfire/issues/1352">error handling</a> in C++ API for binary functions.</li>
+<li>Fixes to <a href="https://github.com/arrayfire/arrayfire/issues/1350">external OpenCL context management</a>.</li>
+<li>Fixes to <a href="https://github.com/arrayfire/arrayfire/issues/1360">JPEG_GREYSCALE</a> for FreeImage versions &lt;= 3.154.</li>
+<li>Fixed for <a href="https://github.com/arrayfire/arrayfire/issues/1386">non-float inputs</a> to <a class="el" href="group__image__func__rgb2gray.htm#ga8a4d6c8e00646611caa7194a65769eda">af::rgb2gray()</a>.</li>
+</ul>
+<h2>Build </h2>
+<ul>
+<li><a href="https://github.com/arrayfire/arrayfire/issues/1378">Disable CPU Async</a> when building with GCC &lt; 4.8.4.</li>
+<li>Add option to <a href="https://github.com/arrayfire/arrayfire/issues/1369">disable CPUID</a> from CMake.</li>
+<li>More verbose message when <a href="https://github.com/arrayfire/arrayfire/issues/1362">CUDA Compute Detection fails</a>.</li>
+<li>Print message to use <a href="https://github.com/arrayfire/arrayfire/issues/1363">CUDA library stub</a> from CUDA Toolkit if CUDA Library is not found from default paths.</li>
+<li><a href="https://github.com/arrayfire/arrayfire/pull/1385">Build Fixes</a> on Windows.<ul>
+<li>For compiling tests our of source.</li>
+<li>For compiling ArrayFire with static MKL.</li>
+</ul>
+</li>
+<li><a href="https://github.com/arrayfire/arrayfire/pull/1368">Exclude &lt;sys/sysctl.h&gt;</a> when building on GNU Hurd.</li>
+<li>Add <a href="https://github.com/arrayfire/arrayfire/pull/1389">manual CMake options</a> to build DEB and RPM packages.</li>
+</ul>
+<h2>Documentation </h2>
+<ul>
+<li>Fixed documentation for <a class="el" href="group__data__func__replace.htm#ga13a51c418de0201102413f05aae45ccd">af::replace()</a>.</li>
+<li>Fixed images in <a class="el" href="using_on_osx.htm">Using on OSX</a> page.</li>
+</ul>
+<h2>Installer </h2>
+<ul>
+<li>Linux x64 installers will now be compiled with GCC 4.9.2.</li>
+<li>OSX installer gives better error messages on brew failures and now includes link to <a href="https://github.com/arrayfire/arrayfire/wiki/Fixing-Common-OS-X-Installer-Failures">Fixing OS X Installer Failures</a> for brew installation failures.</li>
+</ul>
+<h1>v3.3.1 </h1>
 <h2>Bug Fixes </h2>
 <ul>
 <li>Fixes to <a class="el" href="group__device__func__device.htm#ga93c855ccd22d37cf90d32aef5ac75030">af::array::device()</a><ul>
@@ -415,7 +453,7 @@ $(document).ready(function(){initNavTree('releasenotes.htm','');});
 <h2>Documentation Updates </h2>
 <ul>
 <li>Improved tutorials documentation<ul>
-<li>More detailed Using on <a class="el" href="using_on_windows.htm">Linux</a>, <a class="el" href="using_on_windows.htm">OSX</a>, <a class="el" href="using_on_windows.htm">Windows</a> pages.</li>
+<li>More detailed Using on <a class="el" href="using_on_linux.htm">Linux</a>, <a class="el" href="using_on_osx.htm">OSX</a>, <a class="el" href="using_on_windows.htm">Windows</a> pages.</li>
 </ul>
 </li>
 <li>Added return type information for functions that return different type arrays</li>

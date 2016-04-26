@@ -105,7 +105,10 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Replace elements of an array based on an conditional array. </p>
-<p>If the condition array has an element as true, then the element is replaced by the array/value, otherwise no change.</p>
+<ul>
+<li>Input values are retained when corresponding elements from condition array are true.</li>
+<li>Input values are replaced when corresponding elements from condition array are false.</li>
+</ul>
 <hr/>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ga6d285cd28d8c380fbc0dafd5296703b5"></a>
@@ -139,12 +142,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">a</td><td>is the array whose values are replaced by <code>b</code> when <code>cond</code> is false </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">cond</td><td>is the conditional array </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>is the array containing elements that replaces elements of a where <code>cond</code> is false </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">a</td><td>is the input array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cond</td><td>is the conditional array. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>is the replacement array.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>Values of <code>a</code> are replaced with corresponding values of <code>b</code>, when <code>cond</code> is false. </dd></dl>
 
 </div>
 </div>
@@ -179,12 +183,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">a</td><td>is the array whose values are replaced by <code>b</code> when <code>cond</code> is false </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">cond</td><td>is the conditional array </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>is the scalar that replaces the false parts of <code>a</code> </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">a</td><td>is the input array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cond</td><td>is the conditional array. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>is the replacement array.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>Values of <code>a</code> are replaced with corresponding values of <code>b</code>, when <code>cond</code> is false. </dd></dl>
 
 </div>
 </div>
@@ -219,12 +224,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">a</td><td>is the array whose values are replaced with values from <code>b</code> when <code>cond</code> is false </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">cond</td><td>is the conditional array </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>is the array containing elements which replace elements in <code>a</code> when <code>cond</code> is false </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">a</td><td>is the input array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cond</td><td>is the conditional array. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>is the replacement array.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>Values of <code>a</code> are replaced with corresponding values of <code>b</code>, when <code>cond</code> is false. </dd></dl>
 
 </div>
 </div>
@@ -259,12 +265,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">a</td><td>is the array whose values are replaced with values from <code>b</code> when <code>cond</code> is false </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">cond</td><td>is the conditional array </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>is value that replaces elements in <code>a</code> when <code>cond</code> is false </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">a</td><td>is the input array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cond</td><td>is the conditional array. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>is the replacement value.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>Values of <code>a</code> are replaced with corresponding values of <code>b</code>, when <code>cond</code> is false. </dd></dl>
 
 </div>
 </div>

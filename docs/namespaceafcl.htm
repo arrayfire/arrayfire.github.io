@@ -208,7 +208,7 @@ $(document).ready(function(){initNavTree('namespaceafcl.htm','');});
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>The cl_* objects are passed onto c++ objects (cl::Device, cl::Context &amp; cl::CommandQueue) that are defined in the <code>cl.hpp</code> OpenCL c++ header provided by Khronos Group Inc. Therefore, please be aware of the lifetime of the cl_* objects before passing them to ArrayFire. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>ArrayFire does not take control of releasing the objects passed to it. The user needs to release them appropriately. </dd></dl>
 
 </div>
 </div>
@@ -591,7 +591,7 @@ $(document).ready(function(){initNavTree('namespaceafcl.htm','');});
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>Any reference counts incremented for cl_* objects by ArrayFire internally are decremented by this func call and you won't be able to call <code>afcl_set_device_context</code> on these objects after this function has been called. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>ArrayFire does not take control of releasing the objects passed to it. The user needs to release them appropriately. </dd></dl>
 
 </div>
 </div>
