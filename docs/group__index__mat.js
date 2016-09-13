@@ -35,5 +35,5 @@ var group__index__mat =
     [ "operator=", "group__array__mem__operator__eq.htm", "group__array__mem__operator__eq" ],
     [ "row/rows", "group__array__mem__row.htm", "group__array__mem__row" ],
     [ "slice/slices", "group__array__mem__slice.htm", "group__array__mem__slice" ],
-    [ "util", "group__index__func__util.htm", "group__index__func__util" ]
+    [ "util", "group__index__func__util.htm", null ]
 ];

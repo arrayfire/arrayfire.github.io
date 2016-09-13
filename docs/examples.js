@@ -16,6 +16,7 @@ var examples =
     [ "getting_started/vectorize.cpp", "getting_started_2vectorize_8cpp-example.htm", null ],
     [ "graphics/conway.cpp", "graphics_2conway_8cpp-example.htm", null ],
     [ "graphics/conway_pretty.cpp", "graphics_2conway_pretty_8cpp-example.htm", null ],
+    [ "graphics/field.cpp", "graphics_2field_8cpp-example.htm", null ],
     [ "graphics/fractal.cpp", "graphics_2fractal_8cpp-example.htm", null ],
     [ "graphics/gravity_sim.cpp", "graphics_2gravity_sim_8cpp-example.htm", null ],
     [ "graphics/histogram.cpp", "graphics_2histogram_8cpp-example.htm", null ],

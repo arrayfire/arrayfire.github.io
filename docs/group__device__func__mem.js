@@ -4,6 +4,7 @@ var group__device__func__mem =
     [ "af_device_mem_info", "group__device__func__mem.htm#gae633760aed4638f8a5ea333e0774ac84", null ],
     [ "af_get_device_ptr", "group__device__func__mem.htm#ga58fda2d491cd27f31108e699b5aef506", null ],
     [ "af_get_mem_step_size", "group__device__func__mem.htm#ga4c04df1ae248a6a8aa0a28263323872a", null ],
+    [ "af_is_locked_array", "group__device__func__mem.htm#gab99cb6a3744802742c98714fc88fb991", null ],
     [ "af_lock_array", "group__device__func__mem.htm#ga825e21412e9c8e3609c759f8106fd384", null ],
     [ "af_lock_device_ptr", "group__device__func__mem.htm#gac2ad5089cbca1a6cca8d87d42279c6a8", null ],
     [ "af_print_mem_info", "group__device__func__mem.htm#ga7c928031579de47fe21594fd745e9188", null ],
