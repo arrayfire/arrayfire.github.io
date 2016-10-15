@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"group__arith__func__div.htm":[1,0,7,0,3],
 "group__arith__func__div.htm#ga01d81f7664df5648686715980ebe90ab":[1,1,56,4],
 "group__arith__func__div.htm#ga01d81f7664df5648686715980ebe90ab":[1,0,7,0,3,4],
 "group__arith__func__div.htm#ga0fb4fbe58e87db081febbc4f882d0a1e":[1,1,56,23],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "group__arith__func__gt.htm#ga316c59a0d9d07675c24602c62146c4d2":[1,0,7,4,6,5],
 "group__arith__func__gt.htm#ga3349cb07c2762af2b8dd9dc6a2d63b9e":[1,1,96,20],
 "group__arith__func__gt.htm#ga3349cb07c2762af2b8dd9dc6a2d63b9e":[1,0,7,4,6,20],
-"group__arith__func__gt.htm#ga37585e1bad0a7cd2b94936fd246e036a":[1,1,96,21],
-"group__arith__func__gt.htm#ga37585e1bad0a7cd2b94936fd246e036a":[1,0,7,4,6,21]
+"group__arith__func__gt.htm#ga37585e1bad0a7cd2b94936fd246e036a":[1,1,96,21]
 };

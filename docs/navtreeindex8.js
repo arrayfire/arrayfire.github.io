@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"group__data__func__range.htm#ga1e2ae1f90d99f42854a19877261ac455":[1,0,1,2,6,2],
 "group__data__func__range.htm#ga1e2ae1f90d99f42854a19877261ac455":[1,1,170,2],
 "group__data__func__range.htm#ga3789475e962b4c31e07c1c3bdab8498b":[1,0,1,2,6,1],
 "group__data__func__range.htm#ga3789475e962b4c31e07c1c3bdab8498b":[1,1,170,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "group__gfx__func__window.htm#ga37fc7eb00ae11c25e1a60d341663d68d":[1,2,2,2],
 "group__gfx__func__window.htm#ga40859c4145276f77c83d37e2d3608cf4":[1,2,2,10],
 "group__gfx__func__window.htm#ga43dd0b670b6dfd4dab0545b6c06af528":[1,2,2,7],
-"group__gfx__func__window.htm#ga46143fd6de3be9ab9951f140d3ae8c2f":[1,2,2,13],
-"group__gfx__func__window.htm#ga46143fd6de3be9ab9951f140d3ae8c2f":[1,2,0,5]
+"group__gfx__func__window.htm#ga46143fd6de3be9ab9951f140d3ae8c2f":[1,2,2,13]
 };

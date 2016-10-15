@@ -1,6 +1,7 @@
 var examples =
 [
     [ "benchmarks/blas.cpp", "benchmarks_2blas_8cpp-example.htm", null ],
+    [ "benchmarks/cg.cpp", "benchmarks_2cg_8cpp-example.htm", null ],
     [ "benchmarks/fft.cpp", "benchmarks_2fft_8cpp-example.htm", null ],
     [ "benchmarks/pi.cpp", "benchmarks_2pi_8cpp-example.htm", null ],
     [ "computer_vision/fast.cpp", "computer_vision_2fast_8cpp-example.htm", null ],

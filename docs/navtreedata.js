@@ -27,20 +27,20 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "benchmarks_2blas_8cpp-example.htm",
-"group__arith__func__atanh.htm#ga9d1023c1b62e98d5bb783f16e2467e4b",
-"group__arith__func__div.htm#ga01d81f7664df5648686715980ebe90ab",
-"group__arith__func__gt.htm#ga44d41038c299786c89d2960cca29e3ff",
-"group__arith__func__min.htm#ga6c8042ed7b728f4a9017cb3c562e60c2",
-"group__arith__func__or.htm#ga696348d1a87d68897dbbb9b0e37ae24c",
-"group__arith__func__sub.htm#ga43c387d8435db3056f26ef9959db21bf",
-"group__array__mem__operator__plus__eq.htm#ga72f2d805cb5a891e8dc2993edf22d096",
+"group__arith__func__atanh.htm#ga4c23b18ca5b3f2ef99520b3fe20b31df",
+"group__arith__func__div.htm",
+"group__arith__func__gt.htm#ga37585e1bad0a7cd2b94936fd246e036a",
+"group__arith__func__min.htm#ga2b842c2d86df978ff68699aeaafca794",
+"group__arith__func__or.htm#ga67f58ee1fb1007aa8532bd6c2e5521a2",
+"group__arith__func__sub.htm#ga417c2a733abd728ab1ce0eb6db5192db",
+"group__array__mem__operator__plus__eq.htm#ga5d595592ac6552d51ca2f2f1c3e4c6d8",
 "group__data__func__range.htm#ga1e2ae1f90d99f42854a19877261ac455",
-"group__gfx__func__window.htm#ga4a8dff5e0ca0ac4505a999281fbbad44",
-"group__imagemem__func__load.htm#ga7b5c4ca71bcd2605eabfc99c8d8c4255",
-"group__method__mat.htm#gaabd6245f1b5b8a30850b6457e4ef1e4a",
-"group__reduce__func__count.htm",
-"group__signal__func__fft__r2c.htm#ga5a1faa1bcf98eff31909b7d8fe669dfe",
-"group__transform__func__rotate.htm#ga826d224d5d5d0f721b7865a9d4c034da"
+"group__gfx__func__window.htm#ga46143fd6de3be9ab9951f140d3ae8c2f",
+"group__imagemem__func__load.htm",
+"group__method__mat.htm#gaa70b253da2d32394c521a815f7627116",
+"group__reduce__func__any__true.htm#gafe4c8f22bbfa4288696f2a133b1b619e",
+"group__signal__func__fft__r2c.htm",
+"group__transform__func__rotate.htm#ga6555d91c01571c362ebd3bace76d21ea"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -86,7 +86,74 @@ $(document).ready(function(){initNavTree('releasenotes.htm','');});
 <div class="title">Release Notes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>v3.4.0 </h1>
+<div class="textblock"><h1>v3.4.1 </h1>
+<h2>Installers </h2>
+<ul>
+<li>Installers for Linux, OS X and Windows<ul>
+<li>CUDA backend now uses <a href="https://developer.nvidia.com/cuda-toolkit">CUDA 8.0</a>.</li>
+<li>Uses <a href="https://software.intel.com/en-us/intel-mkl">Intel MKL 2017</a>.</li>
+<li>CUDA Compute 2.x (Fermi) is no longer compiled into the library.</li>
+</ul>
+</li>
+<li>Installer for OS X<ul>
+<li>The libraries shipping in the OS X Installer are now compiled with Apple Clang v7.3.1 (previously v6.1.0).</li>
+<li>The OS X version used is 10.11.6 (previously 10.10.5).</li>
+</ul>
+</li>
+<li>Installer for Jetson TX1 / Tegra X1<ul>
+<li>Requires <a href="https://developer.nvidia.com/embedded/jetpack">JetPack for L4T 2.3</a> (containing Linux for Tegra r24.2 for TX1).</li>
+<li>CUDA backend now uses <a href="https://developer.nvidia.com/cuda-toolkit">CUDA 8.0</a> 64-bit.</li>
+<li>Using CUDA's cusolver instead of CPU fallback.</li>
+<li>Uses OpenBLAS for CPU BLAS.</li>
+<li>All ArrayFire libraries are now 64-bit.</li>
+</ul>
+</li>
+</ul>
+<h2>Improvements </h2>
+<ul>
+<li>Add <a class="el" href="group__sparse__func.htm">sparse array</a> support to <a class="el" href="group__method__mat.htm#ga121545fb637db409a523862cdb8ffe39">af::eval()</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1598">1</a></sup></li>
+<li>Add OpenCL-CPU fallback support for sparse <a class="el" href="group__blas__func__matmul.htm#ga63306b6ed967bd1055086db862fe885b">af::matmul()</a> when running on a unified memory device. Uses MKL Sparse BLAS.</li>
+<li>When using CUDA libdevice, pick the correct compute version based on device. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1612">1</a></sup></li>
+<li>OpenCL FFT now also supports prime factors 7, 11 and 13. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1383">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1619">2</a></sup></li>
+</ul>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Allow CUDA libdevice to be detected from custom directory.</li>
+<li>Fix <code>aarch64</code> detection on Jetson TX1 64-bit OS. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1593">1</a></sup></li>
+<li>Add missing definition of <code>af_set_fft_plan_cache_size</code> in unified backend. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1591">1</a></sup></li>
+<li>Fix intial values for <a class="el" href="group__reduce__func__min.htm#ga2b1287d1babb569d28bc6ee1c8e8e1ea">af::min()</a> and <a class="el" href="group__reduce__func__max.htm#ga4459daf5a3b081fb4ee15eb49d8c902a">af::max()</a> operations. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1594">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1595">2</a></sup></li>
+<li>Fix distance calculation in <a class="el" href="group__cv__func__nearest__neighbour.htm#ga8839ead81cbcd6b433822205713bfe79">af::nearestNeighbour</a> for CUDA and OpenCL backend. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1596">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1595">2</a></sup></li>
+<li>Fix OpenCL bug where scalars where are passed incorrectly to compile options. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1595">1</a></sup></li>
+<li>Fix bug in <a class="el" href="group__gfx__func__draw.htm#ga1cdb8c3205d70d8feaddd8c30245393f">af::Window::surface()</a> with respect to dimensions and ranges. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1604">1</a></sup></li>
+<li>Fix possible double free corruption in <a class="el" href="group__index__func__assign.htm#ga3b201c3114941b6f8d0e344afcd18457">af_assign_seq()</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1605">1</a></sup></li>
+<li>Add missing eval for key in <a class="el" href="group__scan__func__scanbykey.htm#ga881c15b2d5ae0dea679eb3fd700ad681">af::scanByKey</a> in CPU backend. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1605">1</a></sup></li>
+<li>Fixed creation of sparse values array using <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa3798241f7c7fb19df683b868bdb089a4">AF_STORAGE_COO</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1620">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1621">1</a></sup></li>
+</ul>
+<h2>Examples </h2>
+<ul>
+<li>Add a <a class="el" href="benchmarks_2cg_8cpp-example.htm">Conjugate Gradient solver example</a> to demonstrate sparse and dense matrix operations. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1599">1</a></sup></li>
+</ul>
+<h2>CUDA Backend </h2>
+<ul>
+<li>When using <a href="https://developer.nvidia.com/cuda-toolkit">CUDA 8.0</a>, compute 2.x are no longer in default compute list.<ul>
+<li>This follows <a href="https://developer.nvidia.com/cuda-toolkit">CUDA 8.0</a> deprecating computes 2.x.</li>
+<li>Default computes for CUDA 8.0 will be 30, 50, 60.</li>
+</ul>
+</li>
+<li>When using CUDA pre-8.0, the default selection remains 20, 30, 50.</li>
+<li>CUDA backend now uses <code>-arch=sm_30</code> for PTX compilation as default.<ul>
+<li>Unless compute 2.0 is enabled.</li>
+</ul>
+</li>
+</ul>
+<h2>Known Issues </h2>
+<ul>
+<li><a class="el" href="group__lapack__factor__func__lu.htm#gafdec123882c86755b3ce260d6abb36ec">af::lu()</a> on CPU is known to give incorrect results when built run on OS X 10.11 or 10.12 and compiled with Accelerate Framework. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1617">1</a></sup><ul>
+<li>Since the OS X Installer libraries uses MKL rather than Accelerate Framework, this issue does not affect those libraries.</li>
+</ul>
+</li>
+</ul>
+<h1>v3.4.0 </h1>
 <h2>Major Updates </h2>
 <ul>
 <li><a class="el" href="group__sparse__func.htm">Sparse Matrix and BLAS</a>. <sup><a href="https://github.com/arrayfire/arrayfire/issues/821">1</a> <a href="https://github.com/arrayfire/arrayfire/pull/1319">2</a></sup></li>
