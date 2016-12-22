@@ -86,7 +86,78 @@ $(document).ready(function(){initNavTree('releasenotes.htm','');});
 <div class="title">Release Notes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>v3.4.1 </h1>
+<div class="textblock"><h1>v3.4.2 </h1>
+<h2>Deprecation Announcement </h2>
+<p>This release supports CUDA 6.5 and higher. The next ArrayFire relase will support CUDA 7.0 and higher, dropping support for CUDA 6.5. Reasons for no longer supporting CUDA 6.5 include:</p>
+<ul>
+<li>CUDA 7.0 NVCC supports the C++11 standard (whereas CUDA 6.5 does not), which is used by ArrayFire's CPU and OpenCL backends.</li>
+<li>Very few ArrayFire users still use CUDA 6.5.</li>
+</ul>
+<p>As a result, the older Jetson TK1 / Tegra K1 will no longer be supported in the next ArrayFire release. The newer Jetson TX1 / Tegra X1 will continue to have full capability with ArrayFire.</p>
+<h2>Docker </h2>
+<ul>
+<li><a href="https://github.com/arrayfire/arrayfire-docker">ArrayFire has been Dockerized</a>.</li>
+</ul>
+<h2>Improvements </h2>
+<ul>
+<li>Implemented sparse storage format conversions between <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa33553814922263702c5a95695c988d8b">AF_STORAGE_CSR</a> and <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa3798241f7c7fb19df683b868bdb089a4">AF_STORAGE_COO</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1642">1</a></sup><ul>
+<li>Directly convert between <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa3798241f7c7fb19df683b868bdb089a4">AF_STORAGE_COO</a> &lt;&ndash;&gt; <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa33553814922263702c5a95695c988d8b">AF_STORAGE_CSR</a> using the <a class="el" href="group__sparse__func__convert__to.htm#ga552d3a90dae9d2c6646a991100688162">af::sparseConvertTo()</a> function.</li>
+<li><a class="el" href="group__sparse__func__convert__to.htm#ga552d3a90dae9d2c6646a991100688162">af::sparseConvertTo()</a> now also supports converting to dense.</li>
+</ul>
+</li>
+<li>Added cast support for <a class="el" href="group__sparse__func.htm">sparse arrays</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1653">1</a></sup><ul>
+<li>Casting only changes the values array and the type. The row and column index arrays are not changed.</li>
+</ul>
+</li>
+<li>Reintroduced automated computation of chart axes limits for graphics functions. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1639">1</a></sup><ul>
+<li>The axes limits will always be the minimum/maximum of the current and new limit.</li>
+<li>The user can still set limits from API calls. If the user sets a limit from the API call, then the automatic limit setting will be disabled.</li>
+</ul>
+</li>
+<li>Using <code>boost::scoped_array</code> instead of <code>boost::scoped_ptr</code> when managing array resources. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1637">1</a></sup></li>
+<li>Internal performance improvements to getInfo() by using <code>const</code> references to avoid unnecessary copying of <code>ArrayInfo</code> objects. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1665">1</a></sup></li>
+<li>Added support for scalar <a class="el" href="classaf_1_1array.htm" title="A multi dimensional data container. ">af::array</a> inputs for <a class="el" href="group__signal__func__convolve.htm#gae79b64c8b0d6a06309e8b67bf89cf6c9" title="C++ Interface for convolution any(one through three) dimensional signals. ">af::convolve()</a> and <a class="el" href="group__set__mat.htm">set functions</a>. <sup><a href="https://github.com/arrayfire/arrayfire/issues/1660">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/issues/1675">2</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1668">3</a></sup></li>
+<li>Performance fixes in <a class="el" href="group__signal__func__fft__convolve.htm#ga711d2440b2d954215a02d90ac8952af8" title="C++ Interface for FFT-based convolution any(one through three) dimensional signals. ">af::fftConvolve()</a> kernels. <sup><a href="https://github.com/arrayfire/arrayfire/issues/1679">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1680">2</a></sup></li>
+</ul>
+<h2>Build </h2>
+<ul>
+<li>Support for Visual Studio 2015 compilation. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1632">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1640">2</a></sup></li>
+<li>Fixed <code>FindCBLAS.cmake</code> when PkgConfig is used. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1657">1</a></sup></li>
+</ul>
+<h2>Bug fixes </h2>
+<ul>
+<li>Fixes to JIT when tree is large. <sup><a href="https://github.com/arrayfire/arrayfire/issues/1646">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1638">2</a></sup></li>
+<li>Fixed indexing bug when converting dense to sparse <a class="el" href="classaf_1_1array.htm" title="A multi dimensional data container. ">af::array</a> as <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa3798241f7c7fb19df683b868bdb089a4">AF_STORAGE_COO</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1642">1</a></sup></li>
+<li>Fixed <a class="el" href="group__image__func__bilateral.htm#ga2ee5156a2d3a51a55f36a797d1274605" title="C++ Interface for bilateral filter. ">af::bilateral()</a> OpenCL kernel compilation on OS X. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1638">1</a></sup></li>
+<li>Fixed memory leak in <a class="el" href="group__image__func__regions.htm#gaa4c7144b6fde68c99d7e9c9ae3336abe" title="C++ Interface for getting regions in an image. ">af::regions()</a> (CPU) and <a class="el" href="group__image__func__rgb2ycbcr.htm#ga4f0faf8297515d78ce3050c0405ff689" title="C++ Interface for converting RGB to YCbCr. ">af::rgb2ycbcr()</a>. <sup><a href="https://github.com/arrayfire/arrayfire/issues/1664">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/issues/1664">2</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1666">3</a></sup></li>
+</ul>
+<h2>Installers </h2>
+<ul>
+<li>Major OS X installer fixes. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1629">1</a></sup><ul>
+<li>Fixed installation scripts.</li>
+<li>Fixed installation symlinks for libraries.</li>
+</ul>
+</li>
+<li>Windows installer now ships with more pre-built examples.</li>
+</ul>
+<h2>Examples </h2>
+<ul>
+<li>Added <a class="el" href="group__lapack__factor__func__cholesky.htm#gac1d4ac4de57dea4841cb11c5e6865792" title="C++ Interface for in place cholesky decomposition. ">af::choleskyInPlace()</a> calls to <code>cholesky.cpp</code> example. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1671">1</a></sup></li>
+</ul>
+<h2>Documentation </h2>
+<ul>
+<li>Added <code>u8</code> as supported data type in <code><a class="el" href="getting__started_8md.htm">getting_started.md</a></code>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1661">1</a></sup></li>
+<li>Fixed typos. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1652">1</a></sup></li>
+</ul>
+<h2>CUDA 8 on OSX </h2>
+<ul>
+<li><a href="https://developer.nvidia.com/cuda-toolkit">CUDA 8.0.55</a> supports Xcode 8. <sup><a href="https://github.com/arrayfire/arrayfire/issues/1664">1</a></sup></li>
+</ul>
+<h2>Known Issues </h2>
+<ul>
+<li>Known failures with CUDA 6.5. These include all functions that use sorting. As a result, sparse storage format conversion between <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa3798241f7c7fb19df683b868bdb089a4">AF_STORAGE_COO</a> and <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa33553814922263702c5a95695c988d8b">AF_STORAGE_CSR</a> has been disabled for CUDA 6.5.</li>
+</ul>
+<h1>v3.4.1 </h1>
 <h2>Installers </h2>
 <ul>
 <li>Installers for Linux, OS X and Windows<ul>
