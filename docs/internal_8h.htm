@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('internal_8h.htm','');});
 <div class="title">internal.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<h3 class="version">(2016-10-25 10:51:30 -0400, (build 17bd204))</h3><div class="textblock"><code>#include &lt;<a class="el" href="defines_8h_source.htm">af/defines.h</a>&gt;</code><br />
+<h3 class="version">(2016-12-28 15:40:52 -0500, (build fff6156))</h3><div class="textblock"><code>#include &lt;<a class="el" href="defines_8h_source.htm">af/defines.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="dim4_8hpp_source.htm">af/dim4.hpp</a>&gt;</code><br />
 </div>
 <p><a href="internal_8h_source.htm">Go to the source code of this file.</a></p>
@@ -125,8 +125,43 @@ Functions</h2></td></tr>
 <tr class="separator:gaef70fb8591d16522a5b05bd7467e7d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9db0eda6ffa4c49e7f66c3d53d62186a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="defines_8h.htm#a82b94dc53bbd100a0e8ca9dd356aaf4f">af_err</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__internal__func__owner.htm#ga9db0eda6ffa4c49e7f66c3d53d62186a">af_is_owner</a> (bool *result, const <a class="el" href="defines_8h.htm#a8e45f4aa3dbea6a7aa021dbc50a4a089">af_array</a> arr)</td></tr>
 <tr class="separator:ga9db0eda6ffa4c49e7f66c3d53d62186a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac29771bd43822cf0a67a69995d5c6a7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="defines_8h.htm#a82b94dc53bbd100a0e8ca9dd356aaf4f">af_err</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="internal_8h.htm#ac29771bd43822cf0a67a69995d5c6a7c">af_get_allocated_bytes</a> (size_t *bytes, const <a class="el" href="defines_8h.htm#a8e45f4aa3dbea6a7aa021dbc50a4a089">af_array</a> arr)</td></tr>
+<tr class="separator:ac29771bd43822cf0a67a69995d5c6a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ac29771bd43822cf0a67a69995d5c6a7c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="defines_8h.htm#a82b94dc53bbd100a0e8ca9dd356aaf4f">af_err</a> af_get_allocated_bytes </td>
+          <td>(</td>
+          <td class="paramtype">size_t *&#160;</td>
+          <td class="paramname"><em>bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="defines_8h.htm#a8e45f4aa3dbea6a7aa021dbc50a4a089">af_array</a>&#160;</td>
+          <td class="paramname"><em>arr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">bytes</td><td>the size of the physical allocated bytes. This will return the size of the parent/owner if the <code>arr</code> is an indexed array. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">arr</td><td>the input array. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="aafdde16371d057c0fc39b7ec7a650184"></a>
 <div class="memitem">
 <div class="memproto">

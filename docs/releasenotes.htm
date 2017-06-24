@@ -86,7 +86,91 @@ $(document).ready(function(){initNavTree('releasenotes.htm','');});
 <div class="title">Release Notes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>v3.4.2 </h1>
+<div class="textblock"><h1>v3.5.0 </h1>
+<h2>Major Updates </h2>
+<ul>
+<li>ArrayFire now supports threaded applications. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1706">1</a></sup></li>
+<li>Added Canny edge detector. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1743">1</a></sup></li>
+<li>Added Sparse-Dense arithmetic operations. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1696">1</a></sup></li>
+</ul>
+<h2>Features </h2>
+<ul>
+<li>ArrayFire Threading<ul>
+<li><a class="el" href="classaf_1_1array.htm">af::array</a> can be read by multiple threads</li>
+<li>All ArrayFire functions can be executed concurrently by multiple threads</li>
+<li>Threads can operate on different devices to simplify Muli-device workloads</li>
+</ul>
+</li>
+<li>New Canny edge detector function, <a class="el" href="group__image__func__canny.htm#gae7b79d6b508a72d1ae2edf8ce408783e">af::canny()</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1743">1</a></sup><ul>
+<li>Can automatically calculate high threshold with <code>AF_CANNY_THRESHOLD_AUTO_OTSU</code></li>
+<li>Supports both L1 and L2 Norms to calculate gradients</li>
+</ul>
+</li>
+<li>New tuned OpenCL BLAS backend, <a href="https://github.com/arrayfire/arrayfire/pull/1727">CLBlast</a>.</li>
+</ul>
+<h2>Improvements </h2>
+<ul>
+<li>Converted CUDA JIT to use <a href="http://docs.nvidia.com/cuda/nvrtc/index.html">NVRTC</a> instead of <a href="http://docs.nvidia.com/cuda/nvvm-ir-spec/index.html">NVVM</a>.</li>
+<li>Performance improvements in <a class="el" href="group__manip__func__reorder.htm#ga72dd90d34aa18b85d9c944f62a2a48b9">af::reorder()</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1766">1</a></sup></li>
+<li>Performance improvements in array::scalar&lt;T&gt;(). <sup><a href="https://github.com/arrayfire/arrayfire/pull/1809">1</a></sup></li>
+<li>Improved unified backend performance. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1770">1</a></sup></li>
+<li>ArrayFire now depends on Forge v1.0. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1800">1</a></sup></li>
+<li>Can now specify the FFT plan cache size using the <a class="el" href="namespaceaf.htm#af4be4eadea7bc6db08b4d8faf7820d64">af::setFFTPlanCacheSize()</a> function.</li>
+<li>Get the number of physical bytes allocated by the memory manager <code><a class="el" href="internal_8h.htm#ac29771bd43822cf0a67a69995d5c6a7c">af_get_allocated_bytes()</a></code>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1630">1</a></sup></li>
+<li><a class="el" href="group__blas__func__dot.htm#ga7190a102305150a074d022c152988b1a">af::dot()</a> can now return a scalar value to the host. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1628">1</a></sup></li>
+</ul>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Fixed improper release of default Mersenne random engine. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1716">1</a></sup></li>
+<li>Fixed <a class="el" href="group__random__func__randu.htm#gabe9a79d7b21f0a8fb7ace6920ead4772">af::randu()</a> and <a class="el" href="group__random__func__randn.htm#ga2e9602d5bcc87204842b634816afa8a4">af::randn()</a> ranges for floating point types. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1784">1</a></sup></li>
+<li>Fixed assignment bug in CPU backend. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1765">1</a></sup></li>
+<li>Fixed complex (<code>c32</code>,<code>c64</code>) multiplication in OpenCL convolution kernels. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1816">1</a></sup></li>
+<li>Fixed inconsistent behavior with <a class="el" href="group__data__func__replace.htm#ga13a51c418de0201102413f05aae45ccd">af::replace()</a> and replace_scalar(). <sup><a href="https://github.com/arrayfire/arrayfire/pull/1773">1</a></sup></li>
+<li>Fixed memory leak in <a class="el" href="group__signal__func__fir.htm#ga2a850e69775eede4709e0d607bba240b">af_fir()</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1765">1</a></sup></li>
+<li>Fixed memory leaks in <a class="el" href="group__arith__func__cast.htm#gab0cb307d6f9019ac8cbbbe9b8a4d6b9b">af_cast</a> for sparse arrays. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1826">1</a></sup></li>
+<li>Fixing correctness of <a class="el" href="group__arith__func__pow.htm#ga0f28be1a9c8b176a78c4a47f483e7fc6">af_pow</a> for complex numbers by using Cartesian form. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1765">1</a></sup></li>
+<li>Corrected <a class="el" href="group__data__func__select.htm#ga43cfc7e96eb2e8ee019820aaa6aa15a8">af::select()</a> with indexing in CUDA and OpenCL backends. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1731">1</a></sup></li>
+<li>Workaround for VS2015 compiler ternary bug. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1771">1</a></sup></li>
+<li>Fixed memory corruption in <code>cuda::findPlan()</code>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1793">1</a></sup></li>
+<li>Argument checks in <a class="el" href="group__sparse__func__create.htm#ga42c5cf729a232c1cbbcfe0f664f3b986">af_create_sparse_array</a> avoids inputs of type int64. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1747">1</a></sup></li>
+<li>Fixed issue with indexing an array with a step size != 1. <sup><a href="https://github.com/arrayfire/arrayfire/issues/1846">1</a></sup></li>
+</ul>
+<h2>Build fixes </h2>
+<ul>
+<li>On OSX, utilize new GLFW package from the brew package manager. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1720">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1775">2</a></sup></li>
+<li>Fixed CUDA PTX names generated by CMake v3.7. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1689">1</a></sup></li>
+<li>Support <code>gcc</code> &gt; 5.x for CUDA. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1708">1</a></sup></li>
+</ul>
+<h2>Examples </h2>
+<ul>
+<li>New genetic algorithm example. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1695">1</a></sup></li>
+</ul>
+<h2>Documentation </h2>
+<ul>
+<li>Updated <code><a class="el" href="README_8md.htm">README.md</a></code> to improve readability and formatting. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1726">1</a></sup></li>
+<li>Updated <code><a class="el" href="README_8md.htm">README.md</a></code> to mention Julia and Nim wrappers. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1714">1</a></sup></li>
+<li>Improved installation instructions - <code><a class="el" href="install_8md.htm">docs/pages/install.md</a></code>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1740">1</a></sup></li>
+</ul>
+<h2>Miscellaneous </h2>
+<ul>
+<li>A few improvements for ROCm support. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1710">1</a></sup></li>
+<li>Removed CUDA 6.5 support. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1687">1</a></sup></li>
+</ul>
+<h2>Known issues </h2>
+<ul>
+<li>Windows<ul>
+<li>The Windows NVIDIA driver version <code>37x.xx</code> contains a bug which causes <code>fftconvolve_opencl</code> to fail. Upgrade or downgrade to a different version of the driver to avoid this failure.</li>
+<li>The following tests fail on Windows with NVIDIA hardware: <code>threading_cuda</code>,<code>qr_dense_opencl</code>, <code>solve_dense_opencl</code>.</li>
+</ul>
+</li>
+<li>macOS<ul>
+<li>The Accelerate framework, used by the CPU backend on macOS, leverages Intel graphics cards (Iris) when there are no discrete GPUs available. This OpenCL implementation is known to give incorrect results on the following tests: <code>lu_dense_{cpu,opencl}</code>, <code>solve_dense_{cpu,opencl}</code>, <code>inverse_dense_{cpu,opencl}</code>.</li>
+<li>Certain tests intermittently fail on macOS with NVIDIA GPUs apparently due to inconsistent driver behavior: <code>fft_large_cuda</code> and <code>svd_dense_cuda</code>.</li>
+<li>The following tests are currently failing on macOS with AMD GPUs: <code>cholesky_dense_opencl</code> and <code>scan_by_key_opencl</code>.</li>
+</ul>
+</li>
+</ul>
+<h1>v3.4.2 </h1>
 <h2>Deprecation Announcement </h2>
 <p>This release supports CUDA 6.5 and higher. The next ArrayFire relase will support CUDA 7.0 and higher, dropping support for CUDA 6.5. Reasons for no longer supporting CUDA 6.5 include:</p>
 <ul>

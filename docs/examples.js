@@ -41,6 +41,7 @@ var examples =
     [ "lin_algebra/svd.cpp", "lin_algebra_2svd_8cpp-example.htm", null ],
     [ "machine_learning/bagging.cpp", "machine_learning_2bagging_8cpp-example.htm", null ],
     [ "machine_learning/deep_belief_net.cpp", "machine_learning_2deep_belief_net_8cpp-example.htm", null ],
+    [ "machine_learning/geneticalgorithm.cpp", "machine_learning_2geneticalgorithm_8cpp-example.htm", null ],
     [ "machine_learning/kmeans.cpp", "machine_learning_2kmeans_8cpp-example.htm", null ],
     [ "machine_learning/knn.cpp", "machine_learning_2knn_8cpp-example.htm", null ],
     [ "machine_learning/logistic_regression.cpp", "machine_learning_2logistic_regression_8cpp-example.htm", null ],

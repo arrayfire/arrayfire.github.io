@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('defines_8h.htm','');});
 <div class="title">defines.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<h3 class="version">(2016-10-25 10:51:30 -0400, (build 17bd204))</h3><div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
+<h3 class="version">(2016-12-28 15:40:52 -0500, (build fff6156))</h3><div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="version_8h_source.htm">af/version.h</a>&gt;</code><br />
 </div>
@@ -167,6 +167,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:ad864b62ff8f81bf33a1df5647453d1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa341d395616c73f5a587c8586e25115"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="defines_8h.htm#a82a3bf91d6dd04661c63632d0fbf4934">af_random_engine_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaf.htm#aaa341d395616c73f5a587c8586e25115">randomEngineType</a></td></tr>
 <tr class="separator:aaa341d395616c73f5a587c8586e25115"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac36806c887ebaedac3bae28831366652"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="defines_8h.htm#a179019caba59979e58ec07d81cd25ef2">af_canny_threshold</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaf.htm#ac36806c887ebaedac3bae28831366652">cannyThreshold</a></td></tr>
+<tr class="separator:ac36806c887ebaedac3bae28831366652"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -400,6 +402,10 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:ada5c8e0c0cea5e50765377715ff2c02b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a179019caba59979e58ec07d81cd25ef2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.htm#a179019caba59979e58ec07d81cd25ef2">af_canny_threshold</a> { <a class="el" href="defines_8h.htm#a179019caba59979e58ec07d81cd25ef2afbff1c29980ead710ae36f5d47f86623">AF_CANNY_THRESHOLD_MANUAL</a> = 0, 
+<a class="el" href="defines_8h.htm#a179019caba59979e58ec07d81cd25ef2a66fa4273820139916620c1dbbba122a6">AF_CANNY_THRESHOLD_AUTO_OTSU</a> = 1
+ }</td></tr>
+<tr class="separator:a179019caba59979e58ec07d81cd25ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75e1422a62a43dc1ce727ccfb850600f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600f">af_storage</a> { <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fac99c819e628693aed3c422d0656519c2">AF_STORAGE_DENSE</a> = 0, 
 <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa33553814922263702c5a95695c988d8b">AF_STORAGE_CSR</a> = 1, 
 <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa008c3ce00eade74aeb854386a1dceec4">AF_STORAGE_CSC</a> = 2, 
@@ -573,6 +579,26 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a3af15a2f5512e0de849d7bc95de3c113a29bf946fdcf81c8b8bad86379e90ed56"></a>AF_PAD_SYM&#160;</td><td class="fielddoc">
 <p>Out of bound values are symmetric over the edge. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a179019caba59979e58ec07d81cd25ef2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="defines_8h.htm#a179019caba59979e58ec07d81cd25ef2">af_canny_threshold</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a179019caba59979e58ec07d81cd25ef2afbff1c29980ead710ae36f5d47f86623"></a>AF_CANNY_THRESHOLD_MANUAL&#160;</td><td class="fielddoc">
+<p>User has to define canny thresholds manually. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a179019caba59979e58ec07d81cd25ef2a66fa4273820139916620c1dbbba122a6"></a>AF_CANNY_THRESHOLD_AUTO_OTSU&#160;</td><td class="fielddoc">
+<p>Determine canny algorithm thresholds using Otsu algorithm. </p>
 </td></tr>
 </table>
 

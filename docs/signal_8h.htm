@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('signal_8h.htm','');});
 <div class="title">signal.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<h3 class="version">(2016-10-25 10:51:30 -0400, (build 17bd204))</h3><div class="textblock"><code>#include &lt;<a class="el" href="defines_8h_source.htm">af/defines.h</a>&gt;</code><br />
+<h3 class="version">(2016-12-28 15:40:52 -0500, (build fff6156))</h3><div class="textblock"><code>#include &lt;<a class="el" href="defines_8h_source.htm">af/defines.h</a>&gt;</code><br />
 </div>
 <p><a href="signal_8h_source.htm">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -232,6 +232,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga1316bb34afc339942353c54807ca4591"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> array&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__image__func__medfilt.htm#ga1316bb34afc339942353c54807ca4591">medfilt2</a> (const array &amp;in, const <a class="el" href="defines_8h.htm#a7f026aa801b1fa6b85b0d992b414cccb">dim_t</a> wind_length=3, const <a class="el" href="defines_8h.htm#a7f026aa801b1fa6b85b0d992b414cccb">dim_t</a> wind_width=3, const borderType edge_pad=<a class="el" href="defines_8h.htm#a3af15a2f5512e0de849d7bc95de3c113aa9ec0ad516e307a4d215cb9cb43cceb7">AF_PAD_ZERO</a>)</td></tr>
 <tr class="memdesc:ga1316bb34afc339942353c54807ca4591"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface for median filter.  <a href="group__image__func__medfilt.htm#ga1316bb34afc339942353c54807ca4591">More...</a><br /></td></tr>
 <tr class="separator:ga1316bb34afc339942353c54807ca4591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4be4eadea7bc6db08b4d8faf7820d64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaf.htm#af4be4eadea7bc6db08b4d8faf7820d64">setFFTPlanCacheSize</a> (size_t cacheSize)</td></tr>
+<tr class="memdesc:af4be4eadea7bc6db08b4d8faf7820d64"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface for setting plan cache size.  <a href="namespaceaf.htm#af4be4eadea7bc6db08b4d8faf7820d64">More...</a><br /></td></tr>
+<tr class="separator:af4be4eadea7bc6db08b4d8faf7820d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0085f85729768af1ca829157335f1cb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="defines_8h.htm#a82b94dc53bbd100a0e8ca9dd356aaf4f">af_err</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__signal__func__approx1.htm#ga0085f85729768af1ca829157335f1cb5">af_approx1</a> (<a class="el" href="defines_8h.htm#a8e45f4aa3dbea6a7aa021dbc50a4a089">af_array</a> *out, const <a class="el" href="defines_8h.htm#a8e45f4aa3dbea6a7aa021dbc50a4a089">af_array</a> in, const <a class="el" href="defines_8h.htm#a8e45f4aa3dbea6a7aa021dbc50a4a089">af_array</a> pos, const <a class="el" href="defines_8h.htm#ac0b7c1cfd1fb146314d96f17bbfffa68">af_interp_type</a> method, const float offGrid)</td></tr>
 <tr class="memdesc:ga0085f85729768af1ca829157335f1cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">C Interface for signals interpolation on one dimensional signals.  <a href="group__signal__func__approx1.htm#ga0085f85729768af1ca829157335f1cb5">More...</a><br /></td></tr>
 <tr class="separator:ga0085f85729768af1ca829157335f1cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -328,9 +331,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga2cb99dca5842f74f6b9cd28eb187a9cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="defines_8h.htm#a82b94dc53bbd100a0e8ca9dd356aaf4f">af_err</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__image__func__medfilt.htm#ga2cb99dca5842f74f6b9cd28eb187a9cd">af_medfilt2</a> (<a class="el" href="defines_8h.htm#a8e45f4aa3dbea6a7aa021dbc50a4a089">af_array</a> *out, const <a class="el" href="defines_8h.htm#a8e45f4aa3dbea6a7aa021dbc50a4a089">af_array</a> in, const <a class="el" href="defines_8h.htm#a7f026aa801b1fa6b85b0d992b414cccb">dim_t</a> wind_length, const <a class="el" href="defines_8h.htm#a7f026aa801b1fa6b85b0d992b414cccb">dim_t</a> wind_width, const <a class="el" href="defines_8h.htm#a3af15a2f5512e0de849d7bc95de3c113">af_border_type</a> edge_pad)</td></tr>
 <tr class="memdesc:ga2cb99dca5842f74f6b9cd28eb187a9cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">C Interface for median filter.  <a href="group__image__func__medfilt.htm#ga2cb99dca5842f74f6b9cd28eb187a9cd">More...</a><br /></td></tr>
 <tr class="separator:ga2cb99dca5842f74f6b9cd28eb187a9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ddef19b43d9a50c97b1a835df60279a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="defines_8h.htm#a82b94dc53bbd100a0e8ca9dd356aaf4f">af_err</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="signal_8h.htm#a4ddef19b43d9a50c97b1a835df60279a">af_set_fft_plan_cache_size</a> (size_t cache_size)</td></tr>
-<tr class="memdesc:a4ddef19b43d9a50c97b1a835df60279a"><td class="mdescLeft">&#160;</td><td class="mdescRight">C Interface for setting plan cache size.  <a href="#a4ddef19b43d9a50c97b1a835df60279a">More...</a><br /></td></tr>
-<tr class="separator:a4ddef19b43d9a50c97b1a835df60279a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4ddef19b43d9a50c97b1a835df60279a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="defines_8h.htm#a82b94dc53bbd100a0e8ca9dd356aaf4f">af_err</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__signal__func__fft.htm#ga4ddef19b43d9a50c97b1a835df60279a">af_set_fft_plan_cache_size</a> (size_t cache_size)</td></tr>
+<tr class="memdesc:ga4ddef19b43d9a50c97b1a835df60279a"><td class="mdescLeft">&#160;</td><td class="mdescRight">C Interface for setting plan cache size.  <a href="group__signal__func__fft.htm#ga4ddef19b43d9a50c97b1a835df60279a">More...</a><br /></td></tr>
+<tr class="separator:ga4ddef19b43d9a50c97b1a835df60279a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a3cbc675cc70478f73803e906253a52c1"></a>
@@ -380,31 +383,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="defines_8h.htm#a82b94dc53bbd100a0e8ca9dd356aaf4fa2e56d1f9585788fed8fbe3a321bddd76">AF_SUCCESS</a> if the convolution is successful, otherwise an appropriate error code is returned. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a4ddef19b43d9a50c97b1a835df60279a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="defines_8h.htm#a82b94dc53bbd100a0e8ca9dd356aaf4f">af_err</a> af_set_fft_plan_cache_size </td>
-          <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>cache_size</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>C Interface for setting plan cache size. </p>
-<p>This function doesn't do anything if called when CPU backend is active. The plans associated with the most recently used array sizes are cached.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">cache_size</td><td>is the number of plans that shall be cached </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

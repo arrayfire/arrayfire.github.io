@@ -207,6 +207,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:ad864b62ff8f81bf33a1df5647453d1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa341d395616c73f5a587c8586e25115"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="defines_8h.htm#a82a3bf91d6dd04661c63632d0fbf4934">af_random_engine_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaf.htm#aaa341d395616c73f5a587c8586e25115">randomEngineType</a></td></tr>
 <tr class="separator:aaa341d395616c73f5a587c8586e25115"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac36806c887ebaedac3bae28831366652"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="defines_8h.htm#a179019caba59979e58ec07d81cd25ef2">af_canny_threshold</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaf.htm#ac36806c887ebaedac3bae28831366652">cannyThreshold</a></td></tr>
+<tr class="separator:ac36806c887ebaedac3bae28831366652"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad529987e6641d166b1d9e2448fd9212d"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classaf_1_1array.htm">array</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaf.htm#ad529987e6641d166b1d9e2448fd9212d">batchFunc_t</a>) (const <a class="el" href="classaf_1_1array.htm">array</a> &amp;lhs, const <a class="el" href="classaf_1_1array.htm">array</a> &amp;rhs)</td></tr>
 <tr class="separator:ad529987e6641d166b1d9e2448fd9212d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9f7b3218bb79ac637a9478ba913526b"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structaf_1_1timer.htm">af::timer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaf.htm#ae9f7b3218bb79ac637a9478ba913526b">timer</a></td></tr>
@@ -293,7 +295,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:gab0de5929db14a2449c935ed82acf5153"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface for getting maximum value and its location from the entire array.  <a href="group__reduce__func__max.htm#gab0de5929db14a2449c935ed82acf5153">More...</a><br /></td></tr>
 <tr class="separator:gab0de5929db14a2449c935ed82acf5153"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae450135c4ae1bdaa4489804a215f3214"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="classaf_1_1array.htm">array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__scan__func__accum.htm#gae450135c4ae1bdaa4489804a215f3214">accum</a> (const <a class="el" href="classaf_1_1array.htm">array</a> &amp;in, const int dim=0)</td></tr>
-<tr class="memdesc:gae450135c4ae1bdaa4489804a215f3214"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface exclusive sum (cumulative sum) of an array.  <a href="group__scan__func__accum.htm#gae450135c4ae1bdaa4489804a215f3214">More...</a><br /></td></tr>
+<tr class="memdesc:gae450135c4ae1bdaa4489804a215f3214"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface inclusive sum (cumulative sum) of an array.  <a href="group__scan__func__accum.htm#gae450135c4ae1bdaa4489804a215f3214">More...</a><br /></td></tr>
 <tr class="separator:gae450135c4ae1bdaa4489804a215f3214"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabe3e469eb355990345012bbe6393b4c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="classaf_1_1array.htm">array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__scan__func__scan.htm#gabe3e469eb355990345012bbe6393b4c3">scan</a> (const <a class="el" href="classaf_1_1array.htm">array</a> &amp;in, const int dim=0, <a class="el" href="defines_8h.htm#a4de0054ea1c296a55a79691c21f19c6c">binaryOp</a> op=<a class="el" href="defines_8h.htm#a4de0054ea1c296a55a79691c21f19c6ca335c219d88e113349f6ce08e830314a1">AF_BINARY_ADD</a>, bool inclusive_scan=true)</td></tr>
 <tr class="memdesc:gabe3e469eb355990345012bbe6393b4c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface generalized scan of an array.  <a href="group__scan__func__scan.htm#gabe3e469eb355990345012bbe6393b4c3">More...</a><br /></td></tr>
@@ -487,9 +489,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga329f6ec3d910ca0443e4bc6b7cfe129f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="classaf_1_1array.htm">array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__blas__func__matmul.htm#ga329f6ec3d910ca0443e4bc6b7cfe129f">matmul</a> (const <a class="el" href="classaf_1_1array.htm">array</a> &amp;a, const <a class="el" href="classaf_1_1array.htm">array</a> &amp;b, const <a class="el" href="classaf_1_1array.htm">array</a> &amp;c, const <a class="el" href="classaf_1_1array.htm">array</a> &amp;d)</td></tr>
 <tr class="memdesc:ga329f6ec3d910ca0443e4bc6b7cfe129f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chain 3 matrix multiplications.  <a href="group__blas__func__matmul.htm#ga329f6ec3d910ca0443e4bc6b7cfe129f">More...</a><br /></td></tr>
 <tr class="separator:ga329f6ec3d910ca0443e4bc6b7cfe129f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab588e94f241e9a0133ad53b341ace7a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="classaf_1_1array.htm">array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__blas__func__dot.htm#gab588e94f241e9a0133ad53b341ace7a8">dot</a> (const <a class="el" href="classaf_1_1array.htm">array</a> &amp;lhs, const <a class="el" href="classaf_1_1array.htm">array</a> &amp;rhs, const <a class="el" href="defines_8h.htm#a67fd2718ccb6233ec081fc7b4757421d">matProp</a> optLhs=<a class="el" href="defines_8h.htm#a67fd2718ccb6233ec081fc7b4757421daccba98c5b50e203da4c452c2c00c3d3e">AF_MAT_NONE</a>, const <a class="el" href="defines_8h.htm#a67fd2718ccb6233ec081fc7b4757421d">matProp</a> optRhs=<a class="el" href="defines_8h.htm#a67fd2718ccb6233ec081fc7b4757421daccba98c5b50e203da4c452c2c00c3d3e">AF_MAT_NONE</a>)</td></tr>
-<tr class="memdesc:gab588e94f241e9a0133ad53b341ace7a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dot Product.  <a href="group__blas__func__dot.htm#gab588e94f241e9a0133ad53b341ace7a8">More...</a><br /></td></tr>
-<tr class="separator:gab588e94f241e9a0133ad53b341ace7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7190a102305150a074d022c152988b1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="classaf_1_1array.htm">array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__blas__func__dot.htm#ga7190a102305150a074d022c152988b1a">dot</a> (const <a class="el" href="classaf_1_1array.htm">array</a> &amp;lhs, const <a class="el" href="classaf_1_1array.htm">array</a> &amp;rhs, const <a class="el" href="defines_8h.htm#a67fd2718ccb6233ec081fc7b4757421d">matProp</a> optLhs=<a class="el" href="defines_8h.htm#a67fd2718ccb6233ec081fc7b4757421daccba98c5b50e203da4c452c2c00c3d3e">AF_MAT_NONE</a>, const <a class="el" href="defines_8h.htm#a67fd2718ccb6233ec081fc7b4757421d">matProp</a> optRhs=<a class="el" href="defines_8h.htm#a67fd2718ccb6233ec081fc7b4757421daccba98c5b50e203da4c452c2c00c3d3e">AF_MAT_NONE</a>)</td></tr>
+<tr class="memdesc:ga7190a102305150a074d022c152988b1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dot Product.  <a href="group__blas__func__dot.htm#ga7190a102305150a074d022c152988b1a">More...</a><br /></td></tr>
+<tr class="separator:ga7190a102305150a074d022c152988b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga63a8e47707874b9d2ba9b9af0b159591"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="classaf_1_1array.htm">array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__blas__func__transpose.htm#ga63a8e47707874b9d2ba9b9af0b159591">transpose</a> (const <a class="el" href="classaf_1_1array.htm">array</a> &amp;in, const bool conjugate=false)</td></tr>
 <tr class="memdesc:ga63a8e47707874b9d2ba9b9af0b159591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transposes a matrix.  <a href="group__blas__func__transpose.htm#ga63a8e47707874b9d2ba9b9af0b159591">More...</a><br /></td></tr>
 <tr class="separator:ga63a8e47707874b9d2ba9b9af0b159591"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -929,6 +931,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gaae505b21ea70109a95c8ba6a5568a5d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="classaf_1_1array.htm">array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__image__func__moments.htm#gaae505b21ea70109a95c8ba6a5568a5d6">moments</a> (const <a class="el" href="classaf_1_1array.htm">array</a> &amp;in, const <a class="el" href="defines_8h.htm#ad3ee8e32709131cf4126dfa26210aec0">momentType</a> moment=<a class="el" href="defines_8h.htm#ad3ee8e32709131cf4126dfa26210aec0a438c36c62e4d61011c3d2de0a20be0a7">AF_MOMENT_FIRST_ORDER</a>)</td></tr>
 <tr class="memdesc:gaae505b21ea70109a95c8ba6a5568a5d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface for calculating image moments.  <a href="group__image__func__moments.htm#gaae505b21ea70109a95c8ba6a5568a5d6">More...</a><br /></td></tr>
 <tr class="separator:gaae505b21ea70109a95c8ba6a5568a5d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7b79d6b508a72d1ae2edf8ce408783e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="classaf_1_1array.htm">array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__image__func__canny.htm#gae7b79d6b508a72d1ae2edf8ce408783e">canny</a> (const <a class="el" href="classaf_1_1array.htm">array</a> &amp;in, const <a class="el" href="defines_8h.htm#a179019caba59979e58ec07d81cd25ef2">cannyThreshold</a> thresholdType, const float lowThresholdRatio, const float highThresholdRatio, const unsigned sobelWindow=3, const bool isFast=false)</td></tr>
+<tr class="memdesc:gae7b79d6b508a72d1ae2edf8ce408783e"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface for canny edge detector.  <a href="group__image__func__canny.htm#gae7b79d6b508a72d1ae2edf8ce408783e">More...</a><br /></td></tr>
+<tr class="separator:gae7b79d6b508a72d1ae2edf8ce408783e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac7bb6cefab347540526b1ac2584d006e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="classaf_1_1array.htm">array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__index__func__index.htm#gac7bb6cefab347540526b1ac2584d006e">lookup</a> (const <a class="el" href="classaf_1_1array.htm">array</a> &amp;in, const <a class="el" href="classaf_1_1array.htm">array</a> &amp;idx, const int dim=-1)</td></tr>
 <tr class="memdesc:gac7bb6cefab347540526b1ac2584d006e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lookup the values of input array based on index.  <a href="group__index__func__index.htm#gac7bb6cefab347540526b1ac2584d006e">More...</a><br /></td></tr>
 <tr class="separator:gac7bb6cefab347540526b1ac2584d006e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1163,6 +1168,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga1316bb34afc339942353c54807ca4591"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="classaf_1_1array.htm">array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__image__func__medfilt.htm#ga1316bb34afc339942353c54807ca4591">medfilt2</a> (const <a class="el" href="classaf_1_1array.htm">array</a> &amp;in, const <a class="el" href="defines_8h.htm#a7f026aa801b1fa6b85b0d992b414cccb">dim_t</a> wind_length=3, const <a class="el" href="defines_8h.htm#a7f026aa801b1fa6b85b0d992b414cccb">dim_t</a> wind_width=3, const <a class="el" href="defines_8h.htm#a3af15a2f5512e0de849d7bc95de3c113">borderType</a> edge_pad=<a class="el" href="defines_8h.htm#a3af15a2f5512e0de849d7bc95de3c113aa9ec0ad516e307a4d215cb9cb43cceb7">AF_PAD_ZERO</a>)</td></tr>
 <tr class="memdesc:ga1316bb34afc339942353c54807ca4591"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface for median filter.  <a href="group__image__func__medfilt.htm#ga1316bb34afc339942353c54807ca4591">More...</a><br /></td></tr>
 <tr class="separator:ga1316bb34afc339942353c54807ca4591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4be4eadea7bc6db08b4d8faf7820d64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceaf.htm#af4be4eadea7bc6db08b4d8faf7820d64">setFFTPlanCacheSize</a> (size_t cacheSize)</td></tr>
+<tr class="memdesc:af4be4eadea7bc6db08b4d8faf7820d64"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface for setting plan cache size.  <a href="#af4be4eadea7bc6db08b4d8faf7820d64">More...</a><br /></td></tr>
+<tr class="separator:af4be4eadea7bc6db08b4d8faf7820d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae9a843c7e93b05e6b090ca32b271ebe9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="classaf_1_1array.htm">array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sparse__func__create.htm#gae9a843c7e93b05e6b090ca32b271ebe9">sparse</a> (const <a class="el" href="defines_8h.htm#a7f026aa801b1fa6b85b0d992b414cccb">dim_t</a> nRows, const <a class="el" href="defines_8h.htm#a7f026aa801b1fa6b85b0d992b414cccb">dim_t</a> nCols, const <a class="el" href="classaf_1_1array.htm">array</a> values, const <a class="el" href="classaf_1_1array.htm">array</a> rowIdx, const <a class="el" href="classaf_1_1array.htm">array</a> colIdx, const <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600f">af::storage</a> stype=<a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa33553814922263702c5a95695c988d8b">AF_STORAGE_CSR</a>)</td></tr>
 <tr class="memdesc:gae9a843c7e93b05e6b090ca32b271ebe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function converts <a class="el" href="classaf_1_1array.htm">af::array</a> of values, row indices and column indices into a sparse array.  <a href="group__sparse__func__create.htm#gae9a843c7e93b05e6b090ca32b271ebe9">More...</a><br /></td></tr>
 <tr class="separator:gae9a843c7e93b05e6b090ca32b271ebe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3218,6 +3226,18 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ac36806c887ebaedac3bae28831366652"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="defines_8h.htm#a179019caba59979e58ec07d81cd25ef2">af_canny_threshold</a> <a class="el" href="defines_8h.htm#a179019caba59979e58ec07d81cd25ef2">cannyThreshold</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="acd654c72624253fcd7fd88fe5298aa9a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -4106,7 +4126,8 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the logarithm of input in base 2 </dd></dl>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="machine_learning_2geneticalgorithm_8cpp-example.htm#a4">machine_learning/geneticalgorithm.cpp</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="af130b743b5abe48393f8f8ac7c974a5a"></a>
@@ -4967,32 +4988,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a101ebe78e996ef54fc8f0b9e0d555381"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="namespaceaf.htm#acd654c72624253fcd7fd88fe5298aa9a">af::cdouble</a> af::operator/ </td>
-          <td>(</td>
-          <td class="paramtype">const double &amp;&#160;</td>
-          <td class="paramname"><em>rhs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespaceaf.htm#acd654c72624253fcd7fd88fe5298aa9a">af::cdouble</a> &amp;&#160;</td>
-          <td class="paramname"><em>lhs</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a8273d165f999c973b0eb4ff58c7ed4f3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -5008,6 +5003,32 @@ Variables</h2></td></tr>
           <td></td>
           <td class="paramtype">const <a class="el" href="namespaceaf.htm#a63e29e484b92e217fe817fe78abc4f5f">af::cfloat</a> &amp;&#160;</td>
           <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a101ebe78e996ef54fc8f0b9e0d555381"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="namespaceaf.htm#acd654c72624253fcd7fd88fe5298aa9a">af::cdouble</a> af::operator/ </td>
+          <td>(</td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespaceaf.htm#acd654c72624253fcd7fd88fe5298aa9a">af::cdouble</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -5340,6 +5361,31 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af4be4eadea7bc6db08b4d8faf7820d64"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> void af::setFFTPlanCacheSize </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>cacheSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>C++ Interface for setting plan cache size. </p>
+<p>This function doesn't do anything if called when CPU backend is active. The plans associated with the most recently used array sizes are cached.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cacheSize</td><td>is the number of plans that shall be cached </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

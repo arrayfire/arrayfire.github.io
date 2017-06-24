@@ -2,6 +2,7 @@ var group__signal__func__fft =
 [
     [ "af_fft", "group__signal__func__fft.htm#ga64d0db9e59c9410ba738591ad146a884", null ],
     [ "af_fft_inplace", "group__signal__func__fft.htm#gaa2f03c9ee1cb80dc184c0b0a13176da1", null ],
+    [ "af_set_fft_plan_cache_size", "group__signal__func__fft.htm#ga4ddef19b43d9a50c97b1a835df60279a", null ],
     [ "dft", "group__signal__func__fft.htm#ga6e082e788e1085ae5e39794ddade9913", null ],
     [ "dft", "group__signal__func__fft.htm#ga7216a4f11834c5e983d6d5e6b87c532c", null ],
     [ "dft", "group__signal__func__fft.htm#ga291b032096457e725fa6bcd2e9b3ce30", null ],

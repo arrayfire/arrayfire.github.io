@@ -89,20 +89,20 @@ $(document).ready(function(){initNavTree('group__scan__func__accum.htm','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Perform exclusive sum along specified dimension.  
+<p>Perform inclusive sum along specified dimension.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:gae450135c4ae1bdaa4489804a215f3214"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> array&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__scan__func__accum.htm#gae450135c4ae1bdaa4489804a215f3214">accum</a> (const array &amp;in, const int dim=0)</td></tr>
-<tr class="memdesc:gae450135c4ae1bdaa4489804a215f3214"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface exclusive sum (cumulative sum) of an array.  <a href="group__scan__func__accum.htm#gae450135c4ae1bdaa4489804a215f3214">More...</a><br /></td></tr>
+<tr class="memdesc:gae450135c4ae1bdaa4489804a215f3214"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface inclusive sum (cumulative sum) of an array.  <a href="group__scan__func__accum.htm#gae450135c4ae1bdaa4489804a215f3214">More...</a><br /></td></tr>
 <tr class="separator:gae450135c4ae1bdaa4489804a215f3214"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga50d499e844e0b63e338cb3ea50439629"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="defines_8h.htm#a82b94dc53bbd100a0e8ca9dd356aaf4f">af_err</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__scan__func__accum.htm#ga50d499e844e0b63e338cb3ea50439629">af_accum</a> (<a class="el" href="defines_8h.htm#a8e45f4aa3dbea6a7aa021dbc50a4a089">af_array</a> *out, const <a class="el" href="defines_8h.htm#a8e45f4aa3dbea6a7aa021dbc50a4a089">af_array</a> in, const int dim)</td></tr>
-<tr class="memdesc:ga50d499e844e0b63e338cb3ea50439629"><td class="mdescLeft">&#160;</td><td class="mdescRight">C Interface exclusive sum (cumulative sum) of an array.  <a href="#ga50d499e844e0b63e338cb3ea50439629">More...</a><br /></td></tr>
+<tr class="memdesc:ga50d499e844e0b63e338cb3ea50439629"><td class="mdescLeft">&#160;</td><td class="mdescRight">C Interface inclusive sum (cumulative sum) of an array.  <a href="#ga50d499e844e0b63e338cb3ea50439629">More...</a><br /></td></tr>
 <tr class="separator:ga50d499e844e0b63e338cb3ea50439629"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Perform exclusive sum along specified dimension. </p>
+<p>Perform inclusive sum along specified dimension. </p>
 <p>This table defines the return value types for the corresponding input types</p>
 <table class="doxtable">
 <tr>
@@ -142,7 +142,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>C++ Interface exclusive sum (cumulative sum) of an array. </p>
+<p>C++ Interface inclusive sum (cumulative sum) of an array. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">in</td><td>is the input array </td></tr>
@@ -185,7 +185,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>C Interface exclusive sum (cumulative sum) of an array. </p>
+<p>C Interface inclusive sum (cumulative sum) of an array. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>will contain exclusive sums of the input </td></tr>

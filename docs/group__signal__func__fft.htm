@@ -127,6 +127,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gaa2f03c9ee1cb80dc184c0b0a13176da1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="defines_8h.htm#a82b94dc53bbd100a0e8ca9dd356aaf4f">af_err</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__signal__func__fft.htm#gaa2f03c9ee1cb80dc184c0b0a13176da1">af_fft_inplace</a> (<a class="el" href="defines_8h.htm#a8e45f4aa3dbea6a7aa021dbc50a4a089">af_array</a> in, const double norm_factor)</td></tr>
 <tr class="memdesc:gaa2f03c9ee1cb80dc184c0b0a13176da1"><td class="mdescLeft">&#160;</td><td class="mdescRight">C Interface for fast fourier transform on one dimensional signals.  <a href="#gaa2f03c9ee1cb80dc184c0b0a13176da1">More...</a><br /></td></tr>
 <tr class="separator:gaa2f03c9ee1cb80dc184c0b0a13176da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4ddef19b43d9a50c97b1a835df60279a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="defines_8h.htm#a82b94dc53bbd100a0e8ca9dd356aaf4f">af_err</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__signal__func__fft.htm#ga4ddef19b43d9a50c97b1a835df60279a">af_set_fft_plan_cache_size</a> (size_t cache_size)</td></tr>
+<tr class="memdesc:ga4ddef19b43d9a50c97b1a835df60279a"><td class="mdescLeft">&#160;</td><td class="mdescRight">C Interface for setting plan cache size.  <a href="#ga4ddef19b43d9a50c97b1a835df60279a">More...</a><br /></td></tr>
+<tr class="separator:ga4ddef19b43d9a50c97b1a835df60279a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Fast Fourier Transform. </p>
@@ -218,6 +221,31 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="defines_8h.htm#a82b94dc53bbd100a0e8ca9dd356aaf4fa2e56d1f9585788fed8fbe3a321bddd76">AF_SUCCESS</a> if the fft transform is successful, otherwise an appropriate error code is returned.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The input <code>in</code> must be a complex array </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga4ddef19b43d9a50c97b1a835df60279a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="defines_8h.htm#a82b94dc53bbd100a0e8ca9dd356aaf4f">af_err</a> af_set_fft_plan_cache_size </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>cache_size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>C Interface for setting plan cache size. </p>
+<p>This function doesn't do anything if called when CPU backend is active. The plans associated with the most recently used array sizes are cached.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cache_size</td><td>is the number of plans that shall be cached </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
