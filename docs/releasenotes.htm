@@ -86,7 +86,42 @@ $(document).ready(function(){initNavTree('releasenotes.htm','');});
 <div class="title">Release Notes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>v3.5.0 </h1>
+<div class="textblock"><h1>v3.5.1 </h1>
+<h2>Improvements </h2>
+<ul>
+<li>Relaxed <code><a class="el" href="group__image__func__unwrap.htm#gabd48af39af6bb17efb70747cc132ad60" title="C++ Interface wrapper for unwrap. ">af::unwrap()</a></code> function's arguments. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1853">1</a></sup></li>
+<li>Changed behavior of <a class="el" href="group__method__mat.htm#ga29f6176f393aeead43be9556c4fde3c0" title="Get the size of the array in memory. ">af::array::allocated()</a> to specify memory allocated. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1877">1</a></sup></li>
+<li>Removed restriction on the nubmer of bins for <code><a class="el" href="group__image__func__histogram.htm#gafb93ba76739ef18b3698e39c7768c90a" title="C++ Interface for histogram. ">af::histogram()</a></code> on CUDA and OpenCL kernels. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1895">1</a></sup></li>
+</ul>
+<h2>Performance </h2>
+<ul>
+<li>Improved JIT performance. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1864">1</a></sup></li>
+<li>Improved CPU element-wise operation performance. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1890">1</a></sup></li>
+<li>Improved regions performance using texture objects. <sup> <a href="https://github.com/arrayfire/arrayfire/pull/1903">1</a></sup></li>
+</ul>
+<h2>Bug fixes </h2>
+<ul>
+<li>Fixed overflow issues in mean. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1849">1</a></sup></li>
+<li>Fixed memory leak when chaining indexing operations. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1879">1</a></sup></li>
+<li>Fixed bug in array assignment when using an empty array to index. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1897">1</a></sup></li>
+<li>Fixed bug with <code><a class="el" href="group__blas__func__matmul.htm#ga63306b6ed967bd1055086db862fe885b" title="Matrix multiply of two arrays. ">af::matmul()</a></code> which occured when its RHS argument was an indexed vector. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1883">1</a></sup></li>
+<li>Fixed bug deadlock bug when sparse array was used with a JIT Array. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1889">1</a></sup></li>
+<li>Fixed pixel tests for FAST kernels. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1891">1</a></sup></li>
+<li>Fixed <code><a class="el" href="group__data__func__replace.htm#ga13a51c418de0201102413f05aae45ccd">af::replace</a></code> so that it is now copy-on-write. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1892">1</a></sup></li>
+<li>Fixed launch configuration issues in CUDA JIT. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1893">1</a></sup></li>
+<li>Fixed segfaults and "Pure Virtual Call" error warnings when exiting on Windows. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1899">1</a> <a href="https://github.com/arrayfire/arrayfire/pull/1924">2</a></sup></li>
+<li>Workaround for <code>clEnqueueReadBuffer</code> bug on OSX. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1888">1</a></sup></li>
+</ul>
+<h2>Build </h2>
+<ul>
+<li>Fixed issues when compiling with GCC 7.1. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1872">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1876">2</a></sup></li>
+<li>Eliminated unnecessary Boost dependency from CPU and CUDA backends. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1857">1</a></sup></li>
+</ul>
+<h2>Misc </h2>
+<ul>
+<li>Updated support links to point to Slack instead of Gitter. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1905">1</a></sup></li>
+</ul>
+<h1>v3.5.0 </h1>
 <h2>Major Updates </h2>
 <ul>
 <li>ArrayFire now supports threaded applications. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1706">1</a></sup></li>
