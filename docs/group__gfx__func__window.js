@@ -14,7 +14,7 @@ var group__gfx__func__window =
     [ "af_set_visibility", "group__gfx__func__window.htm#gad7b63c70d45e101c4d8d500273e310c7", null ],
     [ "af_show", "group__gfx__func__window.htm#ga50dae861324dca1cce9f583256f5a654", null ],
     [ "close", "group__gfx__func__window.htm#ga46143fd6de3be9ab9951f140d3ae8c2f", null ],
-    [ "get", "group__gfx__func__window.htm#gafd10b3f27ccd31a1fa3439ff83d1188c", null ],
+    [ "get", "group__gfx__func__window.htm#ga0d2481ae9d5600854146e6661280c249", null ],
     [ "grid", "group__gfx__func__window.htm#gaecba84f1690934bbc397e8ac7e141268", null ],
     [ "setAxesLimits", "group__gfx__func__window.htm#ga1277bb007f5f2845eac09ead91ad36d2", null ],
     [ "setAxesLimits", "group__gfx__func__window.htm#gabc18fa771f03e10feeede73cf007706e", null ],

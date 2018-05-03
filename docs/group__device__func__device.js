@@ -1,4 +1,4 @@
 var group__device__func__device =
 [
-    [ "device", "group__device__func__device.htm#ga93c855ccd22d37cf90d32aef5ac75030", null ]
+    [ "device", "group__device__func__device.htm#gadadd8fc5a8adad8b3b833eb6a4244236", null ]
 ];

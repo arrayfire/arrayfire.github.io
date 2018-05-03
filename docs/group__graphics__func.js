@@ -7,7 +7,7 @@ var group__graphics__func =
       [ "Window", "group__gfx__func__window.htm#ga5730679e2a1b3400d35493a41eb8ba92", null ],
       [ "~Window", "group__gfx__func__window.htm#ga254ab61160c1cd5eaa46cc0475bb7a06", null ],
       [ "close", "group__gfx__func__window.htm#ga46143fd6de3be9ab9951f140d3ae8c2f", null ],
-      [ "get", "group__gfx__func__window.htm#gafd10b3f27ccd31a1fa3439ff83d1188c", null ],
+      [ "get", "group__gfx__func__window.htm#ga0d2481ae9d5600854146e6661280c249", null ],
       [ "grid", "group__gfx__func__window.htm#gaecba84f1690934bbc397e8ac7e141268", null ],
       [ "hist", "group__gfx__func__draw.htm#gafd7d94aa8f5fd37fee0662a4906a38d7", null ],
       [ "image", "group__gfx__func__draw.htm#gaed174450be6db4dfa5ef65b7baccbe57", null ],

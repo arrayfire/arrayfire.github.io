@@ -11,7 +11,7 @@ var group__index__mat =
       [ "seq", "classaf_1_1seq.htm#a7340e628a70c0f6bc7273d6fc1eaab38", null ],
       [ "seq", "classaf_1_1seq.htm#a8302a0ee31b504826d664dfd0257db75", null ],
       [ "seq", "classaf_1_1seq.htm#ab6eac5a8ca5b555e81af678a0798745c", null ],
-      [ "operator array", "classaf_1_1seq.htm#a77e1da7efee7d2501058f46f74bb398a", null ],
+      [ "operator array", "classaf_1_1seq.htm#aec88936a07e8c3c03ae59bcf9efccc45", null ],
       [ "operator*", "classaf_1_1seq.htm#a9ea7aa11bcfd62f7c2932a1eae7b9ad4", null ],
       [ "operator+", "classaf_1_1seq.htm#a7bada0d4940cb2a8c9dd837f9d1041a4", null ],
       [ "operator-", "classaf_1_1seq.htm#a24d33e7c5c4fc6e4aa5265f18b3d7467", null ],
@@ -24,6 +24,7 @@ var group__index__mat =
       [ "s", "classaf_1_1seq.htm#a42eb4397e1efe3654f22799573c1b27d", null ],
       [ "size", "classaf_1_1seq.htm#a854352f53b148adc24983a58a1866d66", null ]
     ] ],
+    [ "Lookup", "group__index__func__lookup.htm", "group__index__func__lookup" ],
     [ "assign", "group__index__func__assign.htm", "group__index__func__assign" ],
     [ "col/cols", "group__array__mem__col.htm", "group__array__mem__col" ],
     [ "index", "group__index__func__index.htm", "group__index__func__index" ],

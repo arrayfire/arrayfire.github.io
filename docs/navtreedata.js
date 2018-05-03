@@ -1,3 +1,26 @@
+/*
+@ @licstart  The following is the entire license notice for the
+JavaScript code in this file.
+
+Copyright (C) 1997-2017 by Dimitri van Heesch
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+@licend  The above is the entire license notice
+for the JavaScript code in this file
+*/
 var NAVTREE =
 [
   [ "Overview", "index.htm", [
@@ -35,12 +58,12 @@ var NAVTREEINDEX =
 "group__arith__func__sub.htm#ga417c2a733abd728ab1ce0eb6db5192db",
 "group__array__mem__operator__plus__eq.htm#ga5d595592ac6552d51ca2f2f1c3e4c6d8",
 "group__data__func__range.htm",
-"group__gfx__func__window.htm#ga43dd0b670b6dfd4dab0545b6c06af528",
-"group__imageio__mat.htm",
-"group__method__mat.htm#ga6a17a89fab2c26be8e911c4628c4c54c",
-"group__reduce__func__any__true.htm#ga3ec2ca71f7968e5e7a3ab6d58d928e3e",
-"group__signal__func__fft__convolve.htm#ga711d2440b2d954215a02d90ac8952af8",
-"group__transform__func__resize.htm"
+"group__gfx__func__window.htm#ga37fc7eb00ae11c25e1a60d341663d68d",
+"group__imageio__func__save.htm#ga2d73aad096dd1e0022fe7369112168b8",
+"group__method__mat.htm#ga5cc0f3c2307de6b82ede47c9b26da2d0",
+"group__reduce__func__all__true.htm#gaf3f22add3a54fb729a969cf8f669fc2b",
+"group__signal__func__fft__c2r.htm#gaa5efdfd84213a4a07d81a5d534cde5ac",
+"group__stream__func__read.htm#gaf78aa8f367fbd6f408e90f0851e0557a"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,5 +1,6 @@
 var group__imageflt__mat =
 [
+    [ "AnisotropicDiffusion", "group__image__func__anisotropic__diffusion.htm", "group__image__func__anisotropic__diffusion" ],
     [ "SAT", "group__image__func__sat.htm", "group__image__func__sat" ],
     [ "bilateral", "group__image__func__bilateral.htm", "group__image__func__bilateral" ],
     [ "canny", "group__image__func__canny.htm", "group__image__func__canny" ],

@@ -1,6 +1,8 @@
 var group__arrayfire__func =
 [
+    [ "AnisotropicDiffusion", "group__image__func__anisotropic__diffusion.htm", "group__image__func__anisotropic__diffusion" ],
     [ "DoG", "group__cv__func__dog.htm", "group__cv__func__dog" ],
+    [ "Lookup", "group__index__func__lookup.htm", "group__index__func__lookup" ],
     [ "Random Number Generation", "group__random__mat.htm", "group__random__mat" ],
     [ "SAT", "group__image__func__sat.htm", "group__image__func__sat" ],
     [ "abs", "group__arith__func__abs.htm", "group__arith__func__abs" ],
@@ -135,8 +137,8 @@ var group__arrayfire__func =
     [ "lu", "group__lapack__factor__func__lu.htm", "group__lapack__factor__func__lu" ],
     [ "matchTemplate", "group__cv__func__match__template.htm", "group__cv__func__match__template" ],
     [ "matmul", "group__blas__func__matmul.htm", "group__blas__func__matmul" ],
-    [ "max", "group__arith__func__max.htm", "group__arith__func__max" ],
     [ "max", "group__reduce__func__max.htm", "group__reduce__func__max" ],
+    [ "max", "group__arith__func__max.htm", "group__arith__func__max" ],
     [ "maxfilt", "group__image__func__maxfilt.htm", "group__image__func__maxfilt" ],
     [ "mean", "group__stat__func__mean.htm", "group__stat__func__mean" ],
     [ "meanshift", "group__image__func__mean__shift.htm", "group__image__func__mean__shift" ],
@@ -234,6 +236,7 @@ var group__arrayfire__func =
     [ "tgamma", "group__arith__func__tgamma.htm", "group__arith__func__tgamma" ],
     [ "tile", "group__manip__func__tile.htm", "group__manip__func__tile" ],
     [ "toString", "group__print__func__tostring.htm", "group__print__func__tostring" ],
+    [ "topk", "group__stat__func__topk.htm", "group__stat__func__topk" ],
     [ "transform", "group__transform__func__transform.htm", "group__transform__func__transform" ],
     [ "transformcoordinates", "group__transform__func__coordinates.htm", "group__transform__func__coordinates" ],
     [ "translate", "group__transform__func__translate.htm", "group__transform__func__translate" ],
