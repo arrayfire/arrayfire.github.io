@@ -88,7 +88,27 @@ $(document).ready(function(){initNavTree('releasenotes.htm','');});
 <div class="title">Release Notes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>v3.6.0 </h1>
+<div class="textblock"><h1>v3.6.1 </h1>
+<h2>Improvements </h2>
+<ul>
+<li>FreeImage is now a run-time dependency [#2164]</li>
+<li>Reduced binary size by setting the symbol visibility to hidden [#2168]</li>
+<li>Add memory manager logging using the AF_TRACE=mem environment variable [#2169]</li>
+<li>Improved CPU Anisotropic Diffusion performance [#2174]</li>
+<li>Perform normalization after FFT for improved accuracy [#2185][#2192]</li>
+<li>Updated CLBlast to v1.4.0 [#2178]</li>
+<li>Added additional validation when using <a class="el" href="classaf_1_1seq.htm" title="seq is used to create seq for indexing af::array ">af::seq</a> for indexing [#2153]</li>
+<li>Perform checks for unsupported cards by the CUDA implementation [#2182]</li>
+</ul>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Fixed region when all pixels were the foreground or background [#2152]</li>
+<li>Fixed several memory leaks [#2202][#2201][#2180][#2179][#2177][#2175]</li>
+<li>Fixed bug in setDevice which didn't allow you to select the last device [#2189]</li>
+<li>Fixed bug in min/max where the first element of the array was a NaN value [#2155]</li>
+<li>Fixed window cell indexing for graphics [#2207]</li>
+</ul>
+<h1>v3.6.0 </h1>
 <p>The source code with submodules can be downloaded directly from the following link: <a href="http://arrayfire.com/arrayfire_source/arrayfire-full-3.6.0.tar.bz2">http://arrayfire.com/arrayfire_source/arrayfire-full-3.6.0.tar.bz2</a></p>
 <h2>Major Updates </h2>
 <ul>

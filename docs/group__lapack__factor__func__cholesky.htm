@@ -116,8 +116,8 @@ Functions</h2></td></tr>
 <p>\(L = U^T\)</p>
 <p>Only one of <b>L</b> and <b>U</b> is stored to conserve space when solving linear equations.</p>
 <p>This operation can be performed in ArrayFire using the following code snippet.</p>
-<div class="fragment"><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> out;</div><div class="line">    <a class="code" href="group__lapack__factor__func__cholesky.htm#gad4a8bbe24dd91ab1f5fdbe5b70940f64">cholesky</a>(out, in, is_upper);</div></div><!-- fragment --><p> When memory is a concern, users can perform Cholesky decomposition in place as shown below.</p>
-<div class="fragment"><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> in2 = in.<a class="code" href="group__method__mat.htm#gaa859f53b411dd3ab37c8c817b4352e07">copy</a>();</div><div class="line">    <a class="code" href="group__lapack__factor__func__cholesky.htm#gac1d4ac4de57dea4841cb11c5e6865792">choleskyInPlace</a>(in2, is_upper);</div></div><!-- fragment --><hr/>
+<div class="fragment"><div class="line">    <a class="code" href="group__opencl__mat.htm#ga5434aaf76be37fae92ac5086315516f0">array</a> out;</div><div class="line">    <a class="code" href="group__lapack__factor__func__cholesky.htm#gad4a8bbe24dd91ab1f5fdbe5b70940f64">cholesky</a>(out, in, is_upper);</div></div><!-- fragment --><p> When memory is a concern, users can perform Cholesky decomposition in place as shown below.</p>
+<div class="fragment"><div class="line">    <a class="code" href="group__opencl__mat.htm#ga5434aaf76be37fae92ac5086315516f0">array</a> in2 = in.<a class="code" href="group__method__mat.htm#gaa859f53b411dd3ab37c8c817b4352e07">copy</a>();</div><div class="line">    <a class="code" href="group__lapack__factor__func__cholesky.htm#gac1d4ac4de57dea4841cb11c5e6865792">choleskyInPlace</a>(in2, is_upper);</div></div><!-- fragment --><hr/>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="gab9428b008330b309bb6359a6b1c474ca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gab9428b008330b309bb6359a6b1c474ca">&#9670;&nbsp;</a></span>af_cholesky()</h2>

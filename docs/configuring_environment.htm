@@ -101,6 +101,7 @@ $(document).ready(function(){initNavTree('configuring_environment.htm','');});
 <li class="level2"><a href="#af_synchronous_calls">AF_SYNCHRONOUS_CALLS </a></li>
 <li class="level2"><a href="#af_show_load_path">AF_SHOW_LOAD_PATH </a></li>
 <li class="level2"><a href="#af_mem_debug">AF_MEM_DEBUG </a></li>
+<li class="level2"><a href="#af_trace">AF_TRACE </a></li>
 <li class="level2"><a href="#af_max_buffers">AF_MAX_BUFFERS </a></li>
 <li class="level2"><a href="#af_opencl_max_jit_len">AF_OPENCL_MAX_JIT_LEN </a></li>
 <li class="level2"><a href="#af_cuda_max_jit_len">AF_CUDA_MAX_JIT_LEN </a></li>
@@ -168,7 +169,17 @@ AF_SHOW_LOAD_PATH </h2>
 AF_MEM_DEBUG </h2>
 <p>When AF_MEM_DEBUG is set to 1 (or anything not equal to 0), the caching mechanism in the memory manager is disabled. The device buffers are allocated using native functions as needed and freed when going out of scope.</p>
 <p>When the environment variable is not set, it is treated to be zero.</p>
-<div class="fragment"><div class="line">AF_MEM_DEBUG=1 ./myprogram</div></div><!-- fragment --><h2><a class="anchor" id="af_max_buffers"></a>
+<div class="fragment"><div class="line">AF_MEM_DEBUG=1 ./myprogram</div></div><!-- fragment --><h2><a class="anchor" id="af_trace"></a>
+AF_TRACE </h2>
+<p>If ArrayFire was built with logging support, this enviornment variable will enable tracing of various modules within ArrayFire. This is a comma separated list of modules to trace. If enabled, ArrayFire will print relevant information to stdout. Currently the following modules are supported:</p>
+<ul>
+<li>all: All trace outputs</li>
+<li>mem: Memory management allocation, free and garbage collection information</li>
+<li>unified: Unified backend dynamic loading information</li>
+</ul>
+<p>Tracing displays the information that could be useful when debugging or optimizing your application. Here is how you would use this variable: </p><pre class="fragment">AF_TRACE=mem:unified ./myprogram
+</pre><p>This will print information about memory operations such as allocations, deallocations, and garbage collection.</p>
+<h2><a class="anchor" id="af_max_buffers"></a>
 AF_MAX_BUFFERS </h2>
 <p>When AF_MAX_BUFFERS is set, this environment variable specifies the maximum number of buffers allocated before garbage collection kicks in.</p>
 <p>Please note that the total number of buffers that can exist simultaneously can be higher than this number. This variable tells the garbage collector that it should free any available buffers immediately if the treshold is reached.</p>
