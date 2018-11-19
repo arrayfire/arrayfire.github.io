@@ -121,7 +121,22 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Matrix multiplication using array. </p>
 <p>Performs a matrix multiplication on the two input arrays after performing the operations specified in the options. The operations are done while reading the data from memory. This results in no additional memory being used for temporary buffers.</p>
-<dl class="section note"><dt>Note</dt><dd>Sparse support was added to ArrayFire in v3.4.0. This function can be use for Sparse-Dense matrix multiplication. See the notes of the function for usage and restrictions.</dd></dl>
+<p>Batched matrix multiplications are supported. Given below are the supported types of batch operations for any given set of two matrices A and B.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">Size of Input Matrix A  </th><th class="markdownTableHeadCenter">Size of Input Matrix B  </th><th class="markdownTableHeadCenter">Output Matrix Size   </th></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">\( \{ M, K, 1, 1 \} \)  </td><td class="markdownTableBodyCenter">\( \{ K, N, 1, 1 \} \)  </td><td class="markdownTableBodyCenter">\( \{ M, N, 1, 1 \} \)   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">\( \{ M, K, b2, b3 \} \)  </td><td class="markdownTableBodyCenter">\( \{ K, N, b2, b3 \} \)  </td><td class="markdownTableBodyCenter">\( \{ M, N, b2, b3 \} \)   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">\( \{ M, K, 1, 1 \} \)  </td><td class="markdownTableBodyCenter">\( \{ K, N, b2, b3 \} \)  </td><td class="markdownTableBodyCenter">\( \{ M, N, b2, b3 \} \)   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">\( \{ M, K, b2, b3 \} \)  </td><td class="markdownTableBodyCenter">\( \{ K, N, 1, 1 \} \)  </td><td class="markdownTableBodyCenter">\( \{ M, N, b2, b3 \} \)   </td></tr>
+</table>
+<p>where M, K, N are dimensions of the matrix and b2, b3 indicate batch size along the respective dimension.</p>
+<p>For the last two entries in the above table, the 2D matrix is broadcasted to match the dimensions of 3D/4D array. This broadcast doesn't involve any additional memory allocations either on host or device.</p>
+<dl class="section note"><dt>Note</dt><dd>Sparse support was added to ArrayFire in v3.4.0. This function can be used for Sparse-Dense matrix multiplication. See the notes of the function for usage and restrictions.</dd></dl>
 <hr/>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga3f3f29358b44286d19ff2037547649fe"></a>
@@ -235,7 +250,22 @@ The returned array is always dense. </dd>
 
 <p>Matrix multiply of two arrays. </p>
 <p>Performs a matrix multiplication on the two input arrays after performing the operations specified in the options. The operations are done while reading the data from memory. This results in no additional memory being used for temporary buffers.</p>
-<dl class="section note"><dt>Note</dt><dd>Sparse support was added to ArrayFire in v3.4.0. This function can be use for Sparse-Dense matrix multiplication. See the notes of the function for usage and restrictions.</dd></dl>
+<p>Batched matrix multiplications are supported. Given below are the supported types of batch operations for any given set of two matrices A and B.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">Size of Input Matrix A  </th><th class="markdownTableHeadCenter">Size of Input Matrix B  </th><th class="markdownTableHeadCenter">Output Matrix Size   </th></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">\( \{ M, K, 1, 1 \} \)  </td><td class="markdownTableBodyCenter">\( \{ K, N, 1, 1 \} \)  </td><td class="markdownTableBodyCenter">\( \{ M, N, 1, 1 \} \)   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">\( \{ M, K, b2, b3 \} \)  </td><td class="markdownTableBodyCenter">\( \{ K, N, b2, b3 \} \)  </td><td class="markdownTableBodyCenter">\( \{ M, N, b2, b3 \} \)   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">\( \{ M, K, 1, 1 \} \)  </td><td class="markdownTableBodyCenter">\( \{ K, N, b2, b3 \} \)  </td><td class="markdownTableBodyCenter">\( \{ M, N, b2, b3 \} \)   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">\( \{ M, K, b2, b3 \} \)  </td><td class="markdownTableBodyCenter">\( \{ K, N, 1, 1 \} \)  </td><td class="markdownTableBodyCenter">\( \{ M, N, b2, b3 \} \)   </td></tr>
+</table>
+<p>where M, K, N are dimensions of the matrix and b2, b3 indicate batch size along the respective dimension.</p>
+<p>For the last two entries in the above table, the 2D matrix is broadcasted to match the dimensions of 3D/4D array. This broadcast doesn't involve any additional memory allocations either on host or device.</p>
+<dl class="section note"><dt>Note</dt><dd>Sparse support was added to ArrayFire in v3.4.0. This function can be used for Sparse-Dense matrix multiplication. See the notes of the function for usage and restrictions.</dd></dl>
 <hr/>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -395,7 +425,22 @@ The returned array is always dense. </dd>
 
 <p>Matrix multiply of two arrays. </p>
 <p>Performs a matrix multiplication on the two input arrays after performing the operations specified in the options. The operations are done while reading the data from memory. This results in no additional memory being used for temporary buffers.</p>
-<dl class="section note"><dt>Note</dt><dd>Sparse support was added to ArrayFire in v3.4.0. This function can be use for Sparse-Dense matrix multiplication. See the notes of the function for usage and restrictions.</dd></dl>
+<p>Batched matrix multiplications are supported. Given below are the supported types of batch operations for any given set of two matrices A and B.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">Size of Input Matrix A  </th><th class="markdownTableHeadCenter">Size of Input Matrix B  </th><th class="markdownTableHeadCenter">Output Matrix Size   </th></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">\( \{ M, K, 1, 1 \} \)  </td><td class="markdownTableBodyCenter">\( \{ K, N, 1, 1 \} \)  </td><td class="markdownTableBodyCenter">\( \{ M, N, 1, 1 \} \)   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">\( \{ M, K, b2, b3 \} \)  </td><td class="markdownTableBodyCenter">\( \{ K, N, b2, b3 \} \)  </td><td class="markdownTableBodyCenter">\( \{ M, N, b2, b3 \} \)   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">\( \{ M, K, 1, 1 \} \)  </td><td class="markdownTableBodyCenter">\( \{ K, N, b2, b3 \} \)  </td><td class="markdownTableBodyCenter">\( \{ M, N, b2, b3 \} \)   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">\( \{ M, K, b2, b3 \} \)  </td><td class="markdownTableBodyCenter">\( \{ K, N, 1, 1 \} \)  </td><td class="markdownTableBodyCenter">\( \{ M, N, b2, b3 \} \)   </td></tr>
+</table>
+<p>where M, K, N are dimensions of the matrix and b2, b3 indicate batch size along the respective dimension.</p>
+<p>For the last two entries in the above table, the 2D matrix is broadcasted to match the dimensions of 3D/4D array. This broadcast doesn't involve any additional memory allocations either on host or device.</p>
+<dl class="section note"><dt>Note</dt><dd>Sparse support was added to ArrayFire in v3.4.0. This function can be used for Sparse-Dense matrix multiplication. See the notes of the function for usage and restrictions.</dd></dl>
 <hr/>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -438,7 +483,22 @@ The returned array is always dense. </dd>
 
 <p>Matrix multiply of two arrays. </p>
 <p>Performs a matrix multiplication on the two input arrays after performing the operations specified in the options. The operations are done while reading the data from memory. This results in no additional memory being used for temporary buffers.</p>
-<dl class="section note"><dt>Note</dt><dd>Sparse support was added to ArrayFire in v3.4.0. This function can be use for Sparse-Dense matrix multiplication. See the notes of the function for usage and restrictions.</dd></dl>
+<p>Batched matrix multiplications are supported. Given below are the supported types of batch operations for any given set of two matrices A and B.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">Size of Input Matrix A  </th><th class="markdownTableHeadCenter">Size of Input Matrix B  </th><th class="markdownTableHeadCenter">Output Matrix Size   </th></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">\( \{ M, K, 1, 1 \} \)  </td><td class="markdownTableBodyCenter">\( \{ K, N, 1, 1 \} \)  </td><td class="markdownTableBodyCenter">\( \{ M, N, 1, 1 \} \)   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">\( \{ M, K, b2, b3 \} \)  </td><td class="markdownTableBodyCenter">\( \{ K, N, b2, b3 \} \)  </td><td class="markdownTableBodyCenter">\( \{ M, N, b2, b3 \} \)   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">\( \{ M, K, 1, 1 \} \)  </td><td class="markdownTableBodyCenter">\( \{ K, N, b2, b3 \} \)  </td><td class="markdownTableBodyCenter">\( \{ M, N, b2, b3 \} \)   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">\( \{ M, K, b2, b3 \} \)  </td><td class="markdownTableBodyCenter">\( \{ K, N, 1, 1 \} \)  </td><td class="markdownTableBodyCenter">\( \{ M, N, b2, b3 \} \)   </td></tr>
+</table>
+<p>where M, K, N are dimensions of the matrix and b2, b3 indicate batch size along the respective dimension.</p>
+<p>For the last two entries in the above table, the 2D matrix is broadcasted to match the dimensions of 3D/4D array. This broadcast doesn't involve any additional memory allocations either on host or device.</p>
+<dl class="section note"><dt>Note</dt><dd>Sparse support was added to ArrayFire in v3.4.0. This function can be used for Sparse-Dense matrix multiplication. See the notes of the function for usage and restrictions.</dd></dl>
 <hr/>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -481,7 +541,22 @@ The returned array is always dense. </dd>
 
 <p>Matrix multiply of two arrays. </p>
 <p>Performs a matrix multiplication on the two input arrays after performing the operations specified in the options. The operations are done while reading the data from memory. This results in no additional memory being used for temporary buffers.</p>
-<dl class="section note"><dt>Note</dt><dd>Sparse support was added to ArrayFire in v3.4.0. This function can be use for Sparse-Dense matrix multiplication. See the notes of the function for usage and restrictions.</dd></dl>
+<p>Batched matrix multiplications are supported. Given below are the supported types of batch operations for any given set of two matrices A and B.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">Size of Input Matrix A  </th><th class="markdownTableHeadCenter">Size of Input Matrix B  </th><th class="markdownTableHeadCenter">Output Matrix Size   </th></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">\( \{ M, K, 1, 1 \} \)  </td><td class="markdownTableBodyCenter">\( \{ K, N, 1, 1 \} \)  </td><td class="markdownTableBodyCenter">\( \{ M, N, 1, 1 \} \)   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">\( \{ M, K, b2, b3 \} \)  </td><td class="markdownTableBodyCenter">\( \{ K, N, b2, b3 \} \)  </td><td class="markdownTableBodyCenter">\( \{ M, N, b2, b3 \} \)   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">\( \{ M, K, 1, 1 \} \)  </td><td class="markdownTableBodyCenter">\( \{ K, N, b2, b3 \} \)  </td><td class="markdownTableBodyCenter">\( \{ M, N, b2, b3 \} \)   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">\( \{ M, K, b2, b3 \} \)  </td><td class="markdownTableBodyCenter">\( \{ K, N, 1, 1 \} \)  </td><td class="markdownTableBodyCenter">\( \{ M, N, b2, b3 \} \)   </td></tr>
+</table>
+<p>where M, K, N are dimensions of the matrix and b2, b3 indicate batch size along the respective dimension.</p>
+<p>For the last two entries in the above table, the 2D matrix is broadcasted to match the dimensions of 3D/4D array. This broadcast doesn't involve any additional memory allocations either on host or device.</p>
+<dl class="section note"><dt>Note</dt><dd>Sparse support was added to ArrayFire in v3.4.0. This function can be used for Sparse-Dense matrix multiplication. See the notes of the function for usage and restrictions.</dd></dl>
 <hr/>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

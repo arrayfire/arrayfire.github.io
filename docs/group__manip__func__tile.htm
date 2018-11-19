@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('group__manip__func__tile.htm','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Tile the input array along specified dimensions.  
+<p>Repeat the contents of the input array along the specified dimensions.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -104,9 +104,13 @@ Functions</h2></td></tr>
 <tr class="separator:ga3540329723c9876839e0c790075ab076"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Tile the input array along specified dimensions. </p>
-<p>Creates copys of the array a specified number of times within the output array</p>
-<hr/>
+<p>Repeat the contents of the input array along the specified dimensions. </p>
+<p>Creates copies of the input array and concatenates them with each other, such that the output array will have as many copies of the input array as the user specifies, along each dimension. In this sense, the output array is essentially a set of "tiles", where each copy of the input array (including the original) is a "tile" (hence the name of this function).</p>
+<p>Given below are some examples. The input array looks like this:</p>
+<div class="fragment"><div class="line">    <span class="keywordtype">float</span> hA[] = {0, 1, 2, 3, 4, 5};</div><div class="line">    <a class="code" href="group__opencl__mat.htm#ga5434aaf76be37fae92ac5086315516f0">array</a> A(3, 2, hA);</div><div class="line">    <span class="comment">//  0.  3.</span></div><div class="line">    <span class="comment">//  1.  4.</span></div><div class="line">    <span class="comment">//  2.  5.</span></div></div><!-- fragment --><p> Here, the input array is tiled along the first dimenson, 2 times:</p>
+<div class="fragment"><div class="line">    <a class="code" href="group__opencl__mat.htm#ga5434aaf76be37fae92ac5086315516f0">array</a> B = <a class="code" href="group__manip__func__tile.htm#ga3548059d64e0cefc7fedb4ec28321d32">tile</a>(A, 2, 1);</div><div class="line">    <span class="comment">//  0.  3.</span></div><div class="line">    <span class="comment">//  1.  4.</span></div><div class="line">    <span class="comment">//  2.  5.</span></div><div class="line">    <span class="comment">//  0.  3.</span></div><div class="line">    <span class="comment">//  1.  4.</span></div><div class="line">    <span class="comment">//  2.  5.</span></div></div><!-- fragment --><p> Here, the input is tiled along the second dimension, 3 times:</p>
+<div class="fragment"><div class="line">    <a class="code" href="group__opencl__mat.htm#ga5434aaf76be37fae92ac5086315516f0">array</a> C = <a class="code" href="group__manip__func__tile.htm#ga3548059d64e0cefc7fedb4ec28321d32">tile</a>(A, 1, 3);</div><div class="line">    <span class="comment">//  0.  3.  0.  3.  0.  3.</span></div><div class="line">    <span class="comment">//  1.  4.  1.  4.  1.  4.</span></div><div class="line">    <span class="comment">//  2.  5.  2.  5.  2.  5.</span></div></div><!-- fragment --><p> Lastly, one can also tile along multiple dimensions simultaneously. Here, the input is tiled 2 times in the first dimension and 3 times in the second dimension:</p>
+<div class="fragment"><div class="line">    <a class="code" href="group__opencl__mat.htm#ga5434aaf76be37fae92ac5086315516f0">array</a> D = <a class="code" href="group__manip__func__tile.htm#ga3548059d64e0cefc7fedb4ec28321d32">tile</a>(A, 2, 3);</div><div class="line">    <span class="comment">//  0.  3.  0.  3.  0.  3.</span></div><div class="line">    <span class="comment">//  1.  4.  1.  4.  1.  4.</span></div><div class="line">    <span class="comment">//  2.  5.  2.  5.  2.  5.</span></div><div class="line">    <span class="comment">//  0.  3.  0.  3.  0.  3.</span></div><div class="line">    <span class="comment">//  1.  4.  1.  4.  1.  4.</span></div><div class="line">    <span class="comment">//  2.  5.  2.  5.  2.  5.</span></div></div><!-- fragment --><hr/>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga3540329723c9876839e0c790075ab076"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga3540329723c9876839e0c790075ab076">&#9670;&nbsp;</a></span>af_tile()</h2>
@@ -159,15 +163,16 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>is the generated array </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>is the tiled version of the input array </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">in</td><td>is the input matrix </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>is the number of times <code>in</code> is tiled along first dimension </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>is the number of times <code>in</code> is tiled along second dimension </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">z</td><td>is the number of times <code>in</code> is tiled along third dimension </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>is the number of times <code>in</code> is tiled along fourth dimension </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>is the number of times <code>in</code> is copied along the first dimension </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>is the number of times <code>in</code> is copied along the the second dimension </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">z</td><td>is the number of times <code>in</code> is copied along the third dimension </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>is the number of times <code>in</code> is copied along the fourth dimension</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd><code>x</code>, <code>y</code>, <code>z</code>, and <code>w</code> includes the original in the count as well. Thus, if no duplicates are needed in a certain dimension, leave it as 1 (the default value for just one copy) </dd></dl>
 
 </div>
 </div>
@@ -217,14 +222,15 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">in</td><td>is the input array </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>is the number of times <code>in</code> is tiled along first dimension </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>is the number of times <code>in</code> is tiled along second dimension </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">z</td><td>is the number of times <code>in</code> is tiled along third dimension </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>is the number of times <code>in</code> is tiled along fourth dimension </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>is the number of times <code>in</code> is copied along the first dimension </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>is the number of times <code>in</code> is copied along the the second dimension </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">z</td><td>is the number of times <code>in</code> is copied along the third dimension </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>is the number of times <code>in</code> is copied along the fourth dimension </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the tiled output </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The tiled version of the input array</dd></dl>
+<dl class="section note"><dt>Note</dt><dd><code>x</code>, <code>y</code>, <code>z</code>, and <code>w</code> includes the original in the count as well. Thus, if no duplicates are needed in a certain dimension, leave it as 1 (the default value for just one copy) </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="benchmarks_2cg_8cpp-example.htm#a16">benchmarks/cg.cpp</a>, <a class="el" href="computer_vision_2matching_8cpp-example.htm#a9">computer_vision/matching.cpp</a>, <a class="el" href="financial_2black_scholes_options_8cpp-example.htm#a9">financial/black_scholes_options.cpp</a>, <a class="el" href="getting_started_2vectorize_8cpp-example.htm#a8">getting_started/vectorize.cpp</a>, <a class="el" href="graphics_2conway_pretty_8cpp-example.htm#a8">graphics/conway_pretty.cpp</a>, <a class="el" href="graphics_2field_8cpp-example.htm#a5">graphics/field.cpp</a>, <a class="el" href="graphics_2gravity_sim_8cpp-example.htm#a13">graphics/gravity_sim.cpp</a>, <a class="el" href="image_processing_2filters_8cpp-example.htm#a6">image_processing/filters.cpp</a>, <a class="el" href="image_processing_2image_editing_8cpp-example.htm#a13">image_processing/image_editing.cpp</a>, <a class="el" href="machine_learning_2bagging_8cpp-example.htm#a6">machine_learning/bagging.cpp</a>, <a class="el" href="machine_learning_2deep_belief_net_8cpp-example.htm#a15">machine_learning/deep_belief_net.cpp</a>, <a class="el" href="machine_learning_2kmeans_8cpp-example.htm#a2">machine_learning/kmeans.cpp</a>, <a class="el" href="machine_learning_2knn_8cpp-example.htm#a6">machine_learning/knn.cpp</a>, <a class="el" href="machine_learning_2naive_bayes_8cpp-example.htm#a10">machine_learning/naive_bayes.cpp</a>, <a class="el" href="machine_learning_2rbm_8cpp-example.htm#a9">machine_learning/rbm.cpp</a>, and <a class="el" href="pde_2swe_8cpp-example.htm#a5">pde/swe.cpp</a>.</dd>
 </dl>
 </div>
@@ -257,11 +263,12 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">in</td><td>is the input array </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dims</td><td><a class="el" href="classaf_1_1dim4.htm">dim4</a> of tile dimensions </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dims</td><td>specifies the number of times <code>in</code> is copied along each dimension </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the tiled output </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The tiled version of the input array</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Each component of <code>dims</code> includes the original in the count as well. Thus, if no duplicates are needed in a certain dimension, leave it as 1 (the default value for just one copy) </dd></dl>
 
 </div>
 </div>

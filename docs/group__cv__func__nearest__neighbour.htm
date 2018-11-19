@@ -171,7 +171,7 @@ Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">query</td><td>is the array containing the data to be queried </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">train</td><td>is the array containing the data used as training data </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dist_dim</td><td>indicates the dimension to analyze for distance (the dimension indicated here must be of equal length for both query and train arrays) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">n_dist</td><td>is the number of smallest distances to return (currently, only 1 is supported) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n_dist</td><td>is the number of smallest distances to return (currently, only values &lt;= 256 are supported) </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dist_type</td><td>is the distance computation type. Currently <a class="el" href="defines_8h.htm#a976272e4ee02c0d16ea78990c59adafbac3c384561eb097c610a813629204ab9a">AF_SAD</a> (sum of absolute differences), <a class="el" href="defines_8h.htm#a976272e4ee02c0d16ea78990c59adafba424a4d974dc66b0dc481ee4fc4333af2">AF_SSD</a> (sum of squared differences), and <a class="el" href="defines_8h.htm#a976272e4ee02c0d16ea78990c59adafba56f06a772bc072f015bb7139d5e55e9a">AF_SHD</a> (hamming distances) are supported. </td></tr>
   </table>
   </dd>
@@ -243,7 +243,7 @@ Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">query</td><td>is the array containing the data to be queried </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">train</td><td>is the array containing the data used as training data </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dist_dim</td><td>indicates the dimension to analyze for distance (the dimension indicated here must be of equal length for both query and train arrays) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">n_dist</td><td>is the number of smallest distances to return (currently, only 1 is supported) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n_dist</td><td>is the number of smallest distances to return (currently only values &lt;= 256 are supported) </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dist_type</td><td>is the distance computation type. Currently <a class="el" href="defines_8h.htm#a976272e4ee02c0d16ea78990c59adafbac3c384561eb097c610a813629204ab9a">AF_SAD</a> (sum of absolute differences), <a class="el" href="defines_8h.htm#a976272e4ee02c0d16ea78990c59adafba424a4d974dc66b0dc481ee4fc4333af2">AF_SSD</a> (sum of squared differences), and <a class="el" href="defines_8h.htm#a976272e4ee02c0d16ea78990c59adafba56f06a772bc072f015bb7139d5e55e9a">AF_SHD</a> (hamming distances) are supported. </td></tr>
   </table>
   </dd>

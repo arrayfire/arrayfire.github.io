@@ -88,7 +88,53 @@ $(document).ready(function(){initNavTree('releasenotes.htm','');});
 <div class="title">Release Notes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>v3.6.1 </h1>
+<div class="textblock"><h1>v3.6.2 </h1>
+<h2>Features </h2>
+<ul>
+<li>Added support for batching on the <code>cond</code> argument in <a class="el" href="group__data__func__select.htm#ga43cfc7e96eb2e8ee019820aaa6aa15a8">select()</a> [<a href="https://github.com/arrayfire/arrayfire/pull/2243">#2243</a>]</li>
+<li>Added support for broadcasting batched <a class="el" href="group__blas__func__matmul.htm#ga63306b6ed967bd1055086db862fe885b" title="Matrix multiply of two arrays. ">matmul()</a> [<a href="https://github.com/arrayfire/arrayfire/pull/2315">#2315</a>]</li>
+<li>Added support for multiple nearest neighbors in <a class="el" href="group__cv__func__nearest__neighbour.htm#ga8839ead81cbcd6b433822205713bfe79" title="C++ Interface wrapper for Nearest Neighbour. ">nearestNeighbour()</a> [<a href="https://github.com/arrayfire/arrayfire/pull/2280">#2280</a>]</li>
+<li>Added support for clamp-to-edge padding as an <code>af_border_type</code> option [<a href="https://github.com/arrayfire/arrayfire/pull/2333">#2333</a>]</li>
+</ul>
+<h2>Improvements </h2>
+<ul>
+<li>Improved performance of morphological operations [<a href="https://github.com/arrayfire/arrayfire/pull/2238">#2238</a>]</li>
+<li>Fixed linking errors when compiling without Freeimage/Graphics [<a href="https://github.com/arrayfire/arrayfire/pull/2248">#2248</a>]</li>
+<li>Improved the usage of ArrayFire as a CMake subproject [<a href="https://github.com/arrayfire/arrayfire/pull/2290">#2290</a>]</li>
+<li>Enabled configuration of custom library path for loading dynamic backend libraries [<a href="https://github.com/arrayfire/arrayfire/pull/2302">#2302</a>]</li>
+</ul>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Fixed LAPACK definitions and linking errors [<a href="https://github.com/arrayfire/arrayfire/pull/2239">#2239</a>]</li>
+<li>Fixed overflow in dim4::ndims() [<a href="https://github.com/arrayfire/arrayfire/pull/2289">#2289</a>]</li>
+<li>Fixed <a class="el" href="group__arith__func__pow.htm#ga299da8cda1458a6cb7adba9718ec613d" title="C++ Interface for power. ">pow()</a> precision for integral types [<a href="https://github.com/arrayfire/arrayfire/pull/2305">#2305</a>]</li>
+<li>Fixed issues with <a class="el" href="group__manip__func__tile.htm#ga3548059d64e0cefc7fedb4ec28321d32">tile()</a> with a large repeat dimension [<a href="https://github.com/arrayfire/arrayfire/pull/2307">#2307</a>]</li>
+<li>Fixed <a class="el" href="group__lapack__factor__func__svd.htm#gab016ef45fce266ab9545054bea1cb6b7" title="C++ Interface for SVD decomposition. ">svd()</a> sub-array output on OpenCL [<a href="https://github.com/arrayfire/arrayfire/pull/2279">#2279</a>]</li>
+<li>Fixed grid-based indexing calculation in <a class="el" href="group__image__func__histogram.htm#gafb93ba76739ef18b3698e39c7768c90a" title="C++ Interface for histogram. ">histogram()</a> [<a href="https://github.com/arrayfire/arrayfire/pull/2230">#2230</a>]</li>
+<li>Fixed bug in indexing when used after reorder [<a href="https://github.com/arrayfire/arrayfire/pull/2311">#2311</a>]</li>
+<li>Fixed errors when exiting on Windows when using <a href="https://github.com/CNugteren/CLBlast">CLBlast</a> [<a href="https://github.com/arrayfire/arrayfire/pull/2222">#2222</a>]</li>
+<li>Fixed fallthrough error in medfilt1 [<a href="https://github.com/arrayfire/arrayfire/pull/2349">#2349</a>]</li>
+</ul>
+<h2>Documentation </h2>
+<ul>
+<li>Improved <a class="el" href="group__image__func__unwrap.htm#gabd48af39af6bb17efb70747cc132ad60" title="C++ Interface for rearranging windowed sections of an input into columns (or rows) ...">unwrap()</a> documentation [<a href="https://github.com/arrayfire/arrayfire/pull/2301">#2301</a>]</li>
+<li>Improved <a class="el" href="group__image__func__wrap.htm#ga06a40cc4907e646437d7729823a8054d" title="C++ Interface for performing the opposite of unwrap() ">wrap()</a> documentation [<a href="https://github.com/arrayfire/arrayfire/pull/2320">#2320</a>]</li>
+<li>Improved <a class="el" href="group__scan__func__accum.htm#gae450135c4ae1bdaa4489804a215f3214" title="C++ Interface for computing the cumulative sum (inclusive) of an array. ">accum()</a> documentation [<a href="https://github.com/arrayfire/arrayfire/pull/2298">#2298</a>]</li>
+<li>Improved <a class="el" href="group__manip__func__tile.htm#ga3548059d64e0cefc7fedb4ec28321d32">tile()</a> documentation [<a href="https://github.com/arrayfire/arrayfire/pull/2293">#2293</a>]</li>
+<li>Clarified <a class="el" href="group__signal__func__approx1.htm#ga18117f73cee98f0859f8439607f7f962" title="C++ Interface for data interpolation on one dimensional signals. ">approx1()</a> and <a class="el" href="group__signal__func__approx2.htm#gad6a825755f97f59536faab99ed6e0c2d" title="C++ Interface for data interpolation on two dimensional signals. ">approx2()</a> indexing in documentation [<a href="https://github.com/arrayfire/arrayfire/pull/2287">#2287</a>]</li>
+<li>Updated examples of <a class="el" href="group__data__func__select.htm">select()</a> in detailed documentation [<a href="https://github.com/arrayfire/arrayfire/pull/2277">#2277</a>]</li>
+<li>Updated <a class="el" href="group__index__func__lookup.htm#gac7bb6cefab347540526b1ac2584d006e" title="Lookup the values of an input array by indexing with another array. ">lookup()</a> examples [<a href="https://github.com/arrayfire/arrayfire/pull/2288">#2288</a>]</li>
+<li>Updated set operations' documentation [<a href="https://github.com/arrayfire/arrayfire/pull/2299">#2299</a>]</li>
+</ul>
+<h2>Misc </h2>
+<ul>
+<li><code>af*</code> libraries and dependencies directory changed to <code>lib64</code> [<a href="https://github.com/arrayfire/arrayfire/pull/2186">#2186</a>]</li>
+<li>Added new arrayfire ASSERT utility functions [<a href="https://github.com/arrayfire/arrayfire/pull/2249">#2249</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2256">#2256</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2257">#2257</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2263">#2263</a>]</li>
+<li>Improved error messages in JIT [<a href="https://github.com/arrayfire/arrayfire/pull/2309">#2309</a>]</li>
+</ul>
+<h2>Contributions </h2>
+<p>Special thanks to our contributors: <a href="https://github.com/jacobkahn">Jacob Kahn</a>, <a href="https://github.com/vakopian">Vardan Akopian</a> <br />
+ </p><h1>v3.6.1 </h1>
 <h2>Improvements </h2>
 <ul>
 <li>FreeImage is now a run-time dependency [#2164]</li>
@@ -166,7 +212,7 @@ $(document).ready(function(){initNavTree('releasenotes.htm','');});
 <p>Installer CUDA Version: 8.0 (Required) Installer OpenCL Version: 1.2 (Minimum)</p>
 <h2>Improvements </h2>
 <ul>
-<li>Relaxed <code><a class="el" href="group__image__func__unwrap.htm#gabd48af39af6bb17efb70747cc132ad60" title="C++ Interface wrapper for unwrap. ">af::unwrap()</a></code> function's arguments. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1853">1</a></sup></li>
+<li>Relaxed <code><a class="el" href="group__image__func__unwrap.htm#gabd48af39af6bb17efb70747cc132ad60" title="C++ Interface for rearranging windowed sections of an input into columns (or rows) ...">af::unwrap()</a></code> function's arguments. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1853">1</a></sup></li>
 <li>Changed behavior of <a class="el" href="group__method__mat.htm#ga8bc3e142a14a07815b29e230cefacd3e" title="Get the size of the array in memory. ">af::array::allocated()</a> to specify memory allocated. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1877">1</a></sup></li>
 <li>Removed restriction on the number of bins for <code><a class="el" href="group__image__func__histogram.htm#gafb93ba76739ef18b3698e39c7768c90a" title="C++ Interface for histogram. ">af::histogram()</a></code> on CUDA and OpenCL kernels. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1895">1</a></sup></li>
 </ul>
@@ -832,7 +878,7 @@ $(document).ready(function(){initNavTree('releasenotes.htm','');});
 <ul>
 <li><a href="https://github.com/arrayfire/arrayfire/commit/9d218a5">Hide scrollbars</a> appearing for pre and code styles</li>
 <li>Fix <a href="https://github.com/arrayfire/arrayfire/commit/ac09f91">documentation</a> for <a class="el" href="group__data__func__replace.htm#ga13a51c418de0201102413f05aae45ccd">af::replace</a></li>
-<li>Add <a href="https://github.com/arrayfire/arrayfire/commit/4e06483">code sample</a> for converting the output of <a class="el" href="group__unified__func__getavailbackends.htm#ga32fc807a8d4680987a915362573c1a2c">af::getAvailableBackends()</a> into bools</li>
+<li>Add <a href="https://github.com/arrayfire/arrayfire/commit/4e06483">code sample</a> for converting the output of <a class="el" href="group__unified__func__getavailbackends.htm#ga32fc807a8d4680987a915362573c1a2c" title="Returns a flag of all available backends. ">af::getAvailableBackends()</a> into bools</li>
 <li>Minor fixes in documentation</li>
 </ul>
 <h1>v3.2.1 </h1>
@@ -1341,7 +1387,7 @@ $(document).ready(function(){initNavTree('releasenotes.htm','');});
 </ul>
 </li>
 <li>Other functions<ul>
-<li><a class="el" href="group__index__func__lookup.htm#gac7bb6cefab347540526b1ac2584d006e" title="Lookup the values of input array based on index. ">lookup()</a> - lookup indices from a table</li>
+<li><a class="el" href="group__index__func__lookup.htm#gac7bb6cefab347540526b1ac2584d006e" title="Lookup the values of an input array by indexing with another array. ">lookup()</a> - lookup indices from a table</li>
 <li><a class="el" href="namespaceaf.htm#aa0eb9e160f5be4b95234543e5c47934b">batchFunc()</a> - helper function to perform batch operations</li>
 </ul>
 </li>
@@ -1389,8 +1435,8 @@ $(document).ready(function(){initNavTree('releasenotes.htm','');});
 <li><a class="el" href="group__reduce__func__all__true.htm#gac53f164f6bb650ba54a64e27a41e3b19" title="C++ Interface for checking if all values in an array are true. ">alltrue()</a> changed to <a class="el" href="group__reduce__func__all__true.htm#gaf3f22add3a54fb729a969cf8f669fc2b" title="C++ Interface for checking all true values in an array. ">allTrue()</a></li>
 <li><a class="el" href="group__reduce__func__any__true.htm#gaf7184d594b1b6af7bdd01322cc795a4a" title="C++ Interface for checking if all values in an array are true. ">anytrue()</a> changed to <a class="el" href="group__reduce__func__any__true.htm#gafe4c8f22bbfa4288696f2a133b1b619e" title="C++ Interface for checking any true values in an array. ">anyTrue()</a></li>
 <li><a class="el" href="group__set__func__unique.htm#gac33fd89ba6a7582753232c007ff135bf" title="C++ Interface for getting unique values. ">setunique()</a> changed to <a class="el" href="group__set__func__unique.htm#ga73f2f768af96755af50df21e384287c6" title="C++ Interface for getting unique values. ">setUnique()</a></li>
-<li><a class="el" href="group__set__func__union.htm#ga91f6dd436ea57421a689ddc27ca3fd47" title="C++ Interface for performing union of two arrays. ">setunion()</a> changed to <a class="el" href="group__set__func__union.htm#gaa793c080cfa2c5ed7f422479e8e0bfe3" title="C++ Interface for performing union of two arrays. ">setUnion()</a></li>
-<li><a class="el" href="group__set__func__intersect.htm#ga367d3f862af46bc86ef5e08f7a29f104" title="C++ Interface for performing intersect of two arrays. ">setintersect()</a> changed to <a class="el" href="group__set__func__intersect.htm#gae4549aee29c563edfb0b4a444fbf9200" title="C++ Interface for performing intersect of two arrays. ">setIntersect()</a></li>
+<li><a class="el" href="group__set__func__union.htm#ga91f6dd436ea57421a689ddc27ca3fd47" title="C++ Interface for finding the union of two arrays. ">setunion()</a> changed to <a class="el" href="group__set__func__union.htm#gaa793c080cfa2c5ed7f422479e8e0bfe3" title="C++ Interface for finding the union of two arrays. ">setUnion()</a></li>
+<li><a class="el" href="group__set__func__intersect.htm#ga367d3f862af46bc86ef5e08f7a29f104" title="C++ Interface for finding the intersection of two arrays. ">setintersect()</a> changed to <a class="el" href="group__set__func__intersect.htm#gae4549aee29c563edfb0b4a444fbf9200" title="C++ Interface for finding the intersection of two arrays. ">setIntersect()</a></li>
 <li><a class="el" href="group__image__func__histequal.htm#gae1c0d4f649c35fa3a9d2e2d9e21c318c" title="C++ Interface for histogram equalization. ">histequal()</a> changed to <a class="el" href="group__image__func__histequal.htm#ga0c09893b2ba7a63663a1893bc5d87e47" title="C++ Interface for histogram equalization. ">histEqual()</a></li>
 <li><a class="el" href="group__image__func__colorspace.htm#gac2f08cedb760f97f069b4ccbb6d48ea8" title="C++ Interface wrapper for colorspace conversion. ">colorspace()</a> changed to <a class="el" href="group__image__func__colorspace.htm#ga9dabba47b9390faacf8fb146605339b0" title="C++ Interface wrapper for colorspace conversion. ">colorSpace()</a></li>
 <li><a class="el" href="namespaceaf.htm#a53c4f9a4b5440458bffe355803514c90" title="Image Filtering. ">filter()</a> deprecated. Use <a class="el" href="group__signal__func__convolve1.htm#ga72a117436a82ed5fe593fe7072c01968" title="C++ Interface for convolution on one dimensional signals. ">convolve1()</a> and <a class="el" href="group__signal__func__convolve2.htm#ga0aec29b4d4c9cf4412420b91c96ffe6c" title="C++ Interface for convolution on two dimensional signals. ">convolve2()</a></li>

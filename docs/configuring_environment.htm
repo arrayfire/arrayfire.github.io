@@ -106,6 +106,7 @@ $(document).ready(function(){initNavTree('configuring_environment.htm','');});
 <li class="level2"><a href="#af_opencl_max_jit_len">AF_OPENCL_MAX_JIT_LEN </a></li>
 <li class="level2"><a href="#af_cuda_max_jit_len">AF_CUDA_MAX_JIT_LEN </a></li>
 <li class="level2"><a href="#af_cpu_max_jit_len">AF_CPU_MAX_JIT_LEN </a></li>
+<li class="level2"><a href="#af_build_lib_custom_path">AF_BUILD_LIB_CUSTOM_PATH </a></li>
 </ul>
 </li>
 </ul>
@@ -195,7 +196,11 @@ AF_CUDA_MAX_JIT_LEN </h2>
 <h2><a class="anchor" id="af_cpu_max_jit_len"></a>
 AF_CPU_MAX_JIT_LEN </h2>
 <p>When set, this environment variable specifies the maximum length of the CPU JIT tree after which evaluation is forced.</p>
-<p>The default value, as of v3.4, 100. This value was 20 for older versions. </p>
+<p>The default value, as of v3.4, 100. This value was 20 for older versions.</p>
+<h2><a class="anchor" id="af_build_lib_custom_path"></a>
+AF_BUILD_LIB_CUSTOM_PATH </h2>
+<p>When set, this environment variable specifies a custom path along which the symbol manager will search for dynamic (shared library) backends to load. This is useful for specialized build configurations that use the unified backend and build shared libraries separately.</p>
+<p>By default, no additional path will be searched for an empty value. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 </div>

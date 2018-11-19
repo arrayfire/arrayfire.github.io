@@ -109,9 +109,10 @@ Functions</h2></td></tr>
 <li>Nearest neighbor - <a class="el" href="defines_8h.htm#ac0b7c1cfd1fb146314d96f17bbfffa68a5357aed0afbcd45da3d48f080bf5a8bf">AF_INTERP_NEAREST</a></li>
 <li>Linear interpolation - <a class="el" href="defines_8h.htm#ac0b7c1cfd1fb146314d96f17bbfffa68a50db9a815ef5d23eee60ca5bda328836">AF_INTERP_LINEAR</a></li>
 <li>Bilinear interpolation - <a class="el" href="defines_8h.htm#ac0b7c1cfd1fb146314d96f17bbfffa68afb4c4ebeb668df33485e7e52596164a8">AF_INTERP_BILINEAR</a></li>
-<li>Cubic interpolation - <a class="el" href="defines_8h.htm#ac0b7c1cfd1fb146314d96f17bbfffa68a148e6fceb975f667a21e3a8b39ac43ff">AF_INTERP_CUBIC</a> </li>
+<li>Cubic interpolation - <a class="el" href="defines_8h.htm#ac0b7c1cfd1fb146314d96f17bbfffa68a148e6fceb975f667a21e3a8b39ac43ff">AF_INTERP_CUBIC</a></li>
 </ul>
-<h2 class="groupheader">Function Documentation</h2>
+<p>Interpolation is performed assuming input data is equally spaced with indices in the range [0, n). The positions are sampled with respect to data at these locations.</p>
+<div class="fragment"><div class="line"></div><div class="line">    <span class="comment">// input data</span></div><div class="line">    <span class="keywordtype">float</span> inv[3] = {10, 20, 30};</div><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> in(3, inv);</div><div class="line"></div><div class="line">    <span class="comment">// positions of interpolated values</span></div><div class="line">    <span class="keywordtype">float</span> pv[5] = {0.0, 0.5, 1.0, 1.5, 2.0};</div><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> pos(5, pv);</div><div class="line"></div><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> interpolated = <a class="code" href="group__signal__func__approx1.htm#ga18117f73cee98f0859f8439607f7f962">approx1</a>(in, pos);</div><div class="line">    <span class="comment">// interpolated == { 10, 15, 20, 25, 30 };</span></div><div class="line"></div></div><!-- fragment --><h2 class="groupheader">Function Documentation</h2>
 <a id="ga0085f85729768af1ca829157335f1cb5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga0085f85729768af1ca829157335f1cb5">&#9670;&nbsp;</a></span>af_approx1()</h2>
 

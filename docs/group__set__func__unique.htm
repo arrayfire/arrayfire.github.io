@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('group__set__func__unique.htm','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Find unique values from an input.  
+<p>Finds unique values from an input set.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -107,8 +107,12 @@ Functions</h2></td></tr>
 <tr class="separator:gac33fd89ba6a7582753232c007ff135bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Find unique values from an input. </p>
-<h2 class="groupheader">Function Documentation</h2>
+<p>Finds unique values from an input set. </p>
+<p>The input must be a one-dimensional array. Batching is not currently supported.</p>
+<p>A simple example of finding the unique values of a set using <a class="el" href="group__set__func__unique.htm#ga73f2f768af96755af50df21e384287c6" title="C++ Interface for getting unique values. ">setUnique()</a> can be seen below:</p>
+<div class="fragment"><div class="line"></div><div class="line">    <span class="comment">// input data</span></div><div class="line">    <span class="keywordtype">int</span> h_set[6] = {3, 2, 3, 3, 2, 1};</div><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> <span class="keyword">set</span>(6, h_set);</div><div class="line"></div><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> unique = <a class="code" href="group__set__func__unique.htm#ga73f2f768af96755af50df21e384287c6">setUnique</a>(<span class="keyword">set</span>);</div><div class="line">    <span class="comment">// unique == { 1, 2, 3 };</span></div><div class="line"></div></div><!-- fragment --><p> The function can be sped up if it is known that the inputs are sorted.</p>
+<div class="fragment"><div class="line"></div><div class="line">    <span class="comment">// input data</span></div><div class="line">    <span class="keywordtype">int</span> h_set[6] = {1, 2, 2, 3, 3, 3};</div><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> <span class="keyword">set</span>(6, h_set);</div><div class="line"></div><div class="line">    <span class="comment">// is_sorted flag specifies if input is sorted,</span></div><div class="line">    <span class="comment">// allows algorithm to skip internal sorting step</span></div><div class="line">    <span class="keyword">const</span> <span class="keywordtype">bool</span> is_sorted = <span class="keyword">true</span>;</div><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> unique = <a class="code" href="group__set__func__unique.htm#ga73f2f768af96755af50df21e384287c6">setUnique</a>(<span class="keyword">set</span>, is_sorted);</div><div class="line">    <span class="comment">// unique == { 1, 2, 3 };</span></div><div class="line"></div></div><!-- fragment --><p> The inputs can be sorted in ascending or descending order.</p>
+<div class="fragment"><div class="line"></div><div class="line">    <span class="comment">// input data</span></div><div class="line">    <span class="keywordtype">int</span> h_set[6] = {3, 3, 3, 2, 2, 1};</div><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> <span class="keyword">set</span>(6, h_set);</div><div class="line"></div><div class="line">    <span class="comment">// is_sorted flag specifies if input is sorted,</span></div><div class="line">    <span class="comment">// allows algorithm to skip internal sorting step</span></div><div class="line">    <span class="comment">// input can be sorted in ascending or descending order</span></div><div class="line">    <span class="keyword">const</span> <span class="keywordtype">bool</span> is_sorted = <span class="keyword">true</span>;</div><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> unique = <a class="code" href="group__set__func__unique.htm#ga73f2f768af96755af50df21e384287c6">setUnique</a>(<span class="keyword">set</span>, is_sorted);</div><div class="line">    <span class="comment">// unique == { 3, 2, 1 };</span></div><div class="line"></div></div><!-- fragment --><h2 class="groupheader">Function Documentation</h2>
 <a id="ga6afa1de48cbbc4b2df530c2530087943"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga6afa1de48cbbc4b2df530c2530087943">&#9670;&nbsp;</a></span>af_set_unique()</h2>
 

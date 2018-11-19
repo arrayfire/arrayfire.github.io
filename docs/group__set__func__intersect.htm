@@ -91,24 +91,27 @@ $(document).ready(function(){initNavTree('group__set__func__intersect.htm','');}
 </div><!--header-->
 <div class="contents">
 
-<p>Find intersection of two inputs.  
+<p>Find the intersection of two sets.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:gae4549aee29c563edfb0b4a444fbf9200"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="classaf_1_1array.htm">array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__set__func__intersect.htm#gae4549aee29c563edfb0b4a444fbf9200">setIntersect</a> (const <a class="el" href="classaf_1_1array.htm">array</a> &amp;first, const <a class="el" href="classaf_1_1array.htm">array</a> &amp;second, const bool is_unique=false)</td></tr>
-<tr class="memdesc:gae4549aee29c563edfb0b4a444fbf9200"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface for performing intersect of two arrays.  <a href="group__set__func__intersect.htm#gae4549aee29c563edfb0b4a444fbf9200">More...</a><br /></td></tr>
+<tr class="memdesc:gae4549aee29c563edfb0b4a444fbf9200"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface for finding the intersection of two arrays.  <a href="group__set__func__intersect.htm#gae4549aee29c563edfb0b4a444fbf9200">More...</a><br /></td></tr>
 <tr class="separator:gae4549aee29c563edfb0b4a444fbf9200"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga985f9332c5f858eec66c717881ef2607"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="defines_8h.htm#a82b94dc53bbd100a0e8ca9dd356aaf4f">af_err</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__set__func__intersect.htm#ga985f9332c5f858eec66c717881ef2607">af_set_intersect</a> (<a class="el" href="defines_8h.htm#a8e45f4aa3dbea6a7aa021dbc50a4a089">af_array</a> *out, const <a class="el" href="defines_8h.htm#a8e45f4aa3dbea6a7aa021dbc50a4a089">af_array</a> first, const <a class="el" href="defines_8h.htm#a8e45f4aa3dbea6a7aa021dbc50a4a089">af_array</a> second, const bool is_unique)</td></tr>
-<tr class="memdesc:ga985f9332c5f858eec66c717881ef2607"><td class="mdescLeft">&#160;</td><td class="mdescRight">C Interface for performing intersect of two arrays.  <a href="#ga985f9332c5f858eec66c717881ef2607">More...</a><br /></td></tr>
+<tr class="memdesc:ga985f9332c5f858eec66c717881ef2607"><td class="mdescLeft">&#160;</td><td class="mdescRight">C Interface for finding the intersection of two arrays.  <a href="#ga985f9332c5f858eec66c717881ef2607">More...</a><br /></td></tr>
 <tr class="separator:ga985f9332c5f858eec66c717881ef2607"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga367d3f862af46bc86ef5e08f7a29f104"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="classaf_1_1array.htm">array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__set__func__intersect.htm#ga367d3f862af46bc86ef5e08f7a29f104">setintersect</a> (const <a class="el" href="classaf_1_1array.htm">array</a> &amp;first, const <a class="el" href="classaf_1_1array.htm">array</a> &amp;second, const bool is_unique=false)</td></tr>
-<tr class="memdesc:ga367d3f862af46bc86ef5e08f7a29f104"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface for performing intersect of two arrays.  <a href="group__set__func__intersect.htm#ga367d3f862af46bc86ef5e08f7a29f104">More...</a><br /></td></tr>
+<tr class="memdesc:ga367d3f862af46bc86ef5e08f7a29f104"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface for finding the intersection of two arrays.  <a href="group__set__func__intersect.htm#ga367d3f862af46bc86ef5e08f7a29f104">More...</a><br /></td></tr>
 <tr class="separator:ga367d3f862af46bc86ef5e08f7a29f104"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Find intersection of two inputs. </p>
-<h2 class="groupheader">Function Documentation</h2>
+<p>Find the intersection of two sets. </p>
+<p>The inputs must be one-dimensional arrays. Batching is not currently supported.</p>
+<p>A simple example of finding the intersection of two sets using <a class="el" href="group__set__func__intersect.htm#gae4549aee29c563edfb0b4a444fbf9200" title="C++ Interface for finding the intersection of two arrays. ">setIntersect()</a> can be seen below:</p>
+<div class="fragment"><div class="line"></div><div class="line">    <span class="comment">// input data</span></div><div class="line">    <span class="keywordtype">int</span> h_setA[4] = {1, 2, 3, 3};</div><div class="line">    <span class="keywordtype">int</span> h_setB[4] = {3, 3, 4, 5};</div><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> setA(4, h_setA);</div><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> setB(4, h_setB);</div><div class="line"></div><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> setA_B = <a class="code" href="group__set__func__intersect.htm#gae4549aee29c563edfb0b4a444fbf9200">setIntersect</a>(setA, setB);</div><div class="line">    <span class="comment">// setA_B == { 3 };</span></div><div class="line"></div></div><!-- fragment --><p> The function can be sped up if it is known that each input is sorted in increasing order and its values are unique.</p>
+<div class="fragment"><div class="line"></div><div class="line">    <span class="comment">// input data</span></div><div class="line">    <span class="keywordtype">int</span> h_setA[4] = {1, 2, 3, 4};</div><div class="line">    <span class="keywordtype">int</span> h_setB[4] = {2, 3, 4, 5};</div><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> setA(4, h_setA);</div><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> setB(4, h_setB);</div><div class="line"></div><div class="line">    <span class="keyword">const</span> <span class="keywordtype">bool</span> is_unique = <span class="keyword">true</span>;</div><div class="line">    <span class="comment">// is_unique flag specifies if inputs are unique,</span></div><div class="line">    <span class="comment">// allows algorithm to skip internal calls to setUnique</span></div><div class="line">    <span class="comment">// inputs must be unique and sorted in increasing order</span></div><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> setA_B = <a class="code" href="group__set__func__intersect.htm#gae4549aee29c563edfb0b4a444fbf9200">setIntersect</a>(setA, setB, is_unique);</div><div class="line">    <span class="comment">// setA_B == { 2, 3, 4 };</span></div><div class="line"></div></div><!-- fragment --><h2 class="groupheader">Function Documentation</h2>
 <a id="ga985f9332c5f858eec66c717881ef2607"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga985f9332c5f858eec66c717881ef2607">&#9670;&nbsp;</a></span>af_set_intersect()</h2>
 
@@ -147,12 +150,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>C Interface for performing intersect of two arrays. </p>
+<p>C Interface for finding the intersection of two arrays. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>will contain the intersection of <code>first</code> and <code>second</code> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>is the first array </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>is the second array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>is the first input array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>is the second input array </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">is_unique</td><td>if true, skips calling unique internally </td></tr>
   </table>
   </dd>
@@ -193,16 +196,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>C++ Interface for performing intersect of two arrays. </p>
+<p>C++ Interface for finding the intersection of two arrays. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>is the first array </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>is the second array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>is the first input array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>is the second input array </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">is_unique</td><td>if true, skips calling unique internally </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the intersection of <code>first</code> and <code>second</code> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>unique values that are present in both <code>first</code> and <code>second(intersection)</code> in increasing order </dd></dl>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.htm#_deprecated000013">Deprecated:</a></b></dt><dd>Use <a class="el" href="group__set__func__intersect.htm#gae4549aee29c563edfb0b4a444fbf9200">setIntersect</a> instead </dd></dl>
 
 </div>
@@ -239,16 +242,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>C++ Interface for performing intersect of two arrays. </p>
+<p>C++ Interface for finding the intersection of two arrays. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>is the first array </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>is the second array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>is the first input array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>is the second input array </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">is_unique</td><td>if true, skips calling unique internally </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the intersection of <code>first</code> and <code>second</code> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>unique values that are present in both <code>first</code> and <code>second(intersection)</code> in increasing order </dd></dl>
 
 </div>
 </div>

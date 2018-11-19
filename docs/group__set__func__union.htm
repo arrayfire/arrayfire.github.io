@@ -91,24 +91,27 @@ $(document).ready(function(){initNavTree('group__set__func__union.htm','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Find union of two inputs.  
+<p>Find the union of two sets.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:gaa793c080cfa2c5ed7f422479e8e0bfe3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="classaf_1_1array.htm">array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__set__func__union.htm#gaa793c080cfa2c5ed7f422479e8e0bfe3">setUnion</a> (const <a class="el" href="classaf_1_1array.htm">array</a> &amp;first, const <a class="el" href="classaf_1_1array.htm">array</a> &amp;second, const bool is_unique=false)</td></tr>
-<tr class="memdesc:gaa793c080cfa2c5ed7f422479e8e0bfe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface for performing union of two arrays.  <a href="group__set__func__union.htm#gaa793c080cfa2c5ed7f422479e8e0bfe3">More...</a><br /></td></tr>
+<tr class="memdesc:gaa793c080cfa2c5ed7f422479e8e0bfe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface for finding the union of two arrays.  <a href="group__set__func__union.htm#gaa793c080cfa2c5ed7f422479e8e0bfe3">More...</a><br /></td></tr>
 <tr class="separator:gaa793c080cfa2c5ed7f422479e8e0bfe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaabeead0c0dc360db9398e9703dbb273f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="defines_8h.htm#a82b94dc53bbd100a0e8ca9dd356aaf4f">af_err</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__set__func__union.htm#gaabeead0c0dc360db9398e9703dbb273f">af_set_union</a> (<a class="el" href="defines_8h.htm#a8e45f4aa3dbea6a7aa021dbc50a4a089">af_array</a> *out, const <a class="el" href="defines_8h.htm#a8e45f4aa3dbea6a7aa021dbc50a4a089">af_array</a> first, const <a class="el" href="defines_8h.htm#a8e45f4aa3dbea6a7aa021dbc50a4a089">af_array</a> second, const bool is_unique)</td></tr>
-<tr class="memdesc:gaabeead0c0dc360db9398e9703dbb273f"><td class="mdescLeft">&#160;</td><td class="mdescRight">C Interface for performing union of two arrays.  <a href="#gaabeead0c0dc360db9398e9703dbb273f">More...</a><br /></td></tr>
+<tr class="memdesc:gaabeead0c0dc360db9398e9703dbb273f"><td class="mdescLeft">&#160;</td><td class="mdescRight">C Interface for finding the union of two arrays.  <a href="#gaabeead0c0dc360db9398e9703dbb273f">More...</a><br /></td></tr>
 <tr class="separator:gaabeead0c0dc360db9398e9703dbb273f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga91f6dd436ea57421a689ddc27ca3fd47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="classaf_1_1array.htm">array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__set__func__union.htm#ga91f6dd436ea57421a689ddc27ca3fd47">setunion</a> (const <a class="el" href="classaf_1_1array.htm">array</a> &amp;first, const <a class="el" href="classaf_1_1array.htm">array</a> &amp;second, const bool is_unique=false)</td></tr>
-<tr class="memdesc:ga91f6dd436ea57421a689ddc27ca3fd47"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface for performing union of two arrays.  <a href="group__set__func__union.htm#ga91f6dd436ea57421a689ddc27ca3fd47">More...</a><br /></td></tr>
+<tr class="memdesc:ga91f6dd436ea57421a689ddc27ca3fd47"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface for finding the union of two arrays.  <a href="group__set__func__union.htm#ga91f6dd436ea57421a689ddc27ca3fd47">More...</a><br /></td></tr>
 <tr class="separator:ga91f6dd436ea57421a689ddc27ca3fd47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Find union of two inputs. </p>
-<h2 class="groupheader">Function Documentation</h2>
+<p>Find the union of two sets. </p>
+<p>The inputs must be one-dimensional arrays. Batching is not currently supported.</p>
+<p>A simple example of finding the union of two sets using <a class="el" href="group__set__func__union.htm#gaa793c080cfa2c5ed7f422479e8e0bfe3" title="C++ Interface for finding the union of two arrays. ">setUnion()</a> can be seen below:</p>
+<div class="fragment"><div class="line"></div><div class="line">    <span class="comment">// input data</span></div><div class="line">    <span class="keywordtype">int</span> h_setA[4] = {1, 2, 3, 3};</div><div class="line">    <span class="keywordtype">int</span> h_setB[4] = {3, 4, 5, 5};</div><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> setA(4, h_setA);</div><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> setB(4, h_setB);</div><div class="line"></div><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> setAB = <a class="code" href="group__set__func__union.htm#gaa793c080cfa2c5ed7f422479e8e0bfe3">setUnion</a>(setA, setB);</div><div class="line">    <span class="comment">// setAB == { 1, 2, 3, 4, 5 };</span></div><div class="line"></div></div><!-- fragment --><p> The function can be sped up if it is known that each input is sorted in increasing order and its values are unique.</p>
+<div class="fragment"><div class="line"></div><div class="line">    <span class="comment">// input data</span></div><div class="line">    <span class="keywordtype">int</span> h_setA[4] = {1, 2, 3, 4};</div><div class="line">    <span class="keywordtype">int</span> h_setB[4] = {2, 3, 4, 5};</div><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> setA(4, h_setA);</div><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> setB(4, h_setB);</div><div class="line"></div><div class="line">    <span class="keyword">const</span> <span class="keywordtype">bool</span> is_unique = <span class="keyword">true</span>;</div><div class="line">    <span class="comment">// is_unique flag specifies if inputs are unique,</span></div><div class="line">    <span class="comment">// allows algorithm to skip internal calls to setUnique</span></div><div class="line">    <span class="comment">// inputs must be unique and sorted in increasing order</span></div><div class="line">    <a class="code" href="classaf_1_1array.htm">af::array</a> setAB = <a class="code" href="group__set__func__union.htm#gaa793c080cfa2c5ed7f422479e8e0bfe3">setUnion</a>(setA, setB, is_unique);</div><div class="line">    <span class="comment">// setAB == { 1, 2, 3, 4, 5 };</span></div><div class="line"></div></div><!-- fragment --><h2 class="groupheader">Function Documentation</h2>
 <a id="gaabeead0c0dc360db9398e9703dbb273f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaabeead0c0dc360db9398e9703dbb273f">&#9670;&nbsp;</a></span>af_set_union()</h2>
 
@@ -147,12 +150,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>C Interface for performing union of two arrays. </p>
+<p>C Interface for finding the union of two arrays. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>will contain the union of <code>first</code> and <code>second</code> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>is the first array </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>is the second array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>is the first input array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>is the second input array </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">is_unique</td><td>if true, skips calling unique internally </td></tr>
   </table>
   </dd>
@@ -193,16 +196,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>C++ Interface for performing union of two arrays. </p>
+<p>C++ Interface for finding the union of two arrays. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>is the first array </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>is the second array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>is the first input array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>is the second input array </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">is_unique</td><td>if true, skips calling unique internally </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the union of <code>first</code> and <code>second</code> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>all unique values present in <code>first</code> and <code>second</code> (union) in increasing order </dd></dl>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.htm#_deprecated000012">Deprecated:</a></b></dt><dd>Use <a class="el" href="group__set__func__union.htm#gaa793c080cfa2c5ed7f422479e8e0bfe3">setUnion</a> instead </dd></dl>
 
 </div>
@@ -239,16 +242,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>C++ Interface for performing union of two arrays. </p>
+<p>C++ Interface for finding the union of two arrays. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>is the first array </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>is the second array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>is the first input array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>is the second input array </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">is_unique</td><td>if true, skips calling unique internally </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the union of <code>first</code> and <code>second</code> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>all unique values present in <code>first</code> and <code>second</code> (union) in increasing order </dd></dl>
 
 </div>
 </div>

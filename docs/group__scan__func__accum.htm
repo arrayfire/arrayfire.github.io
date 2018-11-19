@@ -91,21 +91,23 @@ $(document).ready(function(){initNavTree('group__scan__func__accum.htm','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Perform inclusive sum along specified dimension.  
+<p>Calculate the cumulative sum (inclusive) along the specified dimension.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:gae450135c4ae1bdaa4489804a215f3214"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="classaf_1_1array.htm">array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__scan__func__accum.htm#gae450135c4ae1bdaa4489804a215f3214">accum</a> (const <a class="el" href="classaf_1_1array.htm">array</a> &amp;in, const int dim=0)</td></tr>
-<tr class="memdesc:gae450135c4ae1bdaa4489804a215f3214"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface inclusive sum (cumulative sum) of an array.  <a href="group__scan__func__accum.htm#gae450135c4ae1bdaa4489804a215f3214">More...</a><br /></td></tr>
+<tr class="memdesc:gae450135c4ae1bdaa4489804a215f3214"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ Interface for computing the cumulative sum (inclusive) of an array.  <a href="group__scan__func__accum.htm#gae450135c4ae1bdaa4489804a215f3214">More...</a><br /></td></tr>
 <tr class="separator:gae450135c4ae1bdaa4489804a215f3214"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga50d499e844e0b63e338cb3ea50439629"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="defines_8h.htm#a82b94dc53bbd100a0e8ca9dd356aaf4f">af_err</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__scan__func__accum.htm#ga50d499e844e0b63e338cb3ea50439629">af_accum</a> (<a class="el" href="defines_8h.htm#a8e45f4aa3dbea6a7aa021dbc50a4a089">af_array</a> *out, const <a class="el" href="defines_8h.htm#a8e45f4aa3dbea6a7aa021dbc50a4a089">af_array</a> in, const int dim)</td></tr>
-<tr class="memdesc:ga50d499e844e0b63e338cb3ea50439629"><td class="mdescLeft">&#160;</td><td class="mdescRight">C Interface inclusive sum (cumulative sum) of an array.  <a href="#ga50d499e844e0b63e338cb3ea50439629">More...</a><br /></td></tr>
+<tr class="memdesc:ga50d499e844e0b63e338cb3ea50439629"><td class="mdescLeft">&#160;</td><td class="mdescRight">C Interface for computing the cumulative sum (inclusive) of an array.  <a href="#ga50d499e844e0b63e338cb3ea50439629">More...</a><br /></td></tr>
 <tr class="separator:ga50d499e844e0b63e338cb3ea50439629"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Perform inclusive sum along specified dimension. </p>
-<p>This table defines the return value types for the corresponding input types</p>
+<p>Calculate the cumulative sum (inclusive) along the specified dimension. </p>
+<p>For a 1D array \(X\), the inclusive cumulative sum calculates \(x_i = \sum_{p=0}^{i}x_p\) for every \(x \in X\). Here is a simple example for the 1D case:</p>
+<div class="fragment"><div class="line">    <span class="keywordtype">float</span> hA[] = {0, 1, 2, 3, 4};</div><div class="line">    <a class="code" href="group__opencl__mat.htm#ga5434aaf76be37fae92ac5086315516f0">array</a> A(5, hA);</div><div class="line">    <span class="comment">//  0.</span></div><div class="line">    <span class="comment">//  1.</span></div><div class="line">    <span class="comment">//  2.</span></div><div class="line">    <span class="comment">//  3.</span></div><div class="line">    <span class="comment">//  4.</span></div><div class="line"></div><div class="line">    <a class="code" href="group__opencl__mat.htm#ga5434aaf76be37fae92ac5086315516f0">array</a> accumA = <a class="code" href="group__scan__func__accum.htm#gae450135c4ae1bdaa4489804a215f3214">accum</a>(A);</div><div class="line">    <span class="comment">//  0.</span></div><div class="line">    <span class="comment">//  1.</span></div><div class="line">    <span class="comment">//  3.</span></div><div class="line">    <span class="comment">//  6.</span></div><div class="line">    <span class="comment">//  10.</span></div></div><!-- fragment --><p> For 2D arrays (and higher dimensions), you can specify the dimension along which the cumulative sum will be calculated. Thus, the formula above will be calculated for all array slices along the specified dimension (in the 2D case for example, this looks like \(x_{i,j} = \sum_{p=0}^{j}x_{i,p}\) if the second dimension (dim1) was chosen). If no dimension is specified, then the first dimension (dim0) is used by default (only in the C++ API; the dimension is required to be specified in the C API):</p>
+<div class="fragment"><div class="line">    <span class="keywordtype">float</span> hB[] = {0, 1, 2, 3, 4, 5, 6, 7, 8};</div><div class="line">    <a class="code" href="group__opencl__mat.htm#ga5434aaf76be37fae92ac5086315516f0">array</a> B(3, 3, hB);</div><div class="line">    <span class="comment">//  0.     3.     6.</span></div><div class="line">    <span class="comment">//  1.     4.     7.</span></div><div class="line">    <span class="comment">//  2.     5.     8.</span></div><div class="line"></div><div class="line">    <a class="code" href="group__opencl__mat.htm#ga5434aaf76be37fae92ac5086315516f0">array</a> accumB_dim0 = <a class="code" href="group__scan__func__accum.htm#gae450135c4ae1bdaa4489804a215f3214">accum</a>(B);</div><div class="line">    <span class="comment">//  0.     3.     6.</span></div><div class="line">    <span class="comment">//  1.     7.     13.</span></div><div class="line">    <span class="comment">//  3.     12.    21.</span></div><div class="line"></div><div class="line">    <a class="code" href="group__opencl__mat.htm#ga5434aaf76be37fae92ac5086315516f0">array</a> accumB_dim1 = <a class="code" href="group__scan__func__accum.htm#gae450135c4ae1bdaa4489804a215f3214">accum</a>(B, 1);</div><div class="line">    <span class="comment">//  0.     3.     9.</span></div><div class="line">    <span class="comment">//  1.     5.     12.</span></div><div class="line">    <span class="comment">//  2.     7.     15.</span></div></div><!-- fragment --><p> The output array type may be different from the input array type. The following table defines the corresponding output types for each input type:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Input Type  </th><th class="markdownTableHeadNone">Output Type -----&mdash;   </th></tr>
@@ -146,15 +148,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>C++ Interface inclusive sum (cumulative sum) of an array. </p>
+<p>C++ Interface for computing the cumulative sum (inclusive) of an array. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">in</td><td>is the input array </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dim</td><td>The dimension along which exclusive sum is performed </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dim</td><td>is the dimension along which the inclusive sum is calculated </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the output containing exclusive sums of the input </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the output containing inclusive sums of the input </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="image_processing_2binary_thresholding_8cpp-example.htm#a9">image_processing/binary_thresholding.cpp</a>.</dd>
 </dl>
 </div>
@@ -191,12 +193,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>C Interface inclusive sum (cumulative sum) of an array. </p>
+<p>C Interface for computing the cumulative sum (inclusive) of an array. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>will contain exclusive sums of the input </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>will contain inclusive sums of the input </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">in</td><td>is the input array </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dim</td><td>The dimension along which exclusive sum is performed </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dim</td><td>is the dimension along which the inclusive sum is calculated </td></tr>
   </table>
   </dd>
 </dl>

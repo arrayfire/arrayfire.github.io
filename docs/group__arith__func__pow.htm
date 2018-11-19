@@ -114,6 +114,26 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Raise an array to a power. </p>
+<p>If the input array has values beyond what a floating point type can represent, then there is no guarantee that the results will be accurate. The exact type mapping from integral types to floating point types used to compute power is given below.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Input Type  </th><th class="markdownTableHeadLeft">Compute Type   </th></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">unsigned long long  </td><td class="markdownTableBodyLeft">double   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">long long  </td><td class="markdownTableBodyLeft">double   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">unsigned int  </td><td class="markdownTableBodyLeft">double   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">int  </td><td class="markdownTableBodyLeft">double   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">unsigned short  </td><td class="markdownTableBodyLeft">float   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">short  </td><td class="markdownTableBodyLeft">float   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">unsigned char  </td><td class="markdownTableBodyLeft">float   </td></tr>
+</table>
+<p>The output array will be of the same type as input.</p>
 <dl class="section note"><dt>Note</dt><dd>This function supports real inputs only. Complex inputs are not yet supported. </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga0f28be1a9c8b176a78c4a47f483e7fc6"></a>

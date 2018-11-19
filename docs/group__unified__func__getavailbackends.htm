@@ -97,8 +97,10 @@ $(document).ready(function(){initNavTree('group__unified__func__getavailbackends
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga92a9ce85385763bfa83911cda905afe8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> <a class="el" href="defines_8h.htm#a82b94dc53bbd100a0e8ca9dd356aaf4f">af_err</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__unified__func__getavailbackends.htm#ga92a9ce85385763bfa83911cda905afe8">af_get_available_backends</a> (int *backends)</td></tr>
+<tr class="memdesc:ga92a9ce85385763bfa83911cda905afe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a flag of all available backends.  <a href="#ga92a9ce85385763bfa83911cda905afe8">More...</a><br /></td></tr>
 <tr class="separator:ga92a9ce85385763bfa83911cda905afe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga32fc807a8d4680987a915362573c1a2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defines_8h.htm#ab23e67549eba2cfbaf0eb5f88f947e48">AFAPI</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__unified__func__getavailbackends.htm#ga32fc807a8d4680987a915362573c1a2c">getAvailableBackends</a> ()</td></tr>
+<tr class="memdesc:ga32fc807a8d4680987a915362573c1a2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a flag of all available backends.  <a href="group__unified__func__getavailbackends.htm#ga32fc807a8d4680987a915362573c1a2c">More...</a><br /></td></tr>
 <tr class="separator:ga32fc807a8d4680987a915362573c1a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -141,9 +143,11 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
+
+<p>Returns a flag of all available backends. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> backends = 0;</div><div class="line"><a class="code" href="group__unified__func__getavailbackends.htm#ga92a9ce85385763bfa83911cda905afe8">af_get_available_backends</a>(&amp;backends);</div><div class="line"></div><div class="line"><span class="keywordflow">if</span>(backends &amp; <a class="code" href="defines_8h.htm#ae7db039065fb80471a750bde2f652acaa8c611d6f808d8ad5fb1af0254b539dab">AF_BACKEND_CUDA</a>) {</div><div class="line">    <span class="comment">// The CUDA backend is available</span></div><div class="line">}</div></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">backends</td><td>is the OR sum of the backends available. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">backends</td><td>A flag of all available backends. Use the &amp;(and) operator to check if a particular backend is available</td></tr>
   </table>
   </dd>
 </dl>
@@ -165,7 +169,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>OR sum of the backends available </dd></dl>
+
+<p>Returns a flag of all available backends. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> backends = <a class="code" href="group__unified__func__getavailbackends.htm#ga32fc807a8d4680987a915362573c1a2c">getAvailableBackends</a>();</div><div class="line"></div><div class="line"><span class="keywordflow">if</span>(backends &amp; <a class="code" href="defines_8h.htm#ae7db039065fb80471a750bde2f652acaa8c611d6f808d8ad5fb1af0254b539dab">AF_BACKEND_CUDA</a>) {</div><div class="line"><span class="comment">// The CUDA backend is available</span></div><div class="line">}</div></div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>A flag of available backends </dd></dl>
 
 </div>
 </div>
