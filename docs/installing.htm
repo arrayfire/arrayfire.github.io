@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('installing.htm','');});
 <p>For more information on using ArrayFire on Windows, visit the following <a href="http://arrayfire.org/docs/using_on_windows.htm">page</a>.</p>
 <h2><a class="anchor" id="Linux"></a> Linux</h2>
 <p>Once you have downloaded the ArrayFire installer, execute the installer from the terminal as shown below. Set the <code>--prefix</code> argument to the directory you would like to install ArrayFire to - we recommend <code>/opt</code>. </p><pre class="fragment">./Arrayfire_*_Linux_x86_64.sh --include-subdir --prefix=/opt
-</pre><p>Given sudo permissions, you can add the ArrayFire libraries via <code>ldconfig</code> like so: </p><pre class="fragment">echo /opt/arrayfire/lib &gt; /etc/ld.so.conf.d/arrayfire.conf
+</pre><p>Given sudo permissions, you can add the ArrayFire libraries via <code>ldconfig</code> like so: </p><pre class="fragment">echo /opt/arrayfire/lib64 &gt; /etc/ld.so.conf.d/arrayfire.conf
 sudo ldconfig
 </pre><p>Otherwise, you will need to set the <code>LD_LIBRARY_PATH</code> environment variable in order to let your shared library loader find the ArrayFire libraries.</p>
 <p>For more information on using ArrayFire on Linux, visit the following <a href="http://arrayfire.org/docs/using_on_linux.htm">page</a>.</p>
