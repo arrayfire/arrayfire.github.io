@@ -6,6 +6,7 @@ var group__data__mat =
     [ "identity", "group__data__func__identity.htm", "group__data__func__identity" ],
     [ "iota", "group__data__func__iota.htm", "group__data__func__iota" ],
     [ "lower", "group__data__func__lower.htm", "group__data__func__lower" ],
+    [ "pad", "group__data__func__pad.htm", "group__data__func__pad" ],
     [ "range", "group__data__func__range.htm", "group__data__func__range" ],
     [ "upper", "group__data__func__upper.htm", "group__data__func__upper" ]
 ];

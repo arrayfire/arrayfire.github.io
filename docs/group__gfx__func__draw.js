@@ -23,12 +23,12 @@ var group__gfx__func__draw =
     [ "plot", "group__gfx__func__draw.htm#ga8e01736df3d805a5488c609e2573818b", null ],
     [ "plot3", "group__gfx__func__draw.htm#ga8e04ec129034e9fe769f3e6b14cd087f", null ],
     [ "scatter", "group__gfx__func__draw.htm#gaf95ec84f9788b42fd443c9523792e4a4", null ],
-    [ "scatter", "group__gfx__func__draw.htm#gabfc0b01364885bdf3ce39c6205dc0287", null ],
     [ "scatter", "group__gfx__func__draw.htm#ga73406db589e5090c051baae0af175df9", null ],
+    [ "scatter", "group__gfx__func__draw.htm#gabfc0b01364885bdf3ce39c6205dc0287", null ],
     [ "scatter3", "group__gfx__func__draw.htm#ga3bbfbe1b60741a259d2146b3ab50ace3", null ],
     [ "surface", "group__gfx__func__draw.htm#ga1cdb8c3205d70d8feaddd8c30245393f", null ],
     [ "surface", "group__gfx__func__draw.htm#ga2d09aa253b391ce82104352b743bb18c", null ],
     [ "vectorField", "group__gfx__func__draw.htm#ga6d3904749d501e6ee607566dc3e1ecc8", null ],
-    [ "vectorField", "group__gfx__func__draw.htm#ga429ca1fb5b9caa6648b869d2f3686b8f", null ],
-    [ "vectorField", "group__gfx__func__draw.htm#gaa2e113b2f1aef7426adc19dab2660133", null ]
+    [ "vectorField", "group__gfx__func__draw.htm#gaa2e113b2f1aef7426adc19dab2660133", null ],
+    [ "vectorField", "group__gfx__func__draw.htm#ga429ca1fb5b9caa6648b869d2f3686b8f", null ]
 ];

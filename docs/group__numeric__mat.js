@@ -8,6 +8,7 @@ var group__numeric__mat =
     [ "max", "group__arith__func__max.htm", "group__arith__func__max" ],
     [ "min", "group__arith__func__min.htm", "group__arith__func__min" ],
     [ "mod", "group__arith__func__mod.htm", "group__arith__func__mod" ],
+    [ "neg", "group__arith__func__neg.htm", "group__arith__func__neg" ],
     [ "rem", "group__arith__func__rem.htm", "group__arith__func__rem" ],
     [ "round", "group__arith__func__round.htm", "group__arith__func__round" ],
     [ "sign", "group__arith__func__sign.htm", "group__arith__func__sign" ],

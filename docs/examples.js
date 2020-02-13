@@ -28,6 +28,8 @@ var examples =
     [ "image_processing/adaptive_thresholding.cpp", "image_processing_2adaptive_thresholding_8cpp-example.htm", null ],
     [ "image_processing/binary_thresholding.cpp", "image_processing_2binary_thresholding_8cpp-example.htm", null ],
     [ "image_processing/brain_segmentation.cpp", "image_processing_2brain_segmentation_8cpp-example.htm", null ],
+    [ "image_processing/confidence_connected_components.cpp", "image_processing_2confidence_connected_components_8cpp-example.htm", null ],
+    [ "image_processing/deconvolution.cpp", "image_processing_2deconvolution_8cpp-example.htm", null ],
     [ "image_processing/edge.cpp", "image_processing_2edge_8cpp-example.htm", null ],
     [ "image_processing/filters.cpp", "image_processing_2filters_8cpp-example.htm", null ],
     [ "image_processing/gradient_diffusion.cpp", "image_processing_2gradient_diffusion_8cpp-example.htm", null ],

@@ -1,0 +1,25 @@
+var group__memory__manager__utils =
+[
+    [ "af_create_memory_manager", "group__memory__manager__utils.htm#ga32e06968596b810f1ba57faafd5dff79", null ],
+    [ "af_memory_manager_get_payload", "group__memory__manager__utils.htm#ga55fd8762e4ac5b690c6952b93d82f12a", null ],
+    [ "af_memory_manager_set_add_memory_management_fn", "group__memory__manager__utils.htm#ga8886512bef0257958dcd107ed8f35b2c", null ],
+    [ "af_memory_manager_set_alloc_fn", "group__memory__manager__utils.htm#ga78816912fc60036370878cb0c4e01720", null ],
+    [ "af_memory_manager_set_allocated_fn", "group__memory__manager__utils.htm#gafc9628fa847d6af006d3b2e3eb8a068f", null ],
+    [ "af_memory_manager_set_get_memory_pressure_fn", "group__memory__manager__utils.htm#ga926047074369341d739553e3ee82ccec", null ],
+    [ "af_memory_manager_set_initialize_fn", "group__memory__manager__utils.htm#ga119a6ccd41c8e10904c63a3908777b6b", null ],
+    [ "af_memory_manager_set_is_user_locked_fn", "group__memory__manager__utils.htm#gab14aefb48956cc2b0b8cded43f00c87d", null ],
+    [ "af_memory_manager_set_jit_tree_exceeds_memory_pressure_fn", "group__memory__manager__utils.htm#ga19abd13bd88a53385514c7667b2af96a", null ],
+    [ "af_memory_manager_set_payload", "group__memory__manager__utils.htm#ga84f56e6b603f54259f70d76d5b1b4676", null ],
+    [ "af_memory_manager_set_print_info_fn", "group__memory__manager__utils.htm#gade1ddbfaf4ee4b9c501dc7afe3420706", null ],
+    [ "af_memory_manager_set_remove_memory_management_fn", "group__memory__manager__utils.htm#gaf3188992d0df0011e6682205f3b599f0", null ],
+    [ "af_memory_manager_set_shutdown_fn", "group__memory__manager__utils.htm#gac63faa6bd69e00271b4b6ee56aa5f1d6", null ],
+    [ "af_memory_manager_set_signal_memory_cleanup_fn", "group__memory__manager__utils.htm#ga63a538ca848c5450f18755b2393b4ce2", null ],
+    [ "af_memory_manager_set_unlock_fn", "group__memory__manager__utils.htm#gaeff6058cd7ff4f2fa7b0297cb2c56b11", null ],
+    [ "af_memory_manager_set_user_lock_fn", "group__memory__manager__utils.htm#ga1ba2158568f795a052ca70ac0fd01ae6", null ],
+    [ "af_memory_manager_set_user_unlock_fn", "group__memory__manager__utils.htm#gaa8c4d2aa257c875bc766470612a770d1", null ],
+    [ "af_release_memory_manager", "group__memory__manager__utils.htm#gad927fd93cbf5bcfe62f775c715db53a6", null ],
+    [ "af_set_memory_manager", "group__memory__manager__utils.htm#ga92dbf524cb2fbbcd573d0b6efe6a15f3", null ],
+    [ "af_set_memory_manager_pinned", "group__memory__manager__utils.htm#gad70fa970f7da0e484af22715cfaf43e9", null ],
+    [ "af_unset_memory_manager", "group__memory__manager__utils.htm#gafa1c8bc5478a6df8786b45e1d35de2a8", null ],
+    [ "af_unset_memory_manager_pinned", "group__memory__manager__utils.htm#gad514f39dbdcb56ebbb6f81806dd53524", null ]
+];

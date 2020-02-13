@@ -1,5 +1,5 @@
 var group__random__func__get__seed =
 [
-    [ "af_get_seed", "group__random__func__get__seed.htm#ga97dfc832d96a4d6443abe453f9e0c83a", null ],
-    [ "getSeed", "group__random__func__get__seed.htm#ga810ac88caec8eef11376cbfdcb2bf4e8", null ]
+    [ "af_get_seed", "group__random__func__get__seed.htm#ga685a096ed5568ac58fe66ee11c7a6b37", null ],
+    [ "getSeed", "group__random__func__get__seed.htm#ga0b82c624a5fe69834532ec5ac66078a6", null ]
 ];

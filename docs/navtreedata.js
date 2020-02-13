@@ -1,18 +1,17 @@
 /*
-@ @licstart  The following is the entire license notice for the
+@licstart  The following is the entire license notice for the
 JavaScript code in this file.
 
-Copyright (C) 1997-2017 by Dimitri van Heesch
+Copyright (C) 1997-2019 by Dimitri van Heesch
 
 This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
+it under the terms of version 2 of the GNU General Public License as published by
+the Free Software Foundation
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along
 with this program; if not, write to the Free Software Foundation, Inc.,
@@ -23,24 +22,9 @@ for the JavaScript code in this file
 */
 var NAVTREE =
 [
-  [ "Overview", "index.htm", [
-    [ "Tutorials", "usergroup0.htm", [
-      [ "Installation", "installing.htm", null ],
-      [ "Using on Linux", "using_on_linux.htm", null ],
-      [ "Using on Windows", "using_on_windows.htm", null ],
-      [ "Using on OSX", "using_on_osx.htm", null ],
-      [ "Getting Started", "gettingstarted.htm", null ],
-      [ "Introduction to Vectorization", "vectorization.htm", null ],
-      [ "Array and Matrix Manipulation", "matrixmanipulation.htm", null ],
-      [ "CUDA Interoperability", "interop_cuda.htm", null ],
-      [ "OpenCL Interoperability", "interop_opencl.htm", null ],
-      [ "Unified Backend", "unifiedbackend.htm", null ],
-      [ "Forge Visualization", "forge_visualization.htm", null ],
-      [ "Indexing", "indexing.htm", null ],
-      [ "Timing ArrayFire", "timing.htm", null ],
-      [ "Configuring ArrayFire Environment", "configuring_environment.htm", null ],
-      [ "GFOR Usage", "page_gfor.htm", null ]
-    ] ],
+  [ "ArrayFire", "index.htm", [
+    [ "Overview", "index.htm", null ],
+    [ "Tutorials", "tutorials.htm", null ],
     [ "Functions", "modules.htm", "modules" ],
     [ "Release Notes", "releasenotes.htm", null ],
     [ "Examples", "examples.htm", "examples" ]
@@ -50,20 +34,22 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "benchmarks_2blas_8cpp-example.htm",
-"group__arith__func__atanh.htm#ga4c23b18ca5b3f2ef99520b3fe20b31df",
-"group__arith__func__div.htm",
-"group__arith__func__gt.htm#ga37585e1bad0a7cd2b94936fd246e036a",
-"group__arith__func__min.htm#ga2b842c2d86df978ff68699aeaafca794",
-"group__arith__func__or.htm#ga67f58ee1fb1007aa8532bd6c2e5521a2",
-"group__arith__func__sub.htm#ga417c2a733abd728ab1ce0eb6db5192db",
-"group__array__mem__operator__plus__eq.htm#ga5d595592ac6552d51ca2f2f1c3e4c6d8",
-"group__data__func__range.htm",
-"group__gfx__func__window.htm#ga37fc7eb00ae11c25e1a60d341663d68d",
-"group__imageio__func__save.htm#ga2d73aad096dd1e0022fe7369112168b8",
-"group__method__mat.htm#ga5cc0f3c2307de6b82ede47c9b26da2d0",
-"group__reduce__func__all__true.htm#gaf3f22add3a54fb729a969cf8f669fc2b",
-"group__signal__func__fft__c2r.htm#gaa5efdfd84213a4a07d81a5d534cde5ac",
-"group__stream__func__read.htm#gaf78aa8f367fbd6f408e90f0851e0557a"
+"classaf_1_1randomEngine.htm#ae23ccef546684e77b43d37ba306adc10",
+"group__arith__func__bitand.htm#ga55e3deb59ef941b1cc1bd15d5a8fca68",
+"group__arith__func__div.htm#ga39aa6c258e9fbd17ee88c465705c3673",
+"group__arith__func__gt.htm#ga98391bc7d8eeb5ac9009d60a32e5eca1",
+"group__arith__func__mod.htm#ga25303731dbeb3918b506c5cf4a2d7044",
+"group__arith__func__or.htm#gab56e84873adc6215fc2c117a8a308bf4",
+"group__arith__func__sub.htm#ga80ff99a2e186c23614ea9f36ffc6f0a4",
+"group__array__mem__operator__multiply__eq.htm#ga4aa6c81faf49ca99f9904c1b9948f37e",
+"group__cv__func__hamming__matcher.htm",
+"group__device__func__mem.htm#gab99cb6a3744802742c98714fc88fb991",
+"group__image__func__histequal.htm#ga0c09893b2ba7a63663a1893bc5d87e47",
+"group__lapack__factor__func__lu.htm#gae42d8e18ff303b659fda897409bc5702",
+"group__method__mat.htm#ga99cd74de21bde89f497dac1c2e1b23f1",
+"group__reduce__func__min.htm#ga8739f890dec19e3f9642ae4678229ca4",
+"group__signal__func__fft__c2r.htm",
+"group__transform__func__coordinates.htm#ga536bf2c56bcf9ea6aeeca3f43f188877"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

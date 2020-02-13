@@ -1,6 +1,6 @@
 var group__colorconv__mat =
 [
-    [ "colorspace", "group__image__func__colorspace.htm", "group__image__func__colorspace" ],
+    [ "colorSpace", "group__image__func__colorspace.htm", "group__image__func__colorspace" ],
     [ "gray2rgb", "group__image__func__gray2rgb.htm", "group__image__func__gray2rgb" ],
     [ "hsv2rgb", "group__image__func__hsv2rgb.htm", "group__image__func__hsv2rgb" ],
     [ "rgb2gray", "group__image__func__rgb2gray.htm", "group__image__func__rgb2gray" ],

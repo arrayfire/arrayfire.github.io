@@ -9,7 +9,6 @@ var group__logic__mat =
     [ "gt", "group__arith__func__gt.htm", "group__arith__func__gt" ],
     [ "le", "group__arith__func__le.htm", "group__arith__func__le" ],
     [ "lt", "group__arith__func__lt.htm", "group__arith__func__lt" ],
-    [ "neg", "group__arith__func__neg.htm", "group__arith__func__neg" ],
     [ "neq", "group__arith__func__neq.htm", "group__arith__func__neq" ],
     [ "not", "group__arith__func__not.htm", "group__arith__func__not" ],
     [ "or", "group__arith__func__or.htm", "group__arith__func__or" ]

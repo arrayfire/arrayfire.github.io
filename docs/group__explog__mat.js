@@ -12,6 +12,7 @@ var group__explog__mat =
     [ "log1p", "group__arith__func__log1p.htm", "group__arith__func__log1p" ],
     [ "pow", "group__arith__func__pow.htm", "group__arith__func__pow" ],
     [ "root", "group__arith__func__root.htm", "group__arith__func__root" ],
+    [ "rsqrt", "group__arith__func__rsqrt.htm", "group__arith__func__rsqrt" ],
     [ "sqrt", "group__arith__func__sqrt.htm", "group__arith__func__sqrt" ],
     [ "tgamma", "group__arith__func__tgamma.htm", "group__arith__func__tgamma" ]
 ];
