@@ -30,7 +30,7 @@ var group__gfx__func__window =
     [ "setVisibility", "group__gfx__func__window.htm#ga9ff8d74c894cf172a03900f61887524d", null ],
     [ "show", "group__gfx__func__window.htm#ga4b148f40a95444d5669406b918ad2f52", null ],
     [ "Window", "group__gfx__func__window.htm#ga004cf7aac21e18b5b5675f1b635c3734", null ],
-    [ "Window", "group__gfx__func__window.htm#ga5730679e2a1b3400d35493a41eb8ba92", null ],
+    [ "Window", "group__gfx__func__window.htm#ga7181172cd614347863c18ca6218d6c97", null ],
     [ "Window", "group__gfx__func__window.htm#gada96f4fe8740ad0bf79388378f217c1f", null ],
     [ "Window", "group__gfx__func__window.htm#ga01089293d764f6706f9873c5f5221a8a", null ],
     [ "~Window", "group__gfx__func__window.htm#ga254ab61160c1cd5eaa46cc0475bb7a06", null ]

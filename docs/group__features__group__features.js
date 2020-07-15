@@ -12,7 +12,7 @@ var group__features__group__features =
       [ "getSize", "classaf_1_1features.htm#a8eac22042c61796b77fa0c7bec5caacb", null ],
       [ "getX", "classaf_1_1features.htm#ae8070eab6da9f4d42c3f7b2c219f2f8d", null ],
       [ "getY", "classaf_1_1features.htm#ad4ae029d57eb27f8e4f781ca7887b3b2", null ],
-      [ "operator=", "classaf_1_1features.htm#a80ebc1d19149f390adf195d5197b7f90", null ]
+      [ "operator=", "classaf_1_1features.htm#a36ec25097042f49432e35603ac40e39f", null ]
     ] ],
     [ "af_create_features", "group__features__group__features.htm#gac3ffa28d0fcefabf4d686934a2fbd106", null ],
     [ "af_get_features_num", "group__features__group__features.htm#ga9d5a64f8c3a3a3033e82592b1e2e5980", null ],

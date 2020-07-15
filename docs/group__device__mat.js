@@ -15,6 +15,5 @@ var group__device__mat =
     [ "isHalfAvailable", "group__device__func__half.htm", "group__device__func__half" ],
     [ "pinned", "group__device__func__pinned.htm", "group__device__func__pinned" ],
     [ "setDevice", "group__device__func__set.htm", "group__device__func__set" ],
-    [ "sync", "group__device__func__sync.htm", "group__device__func__sync" ],
-    [ "device", "group__device__mat.htm#gadadd8fc5a8adad8b3b833eb6a4244236", null ]
+    [ "sync", "group__device__func__sync.htm", "group__device__func__sync" ]
 ];
