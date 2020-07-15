@@ -1,6 +1,6 @@
 <!-- HTML header for doxygen 1.8.17-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
@@ -20,7 +20,7 @@
     jax: ["input/TeX","output/HTML-CSS"],
 });
 </script>
-<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<script type="text/javascript" async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="arrayfire.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -96,13 +96,13 @@ $(document).ready(function(){initNavTree('installing.htm',''); initResizable(); 
 <h2><a class="anchor" id="Windows"></a> Windows</h2>
 <p>Prior to installing ArrayFire on Windows, <a href="https://www.microsoft.com/en-in/download/details.aspx?id=48145">download</a> install the Visual Studio 2015 (x64) runtime libraries.</p>
 <p>Once you have downloaded the ArrayFire installer, execute the installer as you normally would on Windows. If you choose not to modify the path during the installation procedure, you'll need to manually add ArrayFire to the path for all users. Simply append <code>%AF_PATH%/lib</code> to the PATH variable so that the loader can find ArrayFire DLLs.</p>
-<p>For more information on using ArrayFire on Windows, visit the following <a href="http://arrayfire.org/docs/using_on_windows.htm">page</a>.</p>
+<p>For more information on using ArrayFire on Windows, visit the following <a href="https://arrayfire.org/docs/using_on_windows.htm">page</a>.</p>
 <h2><a class="anchor" id="Linux"></a> Linux</h2>
 <p>Once you have downloaded the ArrayFire installer, execute the installer from the terminal as shown below. Set the <code>--prefix</code> argument to the directory you would like to install ArrayFire to - we recommend <code>/opt</code>. </p><pre class="fragment">./Arrayfire_*_Linux_x86_64.sh --include-subdir --prefix=/opt
 </pre><p>Given sudo permissions, you can add the ArrayFire libraries via <code>ldconfig</code> like so: </p><pre class="fragment">echo /opt/arrayfire/lib64 &gt; /etc/ld.so.conf.d/arrayfire.conf
 sudo ldconfig
 </pre><p>Otherwise, you will need to set the <code>LD_LIBRARY_PATH</code> environment variable in order to let your shared library loader find the ArrayFire libraries.</p>
-<p>For more information on using ArrayFire on Linux, visit the following <a href="http://arrayfire.org/docs/using_on_linux.htm">page</a>.</p>
+<p>For more information on using ArrayFire on Linux, visit the following <a href="https://arrayfire.org/docs/using_on_linux.htm">page</a>.</p>
 <h3>Graphics support</h3>
 <p>ArrayFire allows you to do high performance visualizations via our <a href="https://github.com/arrayfire/forge">Forge</a> library. On Linux, there are a few dependencies you will need to install to enable graphics support:</p>
 <p>FreeImage Fontconfig GLU (OpenGL Utility Library)</p>
@@ -111,7 +111,7 @@ sudo ldconfig
 </pre><p><b>Fedora, Redhat, CentOS</b> </p><pre class="fragment">yum install freeimage fontconfig mesa-libGLU
 </pre><h2><a class="anchor" id="macOS"></a> macOS</h2>
 <p>Once you have downloaded the ArrayFire installer, execute the installer by either double clicking on the ArrayFire <code>pkg</code> file or running the following command from your terminal: </p><pre class="fragment">sudo installer -pkg Arrayfire-*_OSX.pkg -target /
-</pre><p>For more information on using ArrayFire on macOS, visit the following <a href="http://arrayfire.org/docs/using_on_osx.htm">page</a>.</p>
+</pre><p>For more information on using ArrayFire on macOS, visit the following <a href="https://arrayfire.org/docs/using_on_osx.htm">page</a>.</p>
 <h2>NVIDIA Tegra devices</h2>
 <p>ArrayFire is capable of running on TX1 and TX2 devices. The TK1 is no longer supported.</p>
 <p>Prior to installing ArrayFire, make sure you have the latest version of JetPack (v2.3 and above) or L4T (v24.2 and above) on your device.</p>
@@ -131,7 +131,7 @@ make
 <ul>
 <li>Google Groups: <a href="https://groups.google.com/forum/#!forum/arrayfire-users">https://groups.google.com/forum/#!forum/arrayfire-users</a></li>
 <li>ArrayFire Services: <a href="https://arrayfire.com/consulting/">Consulting</a> | <a href="https://arrayfire.com/support/">Support</a> | <a href="https://arrayfire.com/training/">Training</a></li>
-<li>ArrayFire Blogs: <a href="http://arrayfire.com/blog/">http://arrayfire.com/blog/</a></li>
+<li>ArrayFire Blogs: <a href="https://arrayfire.com/blog/">https://arrayfire.com/blog/</a></li>
 <li>Email: <a href="#" onclick="location.href='mai'+'lto:'+'tec'+'hn'+'ica'+'l@'+'arr'+'ay'+'fir'+'e.'+'com'; return false;">techn<span style="display: none;">.nosp@m.</span>ical<span style="display: none;">.nosp@m.</span>@arra<span style="display: none;">.nosp@m.</span>yfir<span style="display: none;">.nosp@m.</span>e.com</a> </li>
 </ul>
 </div></div><!-- contents -->
@@ -150,7 +150,7 @@ make
   _gaq.push(['_trackPageview']);
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
@@ -161,7 +161,7 @@ make
   (function() {
     function async_load(){
       var s = document.createElement('script'); s.type = 'text/javascript';
-      s.src = (('https:' == document.location.protocol) ? "https://ssl" : "http://cdn") + ".spectate.com/s.js";
+      s.src = (('https:' == document.location.protocol) ? "https://ssl" : "https://cdn") + ".spectate.com/s.js";
       var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
     }
     if(window.attachEvent) { window.attachEvent('onload', async_load); }
@@ -177,7 +177,7 @@ var oldonload = window.onload;
 window.onload = function(){
    __adroll_loaded=true;
    var scr = document.createElement("script");
-   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "https://a.adroll.com");
    scr.setAttribute('async', 'true');
    scr.type = "text/javascript";
    scr.src = host + "/j/roundtrip.js";

@@ -1,6 +1,6 @@
 <!-- HTML header for doxygen 1.8.17-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
@@ -20,7 +20,7 @@
     jax: ["input/TeX","output/HTML-CSS"],
 });
 </script>
-<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<script type="text/javascript" async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="arrayfire.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -103,7 +103,7 @@ Functions</h2></td></tr>
 <p>Dilation(morphological operator) for images. </p>
 <p>The dilation function takes two pieces of data as inputs. The first is the input image to be morphed, and the second is the mask indicating the neighborhood around each pixel to match.</p>
 <p>In dilation, for each pixel, the mask is centered at the pixel. If the center pixel of the mask matches the corresponding pixel on the image, then the mask is accepted. If the center pixels do not matches, then the mask is ignored and no changes are made.</p>
-<p>For further reference, see: <a href="http://en.wikipedia.org/wiki/Dilation_(morphology)">Dilation (morphology)</a></p>
+<p>For further reference, see: <a href="https://en.wikipedia.org/wiki/Dilation_(morphology)">Dilation (morphology)</a></p>
 <p>Sample input and output are shown below:</p>
 <table border="0">
 <tr>
@@ -228,7 +228,7 @@ Output Image</div></div>
   _gaq.push(['_trackPageview']);
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
@@ -239,7 +239,7 @@ Output Image</div></div>
   (function() {
     function async_load(){
       var s = document.createElement('script'); s.type = 'text/javascript';
-      s.src = (('https:' == document.location.protocol) ? "https://ssl" : "http://cdn") + ".spectate.com/s.js";
+      s.src = (('https:' == document.location.protocol) ? "https://ssl" : "https://cdn") + ".spectate.com/s.js";
       var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
     }
     if(window.attachEvent) { window.attachEvent('onload', async_load); }
@@ -255,7 +255,7 @@ var oldonload = window.onload;
 window.onload = function(){
    __adroll_loaded=true;
    var scr = document.createElement("script");
-   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "https://a.adroll.com");
    scr.setAttribute('async', 'true');
    scr.type = "text/javascript";
    scr.src = host + "/j/roundtrip.js";

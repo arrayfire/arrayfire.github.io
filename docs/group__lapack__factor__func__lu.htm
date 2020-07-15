@@ -1,6 +1,6 @@
 <!-- HTML header for doxygen 1.8.17-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
@@ -20,7 +20,7 @@
     jax: ["input/TeX","output/HTML-CSS"],
 });
 </script>
-<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<script type="text/javascript" async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="arrayfire.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -155,7 +155,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><p> The lower and upper triangle matrices can be obtained if necessary in the following manner.</p>
 <div class="fragment"><div class="line">    <a class="code" href="group__opencl__mat.htm#ga5434aaf76be37fae92ac5086315516f0">array</a> l2 = <a class="code" href="group__data__func__lower.htm#ga3217e07693fdd099fc9acc9065e0a66e">lower</a>(out, <span class="keyword">true</span>);</div>
 <div class="line">    <a class="code" href="group__opencl__mat.htm#ga5434aaf76be37fae92ac5086315516f0">array</a> u2 = <a class="code" href="group__data__func__upper.htm#ga724c96cef1c7ae0e9e6ce8ba33ac3eaa">upper</a>(out, <span class="keyword">false</span>);</div>
-</div><!-- fragment --><p> LU decompositions has many applications including <a href="http://en.wikipedia.org/wiki/LU_decomposition#Solving_linear_equations">solving a system of linear equations</a>. Check <a class="el" href="group__lapack__solve__lu__func__gen.htm#gafb8e3d9894bfe9ef0d21380212637250">af::solveLU</a> fore more information.</p>
+</div><!-- fragment --><p> LU decompositions has many applications including <a href="https://en.wikipedia.org/wiki/LU_decomposition#Solving_linear_equations">solving a system of linear equations</a>. Check <a class="el" href="group__lapack__solve__lu__func__gen.htm#gafb8e3d9894bfe9ef0d21380212637250">af::solveLU</a> fore more information.</p>
 <hr  />
  <h2 class="groupheader">Function Documentation</h2>
 <a id="gad0ddb39e6a9cf22afe24bd45fd892086"></a>
@@ -429,7 +429,7 @@ Functions</h2></td></tr>
   _gaq.push(['_trackPageview']);
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
@@ -440,7 +440,7 @@ Functions</h2></td></tr>
   (function() {
     function async_load(){
       var s = document.createElement('script'); s.type = 'text/javascript';
-      s.src = (('https:' == document.location.protocol) ? "https://ssl" : "http://cdn") + ".spectate.com/s.js";
+      s.src = (('https:' == document.location.protocol) ? "https://ssl" : "https://cdn") + ".spectate.com/s.js";
       var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
     }
     if(window.attachEvent) { window.attachEvent('onload', async_load); }
@@ -456,7 +456,7 @@ var oldonload = window.onload;
 window.onload = function(){
    __adroll_loaded=true;
    var scr = document.createElement("script");
-   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "https://a.adroll.com");
    scr.setAttribute('async', 'true');
    scr.type = "text/javascript";
    scr.src = host + "/j/roundtrip.js";
