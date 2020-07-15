@@ -87,44 +87,44 @@ $(document).ready(function(){initNavTree('releasenotes.htm',''); initResizable()
 <div class="textblock"><h1>v3.7.2 </h1>
 <h2>Improvements </h2>
 <ul>
-<li>Cache CUDA kernels to disk to improve load times(Thanks to @cschreib-ibex) /PR{2848}</li>
-<li>Staticly link against cuda libraries /PR{2785}</li>
-<li>Make cuDNN an optional build dependency /PR{2836}</li>
-<li>Improve support for different compilers and OS /PR{2876} /PR{2945} /PR{2925} /PR{2942} /PR{2943} /PR{2945} /PR{2958}</li>
-<li>Improve performance of join and transpose on CPU /PR{2849}</li>
-<li>Improve documentation /PR{2816} /PR{2821} /PR{2846} /PR{2918} /PR{2928} /PR{2947}</li>
-<li>Reduce binary size using NVRTC and template reducing instantiations /PR{2849} /PR{2861} /PR{2890} /PR{2957}</li>
-<li>reduceByKey performance improvements /PR{2851} /PR{2957}</li>
-<li>Improve support for Intel OpenCL GPUs /PR{2855}</li>
-<li>Allow staticly linking against MKL /PR{2877} (Sponsered by SDL)</li>
-<li>Better support for older CUDA toolkits /PR{2923}</li>
-<li>Add support for CUDA 11 /PR{2939}</li>
-<li>Add support for cuDNN 8 /PR{2963}</li>
-<li>Add support for ccache for faster builds /PR{2931}</li>
-<li>Add support for the conan package manager on linux /PR{2875}</li>
-<li>Propagate build errors up the stack in AFError exceptions /PR{2948} /PR{2957}</li>
-<li>Improve runtime dependency library loading /PR{2954}</li>
-<li>Improved cuDNN runtime checks and warnings /PR{2960}</li>
-<li>Document af_memory_manager_* native memory return values /PR{2911}</li>
+<li>Cache CUDA kernels to disk to improve load times(Thanks to @cschreib-ibex) [<a href="https://github.com/arrayfire/arrayfire/pull/2848">#2848</a>]</li>
+<li>Staticly link against cuda libraries [<a href="https://github.com/arrayfire/arrayfire/pull/2785">#2785</a>]</li>
+<li>Make cuDNN an optional build dependency [<a href="https://github.com/arrayfire/arrayfire/pull/2836">#2836</a>]</li>
+<li>Improve support for different compilers and OS [<a href="https://github.com/arrayfire/arrayfire/pull/2876">#2876</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2945">#2945</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2925">#2925</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2942">#2942</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2943">#2943</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2945">#2945</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2958">#2958</a>]</li>
+<li>Improve performance of join and transpose on CPU [<a href="https://github.com/arrayfire/arrayfire/pull/2849">#2849</a>]</li>
+<li>Improve documentation [<a href="https://github.com/arrayfire/arrayfire/pull/2816">#2816</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2821">#2821</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2846">#2846</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2918">#2918</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2928">#2928</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2947">#2947</a>]</li>
+<li>Reduce binary size using NVRTC and template reducing instantiations [<a href="https://github.com/arrayfire/arrayfire/pull/2849">#2849</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2861">#2861</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2890">#2890</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2957">#2957</a>]</li>
+<li>reduceByKey performance improvements [<a href="https://github.com/arrayfire/arrayfire/pull/2851">#2851</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2957">#2957</a>]</li>
+<li>Improve support for Intel OpenCL GPUs [<a href="https://github.com/arrayfire/arrayfire/pull/2855">#2855</a>]</li>
+<li>Allow staticly linking against MKL [<a href="https://github.com/arrayfire/arrayfire/pull/2877">#2877</a>] (Sponsered by SDL)</li>
+<li>Better support for older CUDA toolkits [<a href="https://github.com/arrayfire/arrayfire/pull/2923">#2923</a>]</li>
+<li>Add support for CUDA 11 [<a href="https://github.com/arrayfire/arrayfire/pull/2939">#2939</a>]</li>
+<li>Add support for cuDNN 8 [<a href="https://github.com/arrayfire/arrayfire/pull/2963">#2963</a>]</li>
+<li>Add support for ccache for faster builds [<a href="https://github.com/arrayfire/arrayfire/pull/2931">#2931</a>]</li>
+<li>Add support for the conan package manager on linux [<a href="https://github.com/arrayfire/arrayfire/pull/2875">#2875</a>]</li>
+<li>Propagate build errors up the stack in AFError exceptions [<a href="https://github.com/arrayfire/arrayfire/pull/2948">#2948</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2957">#2957</a>]</li>
+<li>Improve runtime dependency library loading [<a href="https://github.com/arrayfire/arrayfire/pull/2954">#2954</a>]</li>
+<li>Improved cuDNN runtime checks and warnings [<a href="https://github.com/arrayfire/arrayfire/pull/2960">#2960</a>]</li>
+<li>Document af_memory_manager_* native memory return values [<a href="https://github.com/arrayfire/arrayfire/pull/2911">#2911</a>]</li>
 </ul>
 <h2>Fixes </h2>
 <ul>
-<li>Bug crash when allocating large arrays /PR{2827}</li>
-<li>Fix various compiler warnings /PR{2827} /PR{2849} /PR{2872} /PR{2876}</li>
-<li>Fix minor leaks in OpenCL functions /PR{2913}</li>
-<li>Various continuous integration related fixes /PR{2819}</li>
-<li>Fix zero padding with convolv2NN /PR{2820}</li>
-<li>Fix af_get_memory_pressure_threshold return value /PR{2831}</li>
+<li>Bug crash when allocating large arrays [<a href="https://github.com/arrayfire/arrayfire/pull/2827">#2827</a>]</li>
+<li>Fix various compiler warnings [<a href="https://github.com/arrayfire/arrayfire/pull/2827">#2827</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2849">#2849</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2872">#2872</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2876">#2876</a>]</li>
+<li>Fix minor leaks in OpenCL functions [<a href="https://github.com/arrayfire/arrayfire/pull/2913">#2913</a>]</li>
+<li>Various continuous integration related fixes [<a href="https://github.com/arrayfire/arrayfire/pull/2819">#2819</a>]</li>
+<li>Fix zero padding with convolv2NN [<a href="https://github.com/arrayfire/arrayfire/pull/2820">#2820</a>]</li>
+<li>Fix af_get_memory_pressure_threshold return value [<a href="https://github.com/arrayfire/arrayfire/pull/2831">#2831</a>]</li>
 <li>Increased the max filter length for morph</li>
-<li>Handle empty array inputs for LU, QR, and Rank functions /PR{2838}</li>
-<li>Fix FindMKL.cmake script for sequential threading library /PR{2840} /PR{2952}</li>
-<li>Various internal refactoring /PR{2839} /PR{2861} /PR{2864} /PR{2873} /PR{2890} /PR{2891} /PR{2913} /PR{2959}</li>
-<li>Fix OpenCL 2.0 builtin function name conflict /PR{2851}</li>
-<li>Fix error caused when releasing memory with multiple devices /PR{2867}</li>
-<li>Fix missing set stacktrace symbol from unified API /PR{2915}</li>
-<li>Fix zero padding issue in convolve2NN /PR{2820}</li>
-<li>Fixed bugs in ReduceByKey /PR{2957}</li>
-<li>Add clblast patch to handle custom context with multiple devices /PR{2967}</li>
+<li>Handle empty array inputs for LU, QR, and Rank functions [<a href="https://github.com/arrayfire/arrayfire/pull/2838">#2838</a>]</li>
+<li>Fix FindMKL.cmake script for sequential threading library [<a href="https://github.com/arrayfire/arrayfire/pull/2840">#2840</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2952">#2952</a>]</li>
+<li>Various internal refactoring [<a href="https://github.com/arrayfire/arrayfire/pull/2839">#2839</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2861">#2861</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2864">#2864</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2873">#2873</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2890">#2890</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2891">#2891</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2913">#2913</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2959">#2959</a>]</li>
+<li>Fix OpenCL 2.0 builtin function name conflict [<a href="https://github.com/arrayfire/arrayfire/pull/2851">#2851</a>]</li>
+<li>Fix error caused when releasing memory with multiple devices [<a href="https://github.com/arrayfire/arrayfire/pull/2867">#2867</a>]</li>
+<li>Fix missing set stacktrace symbol from unified API [<a href="https://github.com/arrayfire/arrayfire/pull/2915">#2915</a>]</li>
+<li>Fix zero padding issue in convolve2NN [<a href="https://github.com/arrayfire/arrayfire/pull/2820">#2820</a>]</li>
+<li>Fixed bugs in ReduceByKey [<a href="https://github.com/arrayfire/arrayfire/pull/2957">#2957</a>]</li>
+<li>Add clblast patch to handle custom context with multiple devices [<a href="https://github.com/arrayfire/arrayfire/pull/2967">#2967</a>]</li>
 </ul>
 <h2>Contributions </h2>
 <p>Special thanks to our contributors: <a href="https://github.com/cschreib-ibex">Corentin Schreiber</a> <a href="https://github.com/jacobkahn">Jacob Kahn</a> <a href="https://github.com/pauljurczak">Paul Jurczak</a> <a href="https://github.com/junghans">Christoph Junghans</a></p>
