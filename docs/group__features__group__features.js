@@ -5,6 +5,7 @@ var group__features__group__features =
       [ "features", "classaf_1_1features.htm#a913290c856bbe4d9c4aac326834588f8", null ],
       [ "features", "classaf_1_1features.htm#a5486468d90fe6a78b2f3c60b77ef22ed", null ],
       [ "~features", "classaf_1_1features.htm#a41fa05f6f25494bec8eff85e275e6eca", null ],
+      [ "features", "classaf_1_1features.htm#a0d47767ff022df3d876a7b8f5e5776fe", null ],
       [ "get", "classaf_1_1features.htm#a98275eb9ee53a739d77a3764b7e82f50", null ],
       [ "getNumFeatures", "classaf_1_1features.htm#ad8e831cca66465642b24a1b1f6416ea1", null ],
       [ "getOrientation", "classaf_1_1features.htm#a1f0a81235e8399f8ae4f891ac4d06d0c", null ],

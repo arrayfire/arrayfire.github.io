@@ -18,8 +18,8 @@ var group__gfx__func__window =
     [ "get", "group__gfx__func__window.htm#ga0d2481ae9d5600854146e6661280c249", null ],
     [ "grid", "group__gfx__func__window.htm#gaecba84f1690934bbc397e8ac7e141268", null ],
     [ "setAxesLabelFormat", "group__gfx__func__window.htm#ga1af3692f3906c7e12f1abe49c2582a78", null ],
-    [ "setAxesLimits", "group__gfx__func__window.htm#gabc18fa771f03e10feeede73cf007706e", null ],
     [ "setAxesLimits", "group__gfx__func__window.htm#ga1277bb007f5f2845eac09ead91ad36d2", null ],
+    [ "setAxesLimits", "group__gfx__func__window.htm#gabc18fa771f03e10feeede73cf007706e", null ],
     [ "setAxesLimits", "group__gfx__func__window.htm#ga554b0a23b70b411582c526db0cc2ebef", null ],
     [ "setAxesLimits", "group__gfx__func__window.htm#ga0bb71025fa53918509cef04796e0d3c5", null ],
     [ "setAxesTitles", "group__gfx__func__window.htm#gafed13c75a1462e5b7cbf3a78033efd44", null ],
@@ -30,8 +30,8 @@ var group__gfx__func__window =
     [ "setVisibility", "group__gfx__func__window.htm#ga9ff8d74c894cf172a03900f61887524d", null ],
     [ "show", "group__gfx__func__window.htm#ga4b148f40a95444d5669406b918ad2f52", null ],
     [ "Window", "group__gfx__func__window.htm#ga004cf7aac21e18b5b5675f1b635c3734", null ],
-    [ "Window", "group__gfx__func__window.htm#ga7181172cd614347863c18ca6218d6c97", null ],
     [ "Window", "group__gfx__func__window.htm#gada96f4fe8740ad0bf79388378f217c1f", null ],
     [ "Window", "group__gfx__func__window.htm#ga01089293d764f6706f9873c5f5221a8a", null ],
+    [ "Window", "group__gfx__func__window.htm#ga7181172cd614347863c18ca6218d6c97", null ],
     [ "~Window", "group__gfx__func__window.htm#ga254ab61160c1cd5eaa46cc0475bb7a06", null ]
 ];

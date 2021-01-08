@@ -1,27 +1,3 @@
-/*
- @licstart  The following is the entire license notice for the JavaScript code in this file.
-
- The MIT License (MIT)
-
- Copyright (C) 1997-2020 by Dimitri van Heesch
-
- Permission is hereby granted, free of charge, to any person obtaining a copy of this software
- and associated documentation files (the "Software"), to deal in the Software without restriction,
- including without limitation the rights to use, copy, modify, merge, publish, distribute,
- sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
-
- The above copyright notice and this permission notice shall be included in all copies or
- substantial portions of the Software.
-
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
- BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
- DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
- @licend  The above is the entire license notice for the JavaScript code in this file
-*/
 var NAVTREE =
 [
   [ "ArrayFire", "index.htm", [
@@ -36,22 +12,22 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "benchmarks_2blas_8cpp-example.htm",
-"classaf_1_1features.htm#a36ec25097042f49432e35603ac40e39f",
-"group__arith__func__arg.htm#gad04de0f7948688378dcd3628628a7424",
-"group__arith__func__conjg.htm#ga04a788ad4286ad9483b0d53596bc5da6",
-"group__arith__func__ge.htm#gaaa7e961c4c4922ec40012ff5d365bc08",
-"group__arith__func__lt.htm#gad476bfc37cf2ef8bb2342c2058dc65e2",
-"group__arith__func__not.htm#ga17eb7b75d893bff8288eb80067d4be77",
-"group__arith__func__shiftr.htm#gafdd6b651a3b3aa2d4546eabaa6091070",
-"group__array__mem__operator__minus__eq.htm#ga728673e301d50394cac6c83ed7021e0f",
-"group__c__api__mat.htm#gaefe2e343a74a84bd43b588218ecc09a3",
-"group__device__func__free__host.htm",
-"group__image__func__canny.htm#ga3cc80f80d1b2a19312d033763b382957",
-"group__index__func__assign.htm#ga93cd5199c647dce0e3b823f063b352ae",
-"group__native__memory__interface.htm#gaab0eb541711cd74886dc53529cbe1dc5",
-"group__reduce__func__sum.htm#ga2176b9ffbc6038cf6cebb19aa7736793",
-"group__signal__func__ifft2.htm#ga9e6a165d44306db4552a56d421ce5d05",
-"group__unified__func.htm"
+"classaf_1_1features.htm#a0d47767ff022df3d876a7b8f5e5776fe",
+"group__arith__func__arg.htm#gaa93e6a8ca5f77b3fac1bd66113e640e3",
+"group__arith__func__conjg.htm",
+"group__arith__func__ge.htm#gaa56e26b56fae28c6b00441714656e77c",
+"group__arith__func__lt.htm#gacad065838922b51e17b83f92bbaf4f25",
+"group__arith__func__not.htm",
+"group__arith__func__shiftr.htm#gaf7b463dc8e205b9f6343c050f8c33b5d",
+"group__array__mem__operator__minus__eq.htm#ga70b105286bf582f433a3b3f3a5c2693b",
+"group__c__api__mat.htm#gadb499641bfc02dfa56a75be9ba237e3f",
+"group__device__func__dbl.htm#ga71b5811b21be7a6d5e7fc0087ddf91c1",
+"group__hyper__mat.htm",
+"group__imagemem__func__load.htm",
+"group__memory__manager__utils.htm#gaeff6058cd7ff4f2fa7b0297cb2c56b11",
+"group__reduce__func__product.htm#gaac132e883d40243c420b4ccfa09ddaa3",
+"group__signal__func__ifft.htm",
+"group__transform__func__resize.htm#ga9587c09bde7721659005d920812f5c2a"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

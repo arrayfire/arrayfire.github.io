@@ -10,6 +10,7 @@ var group__data__mat =
     [ "range", "group__data__func__range.htm", "group__data__func__range" ],
     [ "upper", "group__data__func__upper.htm", "group__data__func__upper" ],
     [ "eval", "group__data__mat.htm#ga121545fb637db409a523862cdb8ffe39", null ],
+    [ "eval", "group__data__mat.htm#gaeade064317ff4e40e66180718a34f9da", null ],
     [ "eval", "group__data__mat.htm#ga6a17a89fab2c26be8e911c4628c4c54c", null ],
     [ "eval", "group__data__mat.htm#ga932cc56a65acbe91ff2cea42e2f43bb6", null ],
     [ "eval", "group__data__mat.htm#ga8d75de296c6378ef17825a3776db93e4", null ],
@@ -21,7 +22,6 @@ var group__data__mat =
     [ "eval", "group__data__mat.htm#ga0ab6d6c52ec85bd70ee1223448958261", null ],
     [ "eval", "group__data__mat.htm#gaddec0e716ad2d696f01b3359e2207e7d", null ],
     [ "eval", "group__data__mat.htm#gaed1d77332fa65805b2a6bf1cee8a857c", null ],
-    [ "eval", "group__data__mat.htm#gaeade064317ff4e40e66180718a34f9da", null ],
     [ "getManualEvalFlag", "group__data__mat.htm#ga0c2f8602994b437164ee5783cedabfa9", null ],
     [ "setManualEvalFlag", "group__data__mat.htm#ga11dba1a052f2fe004665237d9670e1f5", null ]
 ];

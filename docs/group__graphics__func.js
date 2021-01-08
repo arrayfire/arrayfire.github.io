@@ -17,12 +17,12 @@ var group__graphics__func =
       [ "plot", "group__gfx__func__draw.htm#ga8e01736df3d805a5488c609e2573818b", null ],
       [ "plot3", "group__gfx__func__draw.htm#ga8e04ec129034e9fe769f3e6b14cd087f", null ],
       [ "scatter", "group__gfx__func__draw.htm#gaf95ec84f9788b42fd443c9523792e4a4", null ],
-      [ "scatter", "group__gfx__func__draw.htm#ga73406db589e5090c051baae0af175df9", null ],
       [ "scatter", "group__gfx__func__draw.htm#gabfc0b01364885bdf3ce39c6205dc0287", null ],
+      [ "scatter", "group__gfx__func__draw.htm#ga73406db589e5090c051baae0af175df9", null ],
       [ "scatter3", "group__gfx__func__draw.htm#ga3bbfbe1b60741a259d2146b3ab50ace3", null ],
       [ "setAxesLabelFormat", "group__gfx__func__window.htm#ga1af3692f3906c7e12f1abe49c2582a78", null ],
-      [ "setAxesLimits", "group__gfx__func__window.htm#gabc18fa771f03e10feeede73cf007706e", null ],
       [ "setAxesLimits", "group__gfx__func__window.htm#ga1277bb007f5f2845eac09ead91ad36d2", null ],
+      [ "setAxesLimits", "group__gfx__func__window.htm#gabc18fa771f03e10feeede73cf007706e", null ],
       [ "setAxesLimits", "group__gfx__func__window.htm#ga554b0a23b70b411582c526db0cc2ebef", null ],
       [ "setAxesLimits", "group__gfx__func__window.htm#ga0bb71025fa53918509cef04796e0d3c5", null ],
       [ "setAxesTitles", "group__gfx__func__window.htm#gafed13c75a1462e5b7cbf3a78033efd44", null ],
@@ -35,8 +35,8 @@ var group__graphics__func =
       [ "surface", "group__gfx__func__draw.htm#ga1cdb8c3205d70d8feaddd8c30245393f", null ],
       [ "surface", "group__gfx__func__draw.htm#ga2d09aa253b391ce82104352b743bb18c", null ],
       [ "vectorField", "group__gfx__func__draw.htm#ga6d3904749d501e6ee607566dc3e1ecc8", null ],
-      [ "vectorField", "group__gfx__func__draw.htm#gaa2e113b2f1aef7426adc19dab2660133", null ],
-      [ "vectorField", "group__gfx__func__draw.htm#ga429ca1fb5b9caa6648b869d2f3686b8f", null ]
+      [ "vectorField", "group__gfx__func__draw.htm#ga429ca1fb5b9caa6648b869d2f3686b8f", null ],
+      [ "vectorField", "group__gfx__func__draw.htm#gaa2e113b2f1aef7426adc19dab2660133", null ]
     ] ],
     [ "Rendering Functions", "group__gfx__func__draw.htm", "group__gfx__func__draw" ],
     [ "Window Functions", "group__gfx__func__window.htm", "group__gfx__func__window" ]
