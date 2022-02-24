@@ -8,7 +8,7 @@ var group__random__mat =
       [ "get", "classaf_1_1randomEngine.htm#afa0d597dca862f2c65692ebc43d3b1dc", null ],
       [ "getSeed", "classaf_1_1randomEngine.htm#a5097cda0eb389cefbbf3042304de86f9", null ],
       [ "getType", "classaf_1_1randomEngine.htm#a2f5b63ccf8a707bf84ecd7fa3a7f75da", null ],
-      [ "operator=", "classaf_1_1randomEngine.htm#a9b991e24811d7611de63a5e5084f218d", null ],
+      [ "operator=", "classaf_1_1randomEngine.htm#a8ee437e84414e7c9a9da00d31d6f33a3", null ],
       [ "setSeed", "classaf_1_1randomEngine.htm#a4ff18bca1ef670e444c8b17861cd95c1", null ],
       [ "setType", "classaf_1_1randomEngine.htm#a7c8a2102ac5e30114630b0a494b5992b", null ]
     ] ],

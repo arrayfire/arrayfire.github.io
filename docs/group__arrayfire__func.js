@@ -23,6 +23,7 @@ var group__arrayfire__func =
     [ "atanh", "group__arith__func__atanh.htm", "group__arith__func__atanh" ],
     [ "bilateral", "group__image__func__bilateral.htm", "group__image__func__bilateral" ],
     [ "bitand", "group__arith__func__bitand.htm", "group__arith__func__bitand" ],
+    [ "bitnot", "group__arith__func__bitnot.htm", "group__arith__func__bitnot" ],
     [ "bitor", "group__arith__func__bitor.htm", "group__arith__func__bitor" ],
     [ "bitshiftl", "group__arith__func__shiftl.htm", "group__arith__func__shiftl" ],
     [ "bitshiftr", "group__arith__func__shiftr.htm", "group__arith__func__shiftr" ],
