@@ -1,5 +1,5 @@
 var group__signal__func__convolve =
 [
-    [ "af::convolve", "group__signal__func__convolve.htm#gae79b64c8b0d6a06309e8b67bf89cf6c9", null ],
-    [ "af::fftConvolve", "group__signal__func__convolve.htm#ga711d2440b2d954215a02d90ac8952af8", null ]
+    [ "af::convolve", "group__signal__func__convolve.htm#ga801b0f4a09a017ccb196fac3c0dc417b", null ],
+    [ "af::fftConvolve", "group__signal__func__convolve.htm#ga95cc430f1c610ed4409ebdd83156b278", null ]
 ];

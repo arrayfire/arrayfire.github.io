@@ -37,20 +37,21 @@ var NAVTREEINDEX =
 [
 "benchmarks_2blas_8cpp-example.htm",
 "classaf_1_1features.htm#a1f0a81235e8399f8ae4f891ac4d06d0c",
-"group__arith__func__arg.htm#gaa93e6a8ca5f77b3fac1bd66113e640e3",
+"group__arith__func__arg.htm#ga4ff1281766ca6b30a8e1c3e1163f4ead",
 "group__arith__func__ceil.htm",
-"group__arith__func__ge.htm#ga92cd85948c3b24e70cc7854a57873758",
-"group__arith__func__lt.htm#gaa27ab8b7ab794f6d7ea7448fee31429b",
-"group__arith__func__neq.htm#gaf67876729fa9b0026300f5ab25651e5c",
-"group__arith__func__shiftr.htm#gaeb440e722d7b3d23b58467f1668629df",
-"group__array__mem__operator__multiply__eq.htm#ga46f55e2de47cb2829c556238eaec13db",
-"group__cv__func__sift.htm#ga8bae580e5cd79b8adab7346146a5824f",
-"group__device__func__pinned.htm#gac66b4c2c79e33d67604772253fa896f8",
-"group__image__func__medfilt.htm#ga2cb99dca5842f74f6b9cd28eb187a9cd",
-"group__lapack__ops__func__norm.htm#ga5bee140b7afdb1a300960e3004bf624c",
-"group__random__func__set__seed.htm#gaabc058b30a776082b5012fe4faffac2d",
-"group__signal__func__convolve.htm",
-"group__stat__func__corrcoef.htm#ga26b894c86731234136bfe1342453d8a7"
+"group__arith__func__ge.htm#ga5720d91075b612414b8f2ad94c77313f",
+"group__arith__func__lt.htm#ga4ea3f3ac717f1e63a2e7d34db59aed9a",
+"group__arith__func__neq.htm#gac86f1f671a502e4941619712c02b6aee",
+"group__arith__func__shiftr.htm#gaa90474e2828f9906f37dc7d91c9ed228",
+"group__array__mem__operator__minus__eq.htm#gacf7fe8d296a09775219a83773087a5a5",
+"group__cv__func__match__template.htm#ga52aea5e045417d33eb8ed8037da48d3c",
+"group__device__func__mem.htm#ga825e21412e9c8e3609c759f8106fd384",
+"group__image__func__iterative__deconv.htm#gaf716e895be65781a1d046619409716b7",
+"group__lapack__helper__func__available.htm#gaedc7cb96aee53e92ab2174bbe26efb17",
+"group__random__func__randu.htm#ga412e2c2f5135bdda218c3487c487d3b5",
+"group__signal__func__approx1.htm#gabd004f943d8a8df6d00064fd965680ee",
+"group__sparse__func__row__idx.htm",
+"modules.htm"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

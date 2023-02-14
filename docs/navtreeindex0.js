@@ -246,8 +246,8 @@ var NAVTREEINDEX0 =
 "classaf_1_1exception.htm#ac4587b848a5af8f1df51bbc9e0cd7fc9":[2,0,3,1],
 "classaf_1_1exception.htm#ae38094b5c00250775aff124fbd9ae119":[2,0,3,2],
 "classaf_1_1exception.htm#ae9b6110e0b61e6c1f44f960f4d7ac505":[2,0,3,8],
-"classaf_1_1features.htm":[2,1,72,0],
+"classaf_1_1features.htm":[2,1,73,0],
 "classaf_1_1features.htm":[2,0,4],
 "classaf_1_1features.htm#a0d47767ff022df3d876a7b8f5e5776fe":[2,0,4,4],
-"classaf_1_1features.htm#a0d47767ff022df3d876a7b8f5e5776fe":[2,1,72,0,4]
+"classaf_1_1features.htm#a0d47767ff022df3d876a7b8f5e5776fe":[2,1,73,0,4]
 };

@@ -3,6 +3,7 @@ var group__numeric__mat =
     [ "abs", "group__arith__func__abs.htm", "group__arith__func__abs" ],
     [ "arg", "group__arith__func__arg.htm", "group__arith__func__arg" ],
     [ "ceil", "group__arith__func__ceil.htm", "group__arith__func__ceil" ],
+    [ "clamp", "group__arith__func__clamp.htm", "group__arith__func__clamp" ],
     [ "floor", "group__arith__func__floor.htm", "group__arith__func__floor" ],
     [ "hypot", "group__arith__func__hypot.htm", "group__arith__func__hypot" ],
     [ "max", "group__arith__func__max.htm", "group__arith__func__max" ],

@@ -2,10 +2,10 @@ var group__blas__func__matmul =
 [
     [ "af_gemm", "group__blas__func__matmul.htm#ga0463ae584163128718237b02faf5caf7", null ],
     [ "af_matmul", "group__blas__func__matmul.htm#ga3f3f29358b44286d19ff2037547649fe", null ],
-    [ "af::matmul", "group__blas__func__matmul.htm#ga3d05bc14538f14713fe3ce65f6841f44", null ],
-    [ "af::matmul", "group__blas__func__matmul.htm#ga329f6ec3d910ca0443e4bc6b7cfe129f", null ],
-    [ "af::matmul", "group__blas__func__matmul.htm#ga63306b6ed967bd1055086db862fe885b", null ],
-    [ "af::matmulNT", "group__blas__func__matmul.htm#gadf90230a67ea7a0b4697511dd978b9c7", null ],
-    [ "af::matmulTN", "group__blas__func__matmul.htm#ga6655d7913b35d7e59f7c8560a5368fbc", null ],
-    [ "af::matmulTT", "group__blas__func__matmul.htm#ga7f3e5a6f282ea2c2c32886c95694bb88", null ]
+    [ "af::matmul", "group__blas__func__matmul.htm#ga805419371b0fe290c18c05dea2744956", null ],
+    [ "af::matmul", "group__blas__func__matmul.htm#ga10f94a05c94f9633647ed73120a7cbc3", null ],
+    [ "af::matmul", "group__blas__func__matmul.htm#gac061af289fcd39a07a3efba0f33fb17f", null ],
+    [ "af::matmulNT", "group__blas__func__matmul.htm#gaf308bc06987aa90c6ef3f1435a8b00cd", null ],
+    [ "af::matmulTN", "group__blas__func__matmul.htm#gaaf7a46a31434131ceb3d43a93ab0fba3", null ],
+    [ "af::matmulTT", "group__blas__func__matmul.htm#ga109ee835f4a634252336ef9a1dc4fa14", null ]
 ];

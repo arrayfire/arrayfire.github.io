@@ -4,8 +4,8 @@ var group__reduce__func__sum =
     [ "af_sum_all", "group__reduce__func__sum.htm#gabc009d04df0faf29ba1e381c7badde58", null ],
     [ "af_sum_nan", "group__reduce__func__sum.htm#ga52461231e2d9995f689b7f23eea0e798", null ],
     [ "af_sum_nan_all", "group__reduce__func__sum.htm#ga65bb08cd2644d5828d72fc42b2eb8abc", null ],
-    [ "af::sum", "group__reduce__func__sum.htm#ga27080996b6ea1c422f16da4b06fb76a7", null ],
-    [ "af::sum", "group__reduce__func__sum.htm#ga2176b9ffbc6038cf6cebb19aa7736793", null ],
-    [ "af::sum", "group__reduce__func__sum.htm#ga964a8e7e78dd6d8f4d20c17edf82dbf5", null ],
-    [ "af::sum", "group__reduce__func__sum.htm#ga7a52bcc5d9a41e291ddb283732ea3adc", null ]
+    [ "af::sum", "group__reduce__func__sum.htm#ga37626f6fd496af2bac2ea5791f201c48", null ],
+    [ "af::sum", "group__reduce__func__sum.htm#ga7b86f360dbdc7c10855170543a0973fa", null ],
+    [ "af::sum", "group__reduce__func__sum.htm#ga5eb9a966c94aa56af61707c91637e8df", null ],
+    [ "af::sum", "group__reduce__func__sum.htm#gac0a61f0efaf87941e373e1c59814fd52", null ]
 ];

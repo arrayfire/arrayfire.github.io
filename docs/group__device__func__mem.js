@@ -13,9 +13,9 @@ var group__device__func__mem =
     [ "af_set_mem_step_size", "group__device__func__mem.htm#ga3be9c5ea9ee828868f5d906333a11499", null ],
     [ "af_unlock_array", "group__device__func__mem.htm#ga07151f8b3d69c1afe3cbd860fd98c36f", null ],
     [ "af_unlock_device_ptr", "group__device__func__mem.htm#ga39817b0ba24db34f00c20cc3a20df6d4", null ],
-    [ "af::deviceGC", "group__device__func__mem.htm#ga2fa2d8f09a01b92e840c8149630246d6", null ],
-    [ "af::deviceMemInfo", "group__device__func__mem.htm#gae763d44f5c5cd80d4cf31fd044ee4e3d", null ],
-    [ "af::getMemStepSize", "group__device__func__mem.htm#ga779bdc65de61e76e066d2cda263a814e", null ],
-    [ "af::printMemInfo", "group__device__func__mem.htm#ga64f2598efae63032e3f9d20841f6abeb", null ],
-    [ "af::setMemStepSize", "group__device__func__mem.htm#ga9c79ca1f0e4dcf4168596d9602d7795c", null ]
+    [ "af::deviceGC", "group__device__func__mem.htm#gacb3dd5a4e98ef2e2ae5b0f382845ed5d", null ],
+    [ "af::deviceMemInfo", "group__device__func__mem.htm#gab67ced8207d177d239ffbf41d333cb0a", null ],
+    [ "af::getMemStepSize", "group__device__func__mem.htm#gaa1c5fab925db5bc7f7fbcd2d656bf601", null ],
+    [ "af::printMemInfo", "group__device__func__mem.htm#ga634fae04c76013ff79dac7b71c7ca6ef", null ],
+    [ "af::setMemStepSize", "group__device__func__mem.htm#ga0007f92737ed60d5286af34fd8652b0d", null ]
 ];
