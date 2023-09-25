@@ -124,7 +124,1680 @@ $(document).ready(function(){initNavTree('releasenotes.htm',''); initResizable()
 <h2>Fixes</h2>
 <ul>
 <li>Improve Errors when creating OpenCL contexts from devices [<a href="https://github.com/arrayfire/arrayfire/pull/3257">#3257</a>]</li>
-<li>Improvements to vcpkg builds </li>
+<li>Improvements to vcpkg builds [<a href="https://github.com/arrayfire/arrayfire/pull/3376">#3376</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/3476">#3476</a>]</li>
+<li>Fix reduce by key when nan's are present [<a href="https://github.com/arrayfire/arrayfire/pull/3261">#3261</a>]</li>
+<li>Fix error in convolve where the ndims parameter was forced to be equal to 2 [<a href="https://github.com/arrayfire/arrayfire/pull/3277">#3277</a>]</li>
+<li>Make constructors that accept dim_t to be explicit to avoid invalid conversions [<a href="https://github.com/arrayfire/arrayfire/pull/3259">#3259</a>]</li>
+<li>Fix error in randu when compiling against clang 14 [<a href="https://github.com/arrayfire/arrayfire/pull/3333">#3333</a>]</li>
+<li>Fix bug in OpenCL linear algebra functions [<a href="https://github.com/arrayfire/arrayfire/pull/3398">#3398</a>]</li>
+<li>Fix bug with thread local variables when device was changed [<a href="https://github.com/arrayfire/arrayfire/pull/3420">#3420</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/3421">#3421</a>]</li>
+<li>Fix bug in qr related to uninitialized memory [<a href="https://github.com/arrayfire/arrayfire/pull/3422">#3422</a>]</li>
+<li>Fix bug in shift where the array had an empty middle dimension [<a href="https://github.com/arrayfire/arrayfire/pull/3488">#3488</a>]</li>
+</ul>
+<h2>Contributions</h2>
+<p >Special thanks to our contributors: <a href="https://github.com/willyborn">Willy Born</a> <a href="https://github.com/mfzmullen">Mike Mullen</a></p>
+<h1>v3.8.3 </h1>
+<h2>Improvements</h2>
+<ul>
+<li>Add support for CUDA 12 [<a href="https://github.com/arrayfire/arrayfire/pull/3352">#3352</a>]</li>
+<li>Modernize documentation style and content [<a href="https://github.com/arrayfire/arrayfire/pull/3351">#3351</a>]</li>
+<li>memcpy performance improvements [<a href="https://github.com/arrayfire/arrayfire/pull/3144">#3144</a>]</li>
+<li>JIT performance improvements [<a href="https://github.com/arrayfire/arrayfire/pull/3144">#3144</a>]</li>
+<li>join performance improvements [<a href="https://github.com/arrayfire/arrayfire/pull/3144">#3144</a>]</li>
+<li>Improve support for Intel and newer Clang compilers [<a href="https://github.com/arrayfire/arrayfire/pull/3334">#3334</a>]</li>
+<li>CCache support on Windows [<a href="https://github.com/arrayfire/arrayfire/pull/3257">#3257</a>]</li>
+</ul>
+<h2>Fixes</h2>
+<ul>
+<li>Fix issue with some locales with OpenCL kernel generation [<a href="https://github.com/arrayfire/arrayfire/pull/3294">#3294</a>]</li>
+<li>Internal improvements</li>
+<li>Fix leak in clfft on exit.</li>
+<li>Fix some cases where ndims was incorrectly used ot calculate shape [<a href="https://github.com/arrayfire/arrayfire/pull/3277">#3277</a>]</li>
+<li>Fix issue when setDevice was not called in new threads [<a href="https://github.com/arrayfire/arrayfire/pull/3269">#3269</a>]</li>
+<li>Restrict initializer list to just fundamental types [<a href="https://github.com/arrayfire/arrayfire/pull/3264">#3264</a>]</li>
+</ul>
+<h2>Contributions</h2>
+<p >Special thanks to our contributors: <a href="https://github.com/carlocab">Carlo Cabrera</a> <a href="https://github.com/GuillaumeSchmid">Guillaume Schmid</a> <a href="https://github.com/willyborn">Willy Born</a> <a href="https://github.com/ktdq">ktdq</a></p>
+<h1>v3.8.2 </h1>
+<h2>Improvements</h2>
+<ul>
+<li>Optimize JIT by removing some consecutive cast operations [<a href="https://github.com/arrayfire/arrayfire/pull/3031">#3031</a>]</li>
+<li>Add driver checks checks for CUDA 11.5 and 11.6 [<a href="https://github.com/arrayfire/arrayfire/pull/3203">#3203</a>]</li>
+<li>Improve the timing algorithm used for timeit [<a href="https://github.com/arrayfire/arrayfire/pull/3185">#3185</a>]</li>
+<li>Dynamically link against CUDA numeric libraries by default [<a href="https://github.com/arrayfire/arrayfire/pull/3205">#3205</a>]</li>
+<li>Add support for pruning CUDA binaries to reduce static binary sizes [<a href="https://github.com/arrayfire/arrayfire/pull/3234">#3234</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/3237">#3237</a>]</li>
+<li>Remove unused cuDNN libraries from installations [<a href="https://github.com/arrayfire/arrayfire/pull/3235">#3235</a>]</li>
+<li>Add support to staticly link NVRTC libraries after CUDA 11.5 [<a href="https://github.com/arrayfire/arrayfire/pull/3236">#3236</a>]</li>
+<li>Add support for compiling with ccache when building the CUDA backend [<a href="https://github.com/arrayfire/arrayfire/pull/3241">#3241</a>]</li>
+<li>Make cuSparse an optional runtime dependency [<a href="https://github.com/arrayfire/arrayfire/pull/3240">#3240</a>]</li>
+</ul>
+<h2>Fixes</h2>
+<ul>
+<li>Fix issue with consecutive moddims operations in the CPU backend [<a href="https://github.com/arrayfire/arrayfire/pull/3232">#3232</a>]</li>
+<li>Better floating point comparisons for tests [<a href="https://github.com/arrayfire/arrayfire/pull/3212">#3212</a>]</li>
+<li>Fix several warnings and inconsistencies with doxygen and documentation [<a href="https://github.com/arrayfire/arrayfire/pull/3226">#3226</a>]</li>
+<li>Fix issue when passing empty arrays into join [<a href="https://github.com/arrayfire/arrayfire/pull/3211">#3211</a>]</li>
+<li>Fix default value for the <code>AF_COMPUTE_LIBRARY</code> when not set [<a href="https://github.com/arrayfire/arrayfire/pull/3228">#3228</a>]</li>
+<li>Fix missing symbol issue when MKL is staticly linked [<a href="https://github.com/arrayfire/arrayfire/pull/3244">#3244</a>]</li>
+<li>Remove linking of OpenCL's library to the unified backend [<a href="https://github.com/arrayfire/arrayfire/pull/3244">#3244</a>]</li>
+</ul>
+<h2>Contributions</h2>
+<p >Special thanks to our contributors: <a href="https://github.com/jacobkahn">Jacob Kahn</a> <a href="https://github.com/willyborn">Willy Born</a></p>
+<h1>v3.8.1 </h1>
+<h2>Improvements</h2>
+<ul>
+<li>moddims now uses JIT approach for certain special cases - [<a href="https://github.com/arrayfire/arrayfire/pull/3177">#3177</a>]</li>
+<li>Embed Version Info in Windows DLLs - [<a href="https://github.com/arrayfire/arrayfire/pull/3025">#3025</a>]</li>
+<li>OpenCL device max parameter is now queries from device properties - [<a href="https://github.com/arrayfire/arrayfire/pull/3032">#3032</a>]</li>
+<li>JIT Performance Optimization: Unique funcName generation sped up - [<a href="https://github.com/arrayfire/arrayfire/pull/3040">#3040</a>]</li>
+<li>Improved readability of log traces - [<a href="https://github.com/arrayfire/arrayfire/pull/3050">#3050</a>]</li>
+<li>Use short function name in non-debug build error messages - [<a href="https://github.com/arrayfire/arrayfire/pull/3060">#3060</a>]</li>
+<li>SIFT/GLOH are now available as part of website binaries - [<a href="https://github.com/arrayfire/arrayfire/pull/3071">#3071</a>]</li>
+<li>Short-circuit zero elements case in detail::copyArray backend function - [<a href="https://github.com/arrayfire/arrayfire/pull/3059">#3059</a>]</li>
+<li>Speedup of kernel caching mechanism - [<a href="https://github.com/arrayfire/arrayfire/pull/3043">#3043</a>]</li>
+<li>Add short-circuit check for empty Arrays in JIT evalNodes - [<a href="https://github.com/arrayfire/arrayfire/pull/3072">#3072</a>]</li>
+<li>Performance optimization of indexing using dynamic thread block sizes - [<a href="https://github.com/arrayfire/arrayfire/pull/3111">#3111</a>]</li>
+<li>ArrayFire starting with this release will use Intel MKL single dynamic library which resolves lot of linking issues unified library had when user applications used MKL themselves - [<a href="https://github.com/arrayfire/arrayfire/pull/3120">#3120</a>]</li>
+<li>Add shortcut check for zero elements in af_write_array - [<a href="https://github.com/arrayfire/arrayfire/pull/3130">#3130</a>]</li>
+<li>Speedup join by eliminating temp buffers for cascading joins - [<a href="https://github.com/arrayfire/arrayfire/pull/3145">#3145</a>]</li>
+<li>Added batch support for solve - [<a href="https://github.com/arrayfire/arrayfire/pull/1705">#1705</a>]</li>
+<li>Use pinned memory to copy device pointers in CUDA solve - [<a href="https://github.com/arrayfire/arrayfire/pull/1705">#1705</a>]</li>
+<li>Added package manager instructions to docs - [<a href="https://github.com/arrayfire/arrayfire/pull/3076">#3076</a>]</li>
+<li>CMake Build Improvements - [<a href="https://github.com/arrayfire/arrayfire/pull/3027">#3027</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3089">#3089</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3037">#3037</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3072">#3072</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3095">#3095</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3096">#3096</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3097">#3097</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3102">#3102</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3106">#3106</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3105">#3105</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3120">#3120</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3136">#3136</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3135">#3135</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3137">#3137</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3119">#3119</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3150">#3150</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3138">#3138</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3156">#3156</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3139">#3139</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/1705">#1705</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3162">#3162</a>]</li>
+<li>CPU backend improvements - [<a href="https://github.com/arrayfire/arrayfire/pull/3010">#3010</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3138">#3138</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3161">#3161</a>]</li>
+<li>CUDA backend improvements - [<a href="https://github.com/arrayfire/arrayfire/pull/3066">#3066</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3091">#3091</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3093">#3093</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3125">#3125</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3143">#3143</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3161">#3161</a>]</li>
+<li>OpenCL backend improvements - [<a href="https://github.com/arrayfire/arrayfire/pull/3091">#3091</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3068">#3068</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3127">#3127</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3010">#3010</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3039">#3039</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3138">#3138</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3161">#3161</a>]</li>
+<li>General(including JIT) performance improvements across backends - [<a href="https://github.com/arrayfire/arrayfire/pull/3167">#3167</a>]</li>
+<li>Testing improvements - [<a href="https://github.com/arrayfire/arrayfire/pull/3072">#3072</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3131">#3131</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3151">#3151</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3141">#3141</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3153">#3153</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3152">#3152</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3157">#3157</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/1705">#1705</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3170">#3170</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3167">#3167</a>]</li>
+<li>Update CLBlast to latest version - [<a href="https://github.com/arrayfire/arrayfire/pull/3135">#3135</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3179">#3179</a>]</li>
+<li>Improved Otsu threshold computation helper in canny algorithm - [<a href="https://github.com/arrayfire/arrayfire/pull/3169">#3169</a>]</li>
+<li>Modified default parameters for fftR2C and fftC2R C++ API from 0 to 1.0 - [<a href="https://github.com/arrayfire/arrayfire/pull/3178">#3178</a>]</li>
+<li>Use appropriate MKL getrs_batch_strided API based on MKL Versions - [<a href="https://github.com/arrayfire/arrayfire/pull/3181">#3181</a>]</li>
+</ul>
+<h2>Fixes</h2>
+<ul>
+<li>Fixed a bug JIT kernel disk caching - [<a href="https://github.com/arrayfire/arrayfire/pull/3182">#3182</a>]</li>
+<li>Fixed stream used by thrust(CUDA backend) functions - [<a href="https://github.com/arrayfire/arrayfire/pull/3029">#3029</a>] <br  />
+</li>
+<li>Added workaround for new cuSparse API that was added by CUDA amid fix releases - [<a href="https://github.com/arrayfire/arrayfire/pull/3057">#3057</a>]</li>
+<li>Fixed <code>const</code> array indexing inside <code>gfor</code> - [<a href="https://github.com/arrayfire/arrayfire/pull/3078">#3078</a>]</li>
+<li>Handle zero elements in copyData to host - [<a href="https://github.com/arrayfire/arrayfire/pull/3059">#3059</a>]</li>
+<li>Fixed double free regression in OpenCL backend - [<a href="https://github.com/arrayfire/arrayfire/pull/3091">#3091</a>]</li>
+<li>Fixed an infinite recursion bug in NaryNode JIT Node - [<a href="https://github.com/arrayfire/arrayfire/pull/3072">#3072</a>]</li>
+<li>Added missing input validation check in sparse-dense arithmetic operations - [<a href="https://github.com/arrayfire/arrayfire/pull/3129">#3129</a>]</li>
+<li>Fixed bug in <code>getMappedPtr</code> in OpenCL due to invalid lambda capture - [<a href="https://github.com/arrayfire/arrayfire/pull/3163">#3163</a>]</li>
+<li>Fixed bug in <code>getMappedPtr</code> on Arrays that are not ready - [<a href="https://github.com/arrayfire/arrayfire/pull/3163">#3163</a>]</li>
+<li>Fixed edgeTraceKernel for CPU devices on OpenCL backend - [<a href="https://github.com/arrayfire/arrayfire/pull/3164">#3164</a>]</li>
+<li>Fixed windows build issue(s) with VS2019 - [<a href="https://github.com/arrayfire/arrayfire/pull/3048">#3048</a>]</li>
+<li>API documentation fixes - [<a href="https://github.com/arrayfire/arrayfire/pull/3075">#3075</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3076">#3076</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3143">#3143</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/3161">#3161</a>]</li>
+<li>CMake Build Fixes - [<a href="https://github.com/arrayfire/arrayfire/pull/3088">#3088</a>]</li>
+<li>Fixed the tutorial link in README - [<a href="https://github.com/arrayfire/arrayfire/pull/3033">#3033</a>]</li>
+<li>Fixed function name typo in timing tutorial - [<a href="https://github.com/arrayfire/arrayfire/pull/3028">#3028</a>]</li>
+<li>Fixed couple of bugs in CPU backend canny implementation - [<a href="https://github.com/arrayfire/arrayfire/pull/3169">#3169</a>]</li>
+<li>Fixed reference count of array(s) used in JIT operations. It is related to arrayfire's internal memory book keeping. The behavior/accuracy of arrayfire code wasn't broken earlier. It corrected the reference count to be of optimal value in the said scenarios. This may potentially reduce memory usage in some narrow cases - [<a href="https://github.com/arrayfire/arrayfire/pull/3167">#3167</a>]</li>
+<li>Added assert that checks if topk is called with a negative value for k - [<a href="https://github.com/arrayfire/arrayfire/pull/3176">#3176</a>]</li>
+<li>Fixed an Issue where countByKey would give incorrect results for any n &gt; 128 - [<a href="https://github.com/arrayfire/arrayfire/pull/3175">#3175</a>]</li>
+</ul>
+<h2>Contributions</h2>
+<p >Special thanks to our contributors: [HO-COOH][<a href="https://github.com/HO-COOH">https://github.com/HO-COOH</a>] [Willy Born][<a href="https://github.com/willyborn">https://github.com/willyborn</a>] [Gilad Avidov][<a href="https://github.com/avidov">https://github.com/avidov</a>] [Pavan Yalamanchili][<a href="https://github.com/pavanky">https://github.com/pavanky</a>]</p>
+<h1>v3.8.0 </h1>
+<h2>Major Updates </h2>
+<ul>
+<li>Non-uniform(ragged) reductions [<a href="https://github.com/arrayfire/arrayfire/pull/2786">#2786</a>]</li>
+<li>Bit-wise not operator support for array and C API (af_bitnot) [<a href="https://github.com/arrayfire/arrayfire/pull/2865">#2865</a>]</li>
+<li>Initialization list constructor for array class [<a href="https://github.com/arrayfire/arrayfire/pull/2829">#2829</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2987">#2987</a>]</li>
+</ul>
+<h2>Improvements </h2>
+<ul>
+<li>New API for following statistics function: cov, var and stdev - [<a href="https://github.com/arrayfire/arrayfire/pull/2986">#2986</a>]</li>
+<li>allocV2 and freeV2 which return cl_mem on OpenCL backend [<a href="https://github.com/arrayfire/arrayfire/pull/2911">#2911</a>]</li>
+<li>Move constructor and move assignment operator for Dim4 class [<a href="https://github.com/arrayfire/arrayfire/pull/2946">#2946</a>]</li>
+<li>Support for CUDA 11.1 and Compute 8.6 [<a href="https://github.com/arrayfire/arrayfire/pull/3023">#3023</a>]</li>
+<li>Fix af::feature copy constructor for multi-threaded sceanarios [<a href="https://github.com/arrayfire/arrayfire/pull/3022">#3022</a>]</li>
+</ul>
+<h1>v3.7.3 </h1>
+<h2>Improvements </h2>
+<ul>
+<li>Add f16 support for histogram - [<a href="https://github.com/arrayfire/arrayfire/pull/2984">#2984</a>]</li>
+<li>Update confidence connected components example with better illustration - [<a href="https://github.com/arrayfire/arrayfire/pull/2968">#2968</a>]</li>
+<li>Enable disk caching of OpenCL kernel binaries - [<a href="https://github.com/arrayfire/arrayfire/pull/2970">#2970</a>]</li>
+<li>Refactor extension of kernel binaries stored to disk <code>.bin</code> - [<a href="https://github.com/arrayfire/arrayfire/pull/2970">#2970</a>]</li>
+<li>Add minimum driver versions for CUDA toolkit 11 in internal map - [<a href="https://github.com/arrayfire/arrayfire/pull/2982">#2982</a>]</li>
+<li>Improve warnings messages from run-time kernel compilation functions - [<a href="https://github.com/arrayfire/arrayfire/pull/2996">#2996</a>]</li>
+</ul>
+<h2>Fixes </h2>
+<ul>
+<li>Fix bias factor of variance in var_all and cov functions - [<a href="https://github.com/arrayfire/arrayfire/pull/2986">#2986</a>]</li>
+<li>Fix a race condition in confidence connected components function for OpenCL backend - [<a href="https://github.com/arrayfire/arrayfire/pull/2969">#2969</a>]</li>
+<li>Safely ignore disk cache failures in CUDA backend for compiled kernel binaries - [<a href="https://github.com/arrayfire/arrayfire/pull/2970">#2970</a>]</li>
+<li>Fix randn by passing in correct values to Box-Muller - [<a href="https://github.com/arrayfire/arrayfire/pull/2980">#2980</a>]</li>
+<li>Fix rounding issues in Box-Muller function used for RNG - [<a href="https://github.com/arrayfire/arrayfire/pull/2980">#2980</a>]</li>
+<li>Fix problems in RNG for older compute architectures with fp16 - [<a href="https://github.com/arrayfire/arrayfire/pull/2980">#2980</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2996">#2996</a>]</li>
+<li>Fix performance regression of approx functions - [<a href="https://github.com/arrayfire/arrayfire/pull/2977">#2977</a>]</li>
+<li>Remove assert that check that signal/filter types have to be the same - [<a href="https://github.com/arrayfire/arrayfire/pull/2993">#2993</a>]</li>
+<li>Fix <code>checkAndSetDevMaxCompute</code> when the device cc is greater than max - [<a href="https://github.com/arrayfire/arrayfire/pull/2996">#2996</a>]</li>
+<li>Fix documentation errors and warnings - [<a href="https://github.com/arrayfire/arrayfire/pull/2973">#2973</a>] , [<a href="https://github.com/arrayfire/arrayfire/pull/2987">#2987</a>]</li>
+<li>Add missing opencl-arrayfire interoperability functions in unified backend - [<a href="https://github.com/arrayfire/arrayfire/pull/2981">#2981</a>]</li>
+</ul>
+<h2>Contributions </h2>
+<p >Special thanks to our contributors: <a href="https://github.com/pjreed">P. J. Reed</a></p>
+<h1>v3.7.2 </h1>
+<h2>Improvements </h2>
+<ul>
+<li>Cache CUDA kernels to disk to improve load times(Thanks to @cschreib-ibex) [<a href="https://github.com/arrayfire/arrayfire/pull/2848">#2848</a>]</li>
+<li>Staticly link against cuda libraries [<a href="https://github.com/arrayfire/arrayfire/pull/2785">#2785</a>]</li>
+<li>Make cuDNN an optional build dependency [<a href="https://github.com/arrayfire/arrayfire/pull/2836">#2836</a>]</li>
+<li>Improve support for different compilers and OS [<a href="https://github.com/arrayfire/arrayfire/pull/2876">#2876</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2945">#2945</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2925">#2925</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2942">#2942</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2943">#2943</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2945">#2945</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2958">#2958</a>]</li>
+<li>Improve performance of join and transpose on CPU [<a href="https://github.com/arrayfire/arrayfire/pull/2849">#2849</a>]</li>
+<li>Improve documentation [<a href="https://github.com/arrayfire/arrayfire/pull/2816">#2816</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2821">#2821</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2846">#2846</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2918">#2918</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2928">#2928</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2947">#2947</a>]</li>
+<li>Reduce binary size using NVRTC and template reducing instantiations [<a href="https://github.com/arrayfire/arrayfire/pull/2849">#2849</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2861">#2861</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2890">#2890</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2957">#2957</a>]</li>
+<li>reduceByKey performance improvements [<a href="https://github.com/arrayfire/arrayfire/pull/2851">#2851</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2957">#2957</a>]</li>
+<li>Improve support for Intel OpenCL GPUs [<a href="https://github.com/arrayfire/arrayfire/pull/2855">#2855</a>]</li>
+<li>Allow staticly linking against MKL [<a href="https://github.com/arrayfire/arrayfire/pull/2877">#2877</a>] (Sponsered by SDL)</li>
+<li>Better support for older CUDA toolkits [<a href="https://github.com/arrayfire/arrayfire/pull/2923">#2923</a>]</li>
+<li>Add support for CUDA 11 [<a href="https://github.com/arrayfire/arrayfire/pull/2939">#2939</a>]</li>
+<li>Add support for ccache for faster builds [<a href="https://github.com/arrayfire/arrayfire/pull/2931">#2931</a>]</li>
+<li>Add support for the conan package manager on linux [<a href="https://github.com/arrayfire/arrayfire/pull/2875">#2875</a>]</li>
+<li>Propagate build errors up the stack in AFError exceptions [<a href="https://github.com/arrayfire/arrayfire/pull/2948">#2948</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2957">#2957</a>]</li>
+<li>Improve runtime dependency library loading [<a href="https://github.com/arrayfire/arrayfire/pull/2954">#2954</a>]</li>
+<li>Improved cuDNN runtime checks and warnings [<a href="https://github.com/arrayfire/arrayfire/pull/2960">#2960</a>]</li>
+<li>Document af_memory_manager_* native memory return values [<a href="https://github.com/arrayfire/arrayfire/pull/2911">#2911</a>]</li>
+</ul>
+<h2>Fixes </h2>
+<ul>
+<li>Bug crash when allocating large arrays [<a href="https://github.com/arrayfire/arrayfire/pull/2827">#2827</a>]</li>
+<li>Fix various compiler warnings [<a href="https://github.com/arrayfire/arrayfire/pull/2827">#2827</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2849">#2849</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2872">#2872</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2876">#2876</a>]</li>
+<li>Fix minor leaks in OpenCL functions [<a href="https://github.com/arrayfire/arrayfire/pull/2913">#2913</a>]</li>
+<li>Various continuous integration related fixes [<a href="https://github.com/arrayfire/arrayfire/pull/2819">#2819</a>]</li>
+<li>Fix zero padding with convolv2NN [<a href="https://github.com/arrayfire/arrayfire/pull/2820">#2820</a>]</li>
+<li>Fix af_get_memory_pressure_threshold return value [<a href="https://github.com/arrayfire/arrayfire/pull/2831">#2831</a>]</li>
+<li>Increased the max filter length for morph</li>
+<li>Handle empty array inputs for LU, QR, and Rank functions [<a href="https://github.com/arrayfire/arrayfire/pull/2838">#2838</a>]</li>
+<li>Fix FindMKL.cmake script for sequential threading library [<a href="https://github.com/arrayfire/arrayfire/pull/2840">#2840</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2952">#2952</a>]</li>
+<li>Various internal refactoring [<a href="https://github.com/arrayfire/arrayfire/pull/2839">#2839</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2861">#2861</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2864">#2864</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2873">#2873</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2890">#2890</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2891">#2891</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2913">#2913</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2959">#2959</a>]</li>
+<li>Fix OpenCL 2.0 builtin function name conflict [<a href="https://github.com/arrayfire/arrayfire/pull/2851">#2851</a>]</li>
+<li>Fix error caused when releasing memory with multiple devices [<a href="https://github.com/arrayfire/arrayfire/pull/2867">#2867</a>]</li>
+<li>Fix missing set stacktrace symbol from unified API [<a href="https://github.com/arrayfire/arrayfire/pull/2915">#2915</a>]</li>
+<li>Fix zero padding issue in convolve2NN [<a href="https://github.com/arrayfire/arrayfire/pull/2820">#2820</a>]</li>
+<li>Fixed bugs in ReduceByKey [<a href="https://github.com/arrayfire/arrayfire/pull/2957">#2957</a>]</li>
+</ul>
+<h2>Contributions </h2>
+<p >Special thanks to our contributors: <a href="https://github.com/cschreib-ibex">Corentin Schreiber</a> <a href="https://github.com/jacobkahn">Jacob Kahn</a> <a href="https://github.com/pauljurczak">Paul Jurczak</a> <a href="https://github.com/junghans">Christoph Junghans</a></p>
+<h1>v3.7.1 </h1>
+<h2>Improvements </h2>
+<ul>
+<li>Improve mtx download for test data [<a href="https://github.com/arrayfire/arrayfire/pull/2742">#2742</a>]</li>
+<li>Documentation improvements [<a href="https://github.com/arrayfire/arrayfire/pull/2754">#2754</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2792">#2792</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2797">#2797</a>]</li>
+<li>Remove verbose messages in older CMake versions [<a href="https://github.com/arrayfire/arrayfire/pull/2773">#2773</a>]</li>
+<li>Reduce binary size with the use of nvrtc [<a href="https://github.com/arrayfire/arrayfire/pull/2790">#2790</a>]</li>
+<li>Use texture memory to load LUT in orb and fast [<a href="https://github.com/arrayfire/arrayfire/pull/2791">#2791</a>]</li>
+<li>Add missing print function for f16 [<a href="https://github.com/arrayfire/arrayfire/pull/2784">#2784</a>]</li>
+<li>Add checks for f16 support in the CUDA backend [<a href="https://github.com/arrayfire/arrayfire/pull/2784">#2784</a>]</li>
+<li>Create a thrust policy to intercept tmp buffer allocations [<a href="https://github.com/arrayfire/arrayfire/pull/2806">#2806</a>]</li>
+</ul>
+<h2>Fixes </h2>
+<ul>
+<li>Fix segfault on exit when ArrayFire is not initialized in the main thread</li>
+<li>Fix support for CMake 3.5.1 [<a href="https://github.com/arrayfire/arrayfire/pull/2771">#2771</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2772">#2772</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2760">#2760</a>]</li>
+<li>Fix evalMultiple if the input array sizes aren't the same [<a href="https://github.com/arrayfire/arrayfire/pull/2766">#2766</a>]</li>
+<li>Fix error when AF_BACKEND_DEFAULT is passed directly to backend [<a href="https://github.com/arrayfire/arrayfire/pull/2769">#2769</a>]</li>
+<li>Workaround name collision with AMD OpenCL implementation [<a href="https://github.com/arrayfire/arrayfire/pull/2802">#2802</a>]</li>
+<li>Fix on-exit errors with the unified backend [<a href="https://github.com/arrayfire/arrayfire/pull/2769">#2769</a>]</li>
+<li>Fix check for f16 compatibility in OpenCL [<a href="https://github.com/arrayfire/arrayfire/pull/2773">#2773</a>]</li>
+<li>Fix matmul on Intel OpenCL when passing same array as input [<a href="https://github.com/arrayfire/arrayfire/pull/2774">#2774</a>]</li>
+<li>Fix CPU OpenCL blas batching [<a href="https://github.com/arrayfire/arrayfire/pull/2774">#2774</a>]</li>
+<li>Fix memory pressure in the default memory manager [<a href="https://github.com/arrayfire/arrayfire/pull/2801">#2801</a>]</li>
+</ul>
+<h2>Contributions </h2>
+<p >Special thanks to our contributors: <a href="https://github.com/padentomasello">padentomasello</a> <a href="https://github.com/glavaux2">glavaux2</a></p>
+<h1>v3.7.0 </h1>
+<h2>Major Updates </h2>
+<ul>
+<li>Added the ability to customize the memory manager(Thanks jacobkahn and flashlight) [<a href="https://github.com/arrayfire/arrayfire/pull/2461">#2461</a>]</li>
+<li>Added 16-bit floating point support for several functions [<a href="https://github.com/arrayfire/arrayfire/pull/2413">#2413</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2587">#2587</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2585">#2585</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2587">#2587</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2583">#2583</a>]</li>
+<li>Added sumByKey, productByKey, minByKey, maxByKey, allTrueByKey, anyTrueByKey, countByKey [<a href="https://github.com/arrayfire/arrayfire/pull/2254">#2254</a>]</li>
+<li>Added confidence connected components [<a href="https://github.com/arrayfire/arrayfire/pull/2748">#2748</a>]</li>
+<li>Added neural network based convolution and gradient functions [<a href="https://github.com/arrayfire/arrayfire/pull/2359">#2359</a>]</li>
+<li>Added a padding function [<a href="https://github.com/arrayfire/arrayfire/pull/2682">#2682</a>]</li>
+<li>Added pinverse for pseudo inverse [<a href="https://github.com/arrayfire/arrayfire/pull/2279">#2279</a>]</li>
+<li>Added support for uniform ranges in approx1 and approx2 functions. [<a href="https://github.com/arrayfire/arrayfire/pull/2297">#2297</a>]</li>
+<li>Added support to write to preallocated arrays for some functions [<a href="https://github.com/arrayfire/arrayfire/pull/2599">#2599</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2481">#2481</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2328">#2328</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2327">#2327</a>]</li>
+<li>Added meanvar function [<a href="https://github.com/arrayfire/arrayfire/pull/2258">#2258</a>]</li>
+<li>Add support for sparse-sparse arithmetic support</li>
+<li>Added rsqrt function for reciprocal square root</li>
+<li>Added a lower level af_gemm function for general matrix multiplication [<a href="https://github.com/arrayfire/arrayfire/pull/2481">#2481</a>]</li>
+<li>Added a function to set the cuBLAS math mode for the CUDA backend [<a href="https://github.com/arrayfire/arrayfire/pull/2584">#2584</a>]</li>
+<li>Separate debug symbols into separate files [<a href="https://github.com/arrayfire/arrayfire/pull/2535">#2535</a>]</li>
+<li>Print stacktraces on errors [<a href="https://github.com/arrayfire/arrayfire/pull/2632">#2632</a>]</li>
+<li>Support move constructor for <a class="el" href="classaf_1_1array.htm" title="A multi dimensional data container.">af::array</a> [<a href="https://github.com/arrayfire/arrayfire/pull/2595">#2595</a>]</li>
+<li>Expose events in the public API [<a href="https://github.com/arrayfire/arrayfire/pull/2461">#2461</a>]</li>
+<li>Add setAxesLabelFormat to format labels on graphs [<a href="https://github.com/arrayfire/arrayfire/pull/2495">#2495</a>]</li>
+</ul>
+<h2>Improvements </h2>
+<ul>
+<li>Better error messages for systems with driver or device incompatibilities [<a href="https://github.com/arrayfire/arrayfire/pull/2678">#2678</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2448">#2448</a>]</li>
+<li>Optimized unified backend function calls</li>
+<li>Optimized anisotropic smoothing [<a href="https://github.com/arrayfire/arrayfire/pull/2713">#2713</a>]</li>
+<li>Optimized canny filter for CUDA and OpenCL</li>
+<li>Better MKL search script</li>
+<li>Better logging of different submodules in ArrayFire [<a href="https://github.com/arrayfire/arrayfire/pull/2670">#2670</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2669">#2669</a>]</li>
+<li>Improve documentation [<a href="https://github.com/arrayfire/arrayfire/pull/2665">#2665</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2620">#2620</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2615">#2615</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2639">#2639</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2628">#2628</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2633">#2633</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2622">#2622</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2617">#2617</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2558">#2558</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2326">#2326</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2515">#2515</a>]</li>
+<li>Optimized <a class="el" href="classaf_1_1array.htm" title="A multi dimensional data container.">af::array</a> assignment [<a href="https://github.com/arrayfire/arrayfire/pull/2575">#2575</a>]</li>
+<li>Update the k-means example to display the result [<a href="https://github.com/arrayfire/arrayfire/pull/2521">#2521</a>]</li>
+</ul>
+<h2>Fixes </h2>
+<ul>
+<li>Fix multi-config generators</li>
+<li>Fix access errors in canny</li>
+<li>Fix segfault in the unified backend if no backends are available</li>
+<li>Fix access errors in scan-by-key</li>
+<li>Fix sobel operator</li>
+<li>Fix an issue with the random number generator and s16</li>
+<li>Fix issue with boolean product reduction</li>
+<li>Fix array_proxy move constructor</li>
+<li>Fix convolve3 launch configuration</li>
+<li>Fix an issue where the fft function modified the input array [<a href="https://github.com/arrayfire/arrayfire/pull/2520">#2520</a>]</li>
+</ul>
+<h2>Contributions </h2>
+<p >Special thanks to our contributors: <a href="https://github.com/jacobkahn">Jacob Khan</a> <a href="https://github.com/WilliamTambellini">William Tambellini</a> <a href="https://github.com/lehins">Alexey Kuleshevich</a> <a href="https://github.com/r-barnes">Richard Barnes</a> <a href="https://github.com/gaika">Gaika</a> <a href="https://github.com/ShalokShalom">ShalokShalom</a></p>
+<h1>v3.6.4 </h1>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Address a JIT performance regression due to moving kernel arguments to shared memory [<a href="https://github.com/arrayfire/arrayfire/pull/2501">#2501</a>]</li>
+<li>Fix the default parameter for setAxisTitle [<a href="https://github.com/arrayfire/arrayfire/pull/2491">#2491</a>]</li>
+</ul>
+<h1>v3.6.3 </h1>
+<h2>Improvements </h2>
+<ul>
+<li>Graphics are now a runtime dependency instead of a link time dependency [<a href="https://github.com/arrayfire/arrayfire/pull/2365">#2365</a>]</li>
+<li>Reduce the CUDA backend binary size using runtime compilation of kernels [<a href="https://github.com/arrayfire/arrayfire/pull/2437">#2437</a>]</li>
+<li>Improved batched matrix multiplication on the CPU backend by using Intel MKL's <code>cblas_Xgemm_batched</code>[<a href="https://github.com/arrayfire/arrayfire/pull/2206">#2206</a>]</li>
+<li>Print JIT kernels to disk or stream using the <code>AF_JIT_KERNEL_TRACE</code> environment variable [<a href="https://github.com/arrayfire/arrayfire/pull/2404">#2404</a>]</li>
+<li><code>void*</code> pointers are now allowed as arguments to <code><a class="el" href="classaf_1_1array.htm#aa70b253da2d32394c521a815f7627116" title="Perform deep copy from host/device pointer to an existing array.">af::array::write()</a></code> [<a href="https://github.com/arrayfire/arrayfire/pull/2367">#2367</a>]</li>
+<li>Slightly improve the efficiency of JITed tile operations [<a href="https://github.com/arrayfire/arrayfire/pull/2472">#2472</a>]</li>
+<li>Make the random number generation on the CPU backend to be consistent with CUDA and OpenCL [<a href="https://github.com/arrayfire/arrayfire/pull/2435">#2435</a>]</li>
+<li>Handled very large JIT tree generations [<a href="https://github.com/arrayfire/arrayfire/pull/2484">#2484</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2487">#2487</a>]</li>
+</ul>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Fixed <code><a class="el" href="classaf_1_1array_1_1array__proxy.htm" title="Intermediate data class.">af::array::array_proxy</a></code> move assignment operator [<a href="https://github.com/arrayfire/arrayfire/pull/2479">#2479</a>]</li>
+<li>Fixed input array dimensions validation in svdInplace() [<a href="https://github.com/arrayfire/arrayfire/pull/2331">#2331</a>]</li>
+<li>Fixed the typedef declaration for window resource handle [<a href="https://github.com/arrayfire/arrayfire/pull/2357">#2357</a>].</li>
+<li>Increase compatibility with GCC 8 [<a href="https://github.com/arrayfire/arrayfire/pull/2379">#2379</a>]</li>
+<li>Fixed <code>af::write</code> tests [<a href="https://github.com/arrayfire/arrayfire/pull/2380">#2380</a>]</li>
+<li>Fixed a bug in broadcast step of 1D exclusive scan [<a href="https://github.com/arrayfire/arrayfire/pull/2366">#2366</a>]</li>
+<li>Fixed OpenGL related build errors on OSX [<a href="https://github.com/arrayfire/arrayfire/pull/2382">#2382</a>]</li>
+<li>Fixed multiple array evaluation. Performance improvement. [<a href="https://github.com/arrayfire/arrayfire/pull/2384">#2384</a>]</li>
+<li>Fixed buffer overflow and expected output of kNN SSD small test [<a href="https://github.com/arrayfire/arrayfire/pull/2445">#2445</a>]</li>
+<li>Fixed MKL linking order to enable threaded BLAS [<a href="https://github.com/arrayfire/arrayfire/pull/2444">#2444</a>]</li>
+<li>Added validations for forge module plugin availability before calling resource cleanup [<a href="https://github.com/arrayfire/arrayfire/pull/2443">#2443</a>]</li>
+<li>Improve compatibility on MSVC toolchain(_MSC_VER &gt; 1914) with the CUDA backend [<a href="https://github.com/arrayfire/arrayfire/pull/2443">#2443</a>]</li>
+<li>Fixed BLAS gemm func generators for newest MSVC 19 on VS 2017 [<a href="https://github.com/arrayfire/arrayfire/pull/2464">#2464</a>]</li>
+<li>Fix errors on exits when using the cuda backend with unified [<a href="https://github.com/arrayfire/arrayfire/pull/2470">#2470</a>]</li>
+</ul>
+<h2>Documentation </h2>
+<ul>
+<li>Updated svdInplace() documentation following a bugfix [<a href="https://github.com/arrayfire/arrayfire/pull/2331">#2331</a>]</li>
+<li>Fixed a typo in matrix multiplication documentation [<a href="https://github.com/arrayfire/arrayfire/pull/2358">#2358</a>]</li>
+<li>Fixed a code snippet demostrating C-API use [<a href="https://github.com/arrayfire/arrayfire/pull/2406">#2406</a>]</li>
+<li>Updated hamming matcher implementation limitation [<a href="https://github.com/arrayfire/arrayfire/pull/2434">#2434</a>]</li>
+<li>Added illustration for the rotate function [<a href="https://github.com/arrayfire/arrayfire/pull/2453">#2453</a>]</li>
+</ul>
+<h2>Misc </h2>
+<ul>
+<li>Use cudaMemcpyAsync instead of cudaMemcpy throughout the codebase [<a href="https://github.com/arrayfire/arrayfire/pull/2362">#2362</a>]</li>
+<li>Display a more informative error message if CUDA driver is incomptible [<a href="https://github.com/arrayfire/arrayfire/pull/2421">#2421</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2448">#2448</a>]</li>
+<li>Changed forge resource managemenet to use smart pointers [<a href="https://github.com/arrayfire/arrayfire/pull/2452">#2452</a>]</li>
+<li>Deprecated intl and uintl typedefs in API [<a href="https://github.com/arrayfire/arrayfire/pull/2360">#2360</a>]</li>
+<li>Enabled graphics by default for all builds starting with v3.6.3 [<a href="https://github.com/arrayfire/arrayfire/pull/2365">#2365</a>]</li>
+<li>Fixed several warnings [<a href="https://github.com/arrayfire/arrayfire/pull/2344">#2344</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2356">#2356</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2361">#2361</a>]</li>
+<li>Refactored initArray() calls to use createEmptyArray(). initArray() is for internal use only by Array class. [<a href="https://github.com/arrayfire/arrayfire/pull/2361">#2361</a>]</li>
+<li>Refactored <code>void*</code> memory allocations to use unsigned char type [<a href="https://github.com/arrayfire/arrayfire/pull/2459">#2459</a>]</li>
+<li>Replaced deprecated MKL API with in-house implementations for sparse to sparse/dense conversions [<a href="https://github.com/arrayfire/arrayfire/pull/2312">#2312</a>]</li>
+<li>Reorganized and fixed some internal backend API [<a href="https://github.com/arrayfire/arrayfire/pull/2356">#2356</a>]</li>
+<li>Updated compilation order of cuda files to speed up compile time [<a href="https://github.com/arrayfire/arrayfire/pull/2368">#2368</a>]</li>
+<li>Removed conditional graphics support builds after enabling runtime loading of graphics dependencies [<a href="https://github.com/arrayfire/arrayfire/pull/2365">#2365</a>]</li>
+<li>Marked graphics dependencies as optional in CPack RPM config [<a href="https://github.com/arrayfire/arrayfire/pull/2365">#2365</a>]</li>
+<li>Refactored a sparse arithmetic backend API [<a href="https://github.com/arrayfire/arrayfire/pull/2379">#2379</a>]</li>
+<li>Fixed const correctness of <code>af_device_array</code> API [<a href="https://github.com/arrayfire/arrayfire/pull/2396">#2396</a>]</li>
+<li>Update Forge to v1.0.4 [<a href="https://github.com/arrayfire/arrayfire/pull/2466">#2466</a>]</li>
+<li>Manage Forge resources from the DeviceManager class [<a href="https://github.com/arrayfire/arrayfire/pull/2381">#2381</a>]</li>
+<li>Fixed non-mkl &amp; non-batch blas upstream call arguments [<a href="https://github.com/arrayfire/arrayfire/pull/2401">#2401</a>]</li>
+<li>Link MKL with OpenMP instead of TBB by default</li>
+<li>use clang-format to format source code</li>
+</ul>
+<h2>Contributions </h2>
+<p >Special thanks to our contributors: <a href="https://github.com/alessandrobessi">Alessandro Bessi</a> <a href="https://github.com/zhihaoy">zhihaoy</a> <a href="https://github.com/jacobkahn">Jacob Khan</a> <a href="https://github.com/WilliamTambellini">William Tambellini</a></p>
+<h1>v3.6.2 </h1>
+<h2>Features </h2>
+<ul>
+<li>Added support for batching on the <code>cond</code> argument in select() [<a href="https://github.com/arrayfire/arrayfire/pull/2243">#2243</a>]</li>
+<li>Added support for broadcasting batched matmul() [<a href="https://github.com/arrayfire/arrayfire/pull/2315">#2315</a>]</li>
+<li>Added support for multiple nearest neighbors in nearestNeighbour() [<a href="https://github.com/arrayfire/arrayfire/pull/2280">#2280</a>]</li>
+<li>Added support for clamp-to-edge padding as an <code>af_border_type</code> option [<a href="https://github.com/arrayfire/arrayfire/pull/2333">#2333</a>]</li>
+</ul>
+<h2>Improvements </h2>
+<ul>
+<li>Improved performance of morphological operations [<a href="https://github.com/arrayfire/arrayfire/pull/2238">#2238</a>]</li>
+<li>Fixed linking errors when compiling without Freeimage/Graphics [<a href="https://github.com/arrayfire/arrayfire/pull/2248">#2248</a>]</li>
+<li>Improved the usage of ArrayFire as a CMake subproject [<a href="https://github.com/arrayfire/arrayfire/pull/2290">#2290</a>]</li>
+<li>Enabled configuration of custom library path for loading dynamic backend libraries [<a href="https://github.com/arrayfire/arrayfire/pull/2302">#2302</a>]</li>
+</ul>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Fixed LAPACK definitions and linking errors [<a href="https://github.com/arrayfire/arrayfire/pull/2239">#2239</a>]</li>
+<li>Fixed overflow in dim4::ndims() [<a href="https://github.com/arrayfire/arrayfire/pull/2289">#2289</a>]</li>
+<li>Fixed pow() precision for integral types [<a href="https://github.com/arrayfire/arrayfire/pull/2305">#2305</a>]</li>
+<li>Fixed issues with tile() with a large repeat dimension [<a href="https://github.com/arrayfire/arrayfire/pull/2307">#2307</a>]</li>
+<li>Fixed svd() sub-array output on OpenCL [<a href="https://github.com/arrayfire/arrayfire/pull/2279">#2279</a>]</li>
+<li>Fixed grid-based indexing calculation in histogram() [<a href="https://github.com/arrayfire/arrayfire/pull/2230">#2230</a>]</li>
+<li>Fixed bug in indexing when used after reorder [<a href="https://github.com/arrayfire/arrayfire/pull/2311">#2311</a>]</li>
+<li>Fixed errors when exiting on Windows when using <a href="https://github.com/CNugteren/CLBlast">CLBlast</a> [<a href="https://github.com/arrayfire/arrayfire/pull/2222">#2222</a>]</li>
+<li>Fixed fallthrough error in medfilt1 [<a href="https://github.com/arrayfire/arrayfire/pull/2349">#2349</a>]</li>
+</ul>
+<h2>Documentation </h2>
+<ul>
+<li>Improved unwrap() documentation [<a href="https://github.com/arrayfire/arrayfire/pull/2301">#2301</a>]</li>
+<li>Improved wrap() documentation [<a href="https://github.com/arrayfire/arrayfire/pull/2320">#2320</a>]</li>
+<li>Improved accum() documentation [<a href="https://github.com/arrayfire/arrayfire/pull/2298">#2298</a>]</li>
+<li>Improved tile() documentation [<a href="https://github.com/arrayfire/arrayfire/pull/2293">#2293</a>]</li>
+<li>Clarified approx1() and approx2() indexing in documentation [<a href="https://github.com/arrayfire/arrayfire/pull/2287">#2287</a>]</li>
+<li>Updated examples of <a class="el" href="group__data__func__select.htm">select()</a> in detailed documentation [<a href="https://github.com/arrayfire/arrayfire/pull/2277">#2277</a>]</li>
+<li>Updated lookup() examples [<a href="https://github.com/arrayfire/arrayfire/pull/2288">#2288</a>]</li>
+<li>Updated set operations' documentation [<a href="https://github.com/arrayfire/arrayfire/pull/2299">#2299</a>]</li>
+</ul>
+<h2>Misc </h2>
+<ul>
+<li><code>af*</code> libraries and dependencies directory changed to <code>lib64</code> [<a href="https://github.com/arrayfire/arrayfire/pull/2186">#2186</a>]</li>
+<li>Added new arrayfire ASSERT utility functions [<a href="https://github.com/arrayfire/arrayfire/pull/2249">#2249</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2256">#2256</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2257">#2257</a>] [<a href="https://github.com/arrayfire/arrayfire/pull/2263">#2263</a>]</li>
+<li>Improved error messages in JIT [<a href="https://github.com/arrayfire/arrayfire/pull/2309">#2309</a>]</li>
+</ul>
+<h2>Contributions </h2>
+<p >Special thanks to our contributors: <a href="https://github.com/jacobkahn">Jacob Kahn</a>, <a href="https://github.com/vakopian">Vardan Akopian</a></p>
+<h1>v3.6.1 </h1>
+<h2>Improvements </h2>
+<ul>
+<li>FreeImage is now a run-time dependency [#2164]</li>
+<li>Reduced binary size by setting the symbol visibility to hidden [#2168]</li>
+<li>Add memory manager logging using the AF_TRACE=mem environment variable [#2169]</li>
+<li>Improved CPU Anisotropic Diffusion performance [#2174]</li>
+<li>Perform normalization after FFT for improved accuracy [#2185][#2192]</li>
+<li>Updated CLBlast to v1.4.0 [#2178]</li>
+<li>Added additional validation when using <a class="el" href="classaf_1_1seq.htm" title="seq is used to create sequences for indexing af::array">af::seq</a> for indexing [#2153]</li>
+<li>Perform checks for unsupported cards by the CUDA implementation [#2182]</li>
+</ul>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Fixed region when all pixels were the foreground or background [#2152]</li>
+<li>Fixed several memory leaks [#2202][#2201][#2180][#2179][#2177][#2175]</li>
+<li>Fixed bug in setDevice which didn't allow you to select the last device [#2189]</li>
+<li>Fixed bug in min/max where the first element of the array was a NaN value [#2155]</li>
+<li>Fixed window cell indexing for graphics [#2207]</li>
+</ul>
+<h1>v3.6.0 </h1>
+<p >The source code with submodules can be downloaded directly from the following link: <a href="http://arrayfire.com/arrayfire_source/arrayfire-full-3.6.0.tar.bz2">http://arrayfire.com/arrayfire_source/arrayfire-full-3.6.0.tar.bz2</a></p>
+<h2>Major Updates </h2>
+<ul>
+<li>Added the <code>topk()</code> function <a href="http://arrayfire.org/docs/group__stat__func__topk.htm">Documentation</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/2061">1</a></sup></li>
+<li>Added batched matrix multiply support. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1898">2</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/2059">3</a></sup></li>
+<li>Added anisotropic diffusion, <code>anisotropicDiffusion()</code>. <a href="http://arrayfire.org/docs/group__image__func__anisotropic__diffusion.htm">Documentation</a> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1850">4</a></sup>.</li>
+</ul>
+<h2>Features </h2>
+<ul>
+<li>Added support for batched matrix multiply. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1898">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/2059">2</a></sup></li>
+<li>New anisotropic diffusion function, <code>anisotropicDiffusion()</code>. <a href="http://arrayfire.org/docs/group__image__func__anisotropic__diffusion.htm">Documentation</a> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1850">3</a></sup>.</li>
+<li>New <code>topk()</code> function, which returns the top k elements along a given dimension of the input. <a href="http://arrayfire.org/docs/group__stat__func__topk.htm">Documentation</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/2061">4</a></sup></li>
+<li>New gradient diffusion <a href="https://github.com/arrayfire/arrayfire/blob/master/examples/image_processing/gradient_diffusion.cpp">example</a>.</li>
+</ul>
+<h2>Improvements </h2>
+<ul>
+<li>JITted <code>select()</code> and <code>shift()</code> functions for CUDA and OpenCL backends. <sup><a href="https://github.com/arrayfire/arrayfire/pull/2047">1</a></sup></li>
+<li>Significant CMake improvements. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1861">2</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/2070">3</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/2018">4</a></sup></li>
+<li>Improved the quality of the random number generator, thanks to Ralf Stubner. <sup><a href="https://github.com/arrayfire/arrayfire/pull/2122">5</a></sup></li>
+<li>Modified <code>af_colormap</code> struct to match forge's definition. <sup><a href="https://github.com/arrayfire/arrayfire/pull/2082">6</a></sup></li>
+<li>Improved Black Scholes example. <sup><a href="https://github.com/arrayfire/arrayfire/pull/2079">7</a></sup></li>
+<li>Using CPack to generate installers. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1861">8</a></sup></li>
+<li>Refactored <a href="https://github.com/arrayfire/arrayfire/blob/master/examples/financial/black_scholes_options.cpp">black_scholes_options</a> example to use built-in <code><a class="el" href="group__arith__func__erfc.htm#gaa5639fa042b89e51308ddd3e22c1dad2" title="C++ Interface to evaluate the complementary error function.">af::erfc</a></code> function for cumulative normal distribution.<sup><a href="https://github.com/arrayfire/arrayfire/pull/2079">9</a></sup>.</li>
+<li>Reduced the scope of mutexes in memory manager <sup><a href="https://github.com/arrayfire/arrayfire/pull/2125">10</a></sup></li>
+<li>Official installers do not require the CUDA toolkit to be installed</li>
+<li>Significant CMake improvements have been made. Using CPack to generate installers. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1861">11</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/2070">12</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/2018">13</a></sup></li>
+<li>Corrected assert function calls in select() tests. <sup><a href="https://github.com/arrayfire/arrayfire/pull/2058">14</a></sup></li>
+</ul>
+<h2>Bug fixes </h2>
+<ul>
+<li>Fixed <code>shfl_down()</code> warnings with CUDA 9. <sup><a href="https://github.com/arrayfire/arrayfire/pull/2040">1</a></sup></li>
+<li>Disabled CUDA JIT debug flags on ARM architecture.<sup><a href="https://github.com/arrayfire/arrayfire/pull/2037">2</a></sup></li>
+<li>Fixed CLBLast install lib dir for linux platform where <code>lib</code> directory has arch(64) suffix.<sup><a href="https://github.com/arrayfire/arrayfire/pull/2094">3</a></sup></li>
+<li>Fixed assert condition in 3d morph opencl kernel.<sup><a href="https://github.com/arrayfire/arrayfire/pull/2033">4</a></sup></li>
+<li>Fix JIT errors with large non-linear kernels<sup><a href="https://github.com/arrayfire/arrayfire/pull/2127">5</a></sup></li>
+<li>Fix bug in CPU jit after moddims was called <sup><a href="https://github.com/arrayfire/arrayfire/pull/2127">5</a></sup></li>
+<li>Fixed deadlock caused by calls to from the worker thread <sup><a href="https://github.com/arrayfire/arrayfire/pull/2124">6</a></sup></li>
+</ul>
+<h2>Documentation </h2>
+<ul>
+<li>Fixed variable name typo in <code><a class="el" href="vectorization_8md.htm">vectorization.md</a></code>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/2032">1</a></sup></li>
+<li>Fixed <code>AF_API_VERSION</code> value in Doxygen config file. <sup><a href="https://github.com/arrayfire/arrayfire/pull/2053">2</a></sup></li>
+</ul>
+<h2>Known issues </h2>
+<ul>
+<li>Several OpenCL tests failing on OSX:<ul>
+<li>`canny_opencl, fft_opencl, gen_assign_opencl, homography_opencl, reduce_opencl, scan_by_key_opencl, solve_dense_opencl, sparse_arith_opencl, sparse_convert_opencl, where_opencl`</li>
+</ul>
+</li>
+</ul>
+<h2>Community contributions </h2>
+<p >Special thanks to our contributors: <a href="https://github.com/afvincent">Adrien F. Vincent</a>, <a href="https://github.com/CNugteren">Cedric Nugteren</a>, <a href="https://github.com/fzimmermann89">Felix</a>, <a href="https://github.com/FloopCZ">Filip Matzner</a>, <a href="https://github.com/HoneyPatouceul">HoneyPatouceul</a>, <a href="https://github.com/plavin">Patrick Lavin</a>, <a href="https://github.com/rstub">Ralf Stubner</a>, <a href="https://github.com/WilliamTambellini">William Tambellini</a></p>
+<h1>v3.5.1 </h1>
+<p >The source code with submodules can be downloaded directly from the following link: <a href="http://arrayfire.com/arrayfire_source/arrayfire-full-3.5.1.tar.bz2">http://arrayfire.com/arrayfire_source/arrayfire-full-3.5.1.tar.bz2</a></p>
+<p >Installer CUDA Version: 8.0 (Required) Installer OpenCL Version: 1.2 (Minimum)</p>
+<h2>Improvements </h2>
+<ul>
+<li>Relaxed <code><a class="el" href="group__image__func__unwrap.htm#gac65c28b7e78bc25d5e442a0159afee53" title="C++ Interface for rearranging windowed sections of an input into columns (or rows)">af::unwrap()</a></code> function's arguments. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1853">1</a></sup></li>
+<li>Changed behavior of <a class="el" href="classaf_1_1array.htm#a8bc3e142a14a07815b29e230cefacd3e" title="Get the size of the array in memory.">af::array::allocated()</a> to specify memory allocated. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1877">1</a></sup></li>
+<li>Removed restriction on the number of bins for <code><a class="el" href="group__image__func__histogram.htm#gaf97fd7eb81e8ec41c816eeda9104ae24" title="C++ Interface for histogram.">af::histogram()</a></code> on CUDA and OpenCL kernels. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1895">1</a></sup></li>
+</ul>
+<h2>Performance </h2>
+<ul>
+<li>Improved JIT performance. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1864">1</a></sup></li>
+<li>Improved CPU element-wise operation performance. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1890">1</a></sup></li>
+<li>Improved regions performance using texture objects. <sup> <a href="https://github.com/arrayfire/arrayfire/pull/1903">1</a></sup></li>
+</ul>
+<h2>Bug fixes </h2>
+<ul>
+<li>Fixed overflow issues in mean. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1849">1</a></sup></li>
+<li>Fixed memory leak when chaining indexing operations. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1879">1</a></sup></li>
+<li>Fixed bug in array assignment when using an empty array to index. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1897">1</a></sup></li>
+<li>Fixed bug with <code><a class="el" href="group__blas__func__matmul.htm#gac061af289fcd39a07a3efba0f33fb17f" title="C++ Interface to multiply two matrices.">af::matmul()</a></code> which occured when its RHS argument was an indexed vector. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1883">1</a></sup></li>
+<li>Fixed bug deadlock bug when sparse array was used with a JIT Array. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1889">1</a></sup></li>
+<li>Fixed pixel tests for FAST kernels. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1891">1</a></sup></li>
+<li>Fixed <code><a class="el" href="group__data__func__replace.htm#ga21eeef8e69367938673753fafe539431" title="C++ Interface to replace elements of an array with elements of another array.">af::replace</a></code> so that it is now copy-on-write. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1892">1</a></sup></li>
+<li>Fixed launch configuration issues in CUDA JIT. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1893">1</a></sup></li>
+<li>Fixed segfaults and "Pure Virtual Call" error warnings when exiting on Windows. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1899">1</a> <a href="https://github.com/arrayfire/arrayfire/pull/1924">2</a></sup></li>
+<li>Workaround for <code>clEnqueueReadBuffer</code> bug on OSX. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1888">1</a></sup></li>
+</ul>
+<h2>Build </h2>
+<ul>
+<li>Fixed issues when compiling with GCC 7.1. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1872">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1876">2</a></sup></li>
+<li>Eliminated unnecessary Boost dependency from CPU and CUDA backends. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1857">1</a></sup></li>
+</ul>
+<h2>Misc </h2>
+<ul>
+<li>Updated support links to point to Slack instead of Gitter. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1905">1</a></sup></li>
+</ul>
+<h1>v3.5.0 </h1>
+<h2>Major Updates </h2>
+<ul>
+<li>ArrayFire now supports threaded applications. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1706">1</a></sup></li>
+<li>Added Canny edge detector. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1743">1</a></sup></li>
+<li>Added Sparse-Dense arithmetic operations. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1696">1</a></sup></li>
+</ul>
+<h2>Features </h2>
+<ul>
+<li>ArrayFire Threading<ul>
+<li><a class="el" href="classaf_1_1array.htm">af::array</a> can be read by multiple threads</li>
+<li>All ArrayFire functions can be executed concurrently by multiple threads</li>
+<li>Threads can operate on different devices to simplify Muli-device workloads</li>
+</ul>
+</li>
+<li>New Canny edge detector function, <a class="el" href="group__image__func__canny.htm#ga79334eae16255b8a33f4f1a672f7cac6">af::canny()</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1743">1</a></sup><ul>
+<li>Can automatically calculate high threshold with <code>AF_CANNY_THRESHOLD_AUTO_OTSU</code></li>
+<li>Supports both L1 and L2 Norms to calculate gradients</li>
+</ul>
+</li>
+<li>New tuned OpenCL BLAS backend, <a href="https://github.com/arrayfire/arrayfire/pull/1727">CLBlast</a>.</li>
+</ul>
+<h2>Improvements </h2>
+<ul>
+<li>Converted CUDA JIT to use <a href="http://docs.nvidia.com/cuda/nvrtc/index.html">NVRTC</a> instead of <a href="http://docs.nvidia.com/cuda/nvvm-ir-spec/index.html">NVVM</a>.</li>
+<li>Performance improvements in <a class="el" href="group__manip__func__reorder.htm#ga642d691220a06b0aafa1123e722a5937">af::reorder()</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1766">1</a></sup></li>
+<li>Performance improvements in <a class="el" href="classaf_1_1array.htm#a048d77db849d74f18a13dabfd43ce55d">af::array::scalar&lt;T&gt;()</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1809">1</a></sup></li>
+<li>Improved unified backend performance. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1770">1</a></sup></li>
+<li>ArrayFire now depends on Forge v1.0. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1800">1</a></sup></li>
+<li>Can now specify the FFT plan cache size using the <a class="el" href="namespaceaf.htm#adae4ba27bc8beed887774815c469f74e">af::setFFTPlanCacheSize()</a> function.</li>
+<li>Get the number of physical bytes allocated by the memory manager <a class="el" href="internal_8h.htm#ac29771bd43822cf0a67a69995d5c6a7c">af_get_allocated_bytes()</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1630">1</a></sup></li>
+<li><a class="el" href="group__blas__func__dot.htm#gab98b9a8de187c5e58e946658e62161ca">af::dot()</a> can now return a scalar value to the host. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1628">1</a></sup></li>
+</ul>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Fixed improper release of default Mersenne random engine. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1716">1</a></sup></li>
+<li>Fixed <a class="el" href="group__random__func__randu.htm#ga828798e84ab467f6f8568830f1c853f3">af::randu()</a> and <a class="el" href="group__random__func__randn.htm#gac164aa9deb983d34d236ee50587cfd88">af::randn()</a> ranges for floating point types. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1784">1</a></sup></li>
+<li>Fixed assignment bug in CPU backend. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1765">1</a></sup></li>
+<li>Fixed complex (<code>c32</code>,<code>c64</code>) multiplication in OpenCL convolution kernels. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1816">1</a></sup></li>
+<li>Fixed inconsistent behavior with <a class="el" href="group__data__func__replace.htm#ga21eeef8e69367938673753fafe539431">af::replace()</a> and <a class="el" href="group__data__func__replace.htm#ga58449937228761176de47b1d75d689d8">af_replace_scalar()</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1773">1</a></sup></li>
+<li>Fixed memory leak in <a class="el" href="group__signal__func__fir.htm#ga2a850e69775eede4709e0d607bba240b">af_fir()</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1765">1</a></sup></li>
+<li>Fixed memory leaks in <a class="el" href="group__arith__func__cast.htm#gab0cb307d6f9019ac8cbbbe9b8a4d6b9b">af_cast</a> for sparse arrays. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1826">1</a></sup></li>
+<li>Fixing correctness of <a class="el" href="group__arith__func__pow.htm#ga0f28be1a9c8b176a78c4a47f483e7fc6">af_pow</a> for complex numbers by using Cartesian form. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1765">1</a></sup></li>
+<li>Corrected <a class="el" href="group__data__func__select.htm#ga1a2bf0110367961d084bc6b5d33f7555">af::select()</a> with indexing in CUDA and OpenCL backends. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1731">1</a></sup></li>
+<li>Workaround for VS2015 compiler ternary bug. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1771">1</a></sup></li>
+<li>Fixed memory corruption in <code>cuda::findPlan()</code>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1793">1</a></sup></li>
+<li>Argument checks in <a class="el" href="group__sparse__func__create.htm#ga42c5cf729a232c1cbbcfe0f664f3b986">af_create_sparse_array</a> avoids inputs of type int64. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1747">1</a></sup></li>
+<li>Fixed issue with indexing an array with a step size != 1. <sup><a href="https://github.com/arrayfire/arrayfire/issues/1846">1</a></sup></li>
+</ul>
+<h2>Build fixes </h2>
+<ul>
+<li>On OSX, utilize new GLFW package from the brew package manager. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1720">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1775">2</a></sup></li>
+<li>Fixed CUDA PTX names generated by CMake v3.7. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1689">1</a></sup></li>
+<li>Support <code>gcc</code> &gt; 5.x for CUDA. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1708">1</a></sup></li>
+</ul>
+<h2>Examples </h2>
+<ul>
+<li>New genetic algorithm example. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1695">1</a></sup></li>
+</ul>
+<h2>Documentation </h2>
+<ul>
+<li>Updated <code><a class="el" href="README_8md.htm">README.md</a></code> to improve readability and formatting. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1726">1</a></sup></li>
+<li>Updated <code><a class="el" href="README_8md.htm">README.md</a></code> to mention Julia and Nim wrappers. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1714">1</a></sup></li>
+<li>Improved installation instructions - <code><a class="el" href="install_8md.htm">docs/pages/install.md</a></code>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1740">1</a></sup></li>
+</ul>
+<h2>Miscellaneous </h2>
+<ul>
+<li>A few improvements for ROCm support. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1710">1</a></sup></li>
+<li>Removed CUDA 6.5 support. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1687">1</a></sup></li>
+</ul>
+<h2>Known issues </h2>
+<ul>
+<li>Windows<ul>
+<li>The Windows NVIDIA driver version <code>37x.xx</code> contains a bug which causes <code>fftconvolve_opencl</code> to fail. Upgrade or downgrade to a different version of the driver to avoid this failure.</li>
+<li>The following tests fail on Windows with NVIDIA hardware: <code>threading_cuda</code>,<code>qr_dense_opencl</code>, <code>solve_dense_opencl</code>.</li>
+</ul>
+</li>
+<li>macOS<ul>
+<li>The Accelerate framework, used by the CPU backend on macOS, leverages Intel graphics cards (Iris) when there are no discrete GPUs available. This OpenCL implementation is known to give incorrect results on the following tests: <code>lu_dense_{cpu,opencl}</code>, <code>solve_dense_{cpu,opencl}</code>, <code>inverse_dense_{cpu,opencl}</code>.</li>
+<li>Certain tests intermittently fail on macOS with NVIDIA GPUs apparently due to inconsistent driver behavior: <code>fft_large_cuda</code> and <code>svd_dense_cuda</code>.</li>
+<li>The following tests are currently failing on macOS with AMD GPUs: <code>cholesky_dense_opencl</code> and <code>scan_by_key_opencl</code>.</li>
+</ul>
+</li>
+</ul>
+<h1>v3.4.2 </h1>
+<h2>Deprecation Announcement </h2>
+<p >This release supports CUDA 6.5 and higher. The next ArrayFire relase will support CUDA 7.0 and higher, dropping support for CUDA 6.5. Reasons for no longer supporting CUDA 6.5 include:</p>
+<ul>
+<li>CUDA 7.0 NVCC supports the C++11 standard (whereas CUDA 6.5 does not), which is used by ArrayFire's CPU and OpenCL backends.</li>
+<li>Very few ArrayFire users still use CUDA 6.5.</li>
+</ul>
+<p >As a result, the older Jetson TK1 / Tegra K1 will no longer be supported in the next ArrayFire release. The newer Jetson TX1 / Tegra X1 will continue to have full capability with ArrayFire.</p>
+<h2>Docker </h2>
+<ul>
+<li><a href="https://github.com/arrayfire/arrayfire-docker">ArrayFire has been Dockerized</a>.</li>
+</ul>
+<h2>Improvements </h2>
+<ul>
+<li>Implemented sparse storage format conversions between <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa33553814922263702c5a95695c988d8b">AF_STORAGE_CSR</a> and <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa3798241f7c7fb19df683b868bdb089a4">AF_STORAGE_COO</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1642">1</a></sup><ul>
+<li>Directly convert between <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa3798241f7c7fb19df683b868bdb089a4">AF_STORAGE_COO</a> &lt;--&gt; <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa33553814922263702c5a95695c988d8b">AF_STORAGE_CSR</a> using the <a class="el" href="group__sparse__func__convert__to.htm#gade6974709ebd7989b21bcb9cbee39bbd">af::sparseConvertTo()</a> function.</li>
+<li><a class="el" href="group__sparse__func__convert__to.htm#gade6974709ebd7989b21bcb9cbee39bbd">af::sparseConvertTo()</a> now also supports converting to dense.</li>
+</ul>
+</li>
+<li>Added cast support for <a class="el" href="group__sparse__func.htm">sparse arrays</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1653">1</a></sup><ul>
+<li>Casting only changes the values array and the type. The row and column index arrays are not changed.</li>
+</ul>
+</li>
+<li>Reintroduced automated computation of chart axes limits for graphics functions. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1639">1</a></sup><ul>
+<li>The axes limits will always be the minimum/maximum of the current and new limit.</li>
+<li>The user can still set limits from API calls. If the user sets a limit from the API call, then the automatic limit setting will be disabled.</li>
+</ul>
+</li>
+<li>Using <code>boost::scoped_array</code> instead of <code>boost::scoped_ptr</code> when managing array resources. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1637">1</a></sup></li>
+<li>Internal performance improvements to getInfo() by using <code>const</code> references to avoid unnecessary copying of <code>ArrayInfo</code> objects. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1665">1</a></sup></li>
+<li>Added support for scalar <a class="el" href="classaf_1_1array.htm" title="A multi dimensional data container.">af::array</a> inputs for <a class="el" href="group__signal__func__convolve.htm#ga801b0f4a09a017ccb196fac3c0dc417b" title="C++ Interface for convolution any(one through three) dimensional signals.">af::convolve()</a> and <a class="el" href="group__set__mat.htm">set functions</a>. <sup><a href="https://github.com/arrayfire/arrayfire/issues/1660">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/issues/1675">2</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1668">3</a></sup></li>
+<li>Performance fixes in <a class="el" href="group__signal__func__convolve.htm#ga95cc430f1c610ed4409ebdd83156b278" title="C++ Interface for FFT-based convolution any(one through three) dimensional signals.">af::fftConvolve()</a> kernels. <sup><a href="https://github.com/arrayfire/arrayfire/issues/1679">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1680">2</a></sup></li>
+</ul>
+<h2>Build </h2>
+<ul>
+<li>Support for Visual Studio 2015 compilation. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1632">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1640">2</a></sup></li>
+<li>Fixed <code>FindCBLAS.cmake</code> when PkgConfig is used. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1657">1</a></sup></li>
+</ul>
+<h2>Bug fixes </h2>
+<ul>
+<li>Fixes to JIT when tree is large. <sup><a href="https://github.com/arrayfire/arrayfire/issues/1646">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1638">2</a></sup></li>
+<li>Fixed indexing bug when converting dense to sparse <a class="el" href="classaf_1_1array.htm" title="A multi dimensional data container.">af::array</a> as <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa3798241f7c7fb19df683b868bdb089a4">AF_STORAGE_COO</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1642">1</a></sup></li>
+<li>Fixed <a class="el" href="group__image__func__bilateral.htm#gabecce3d57eb1880bdfc680992b2c15f6" title="C++ Interface for bilateral filter.">af::bilateral()</a> OpenCL kernel compilation on OS X. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1638">1</a></sup></li>
+<li>Fixed memory leak in <a class="el" href="group__image__func__regions.htm#gaf631c72f5d9f2bcb719841d08443926c" title="C++ Interface for getting regions in an image.">af::regions()</a> (CPU) and <a class="el" href="group__image__func__rgb2ycbcr.htm#ga48c473e4cf44c12e2f1be25b5f816805" title="C++ Interface for converting RGB to YCbCr.">af::rgb2ycbcr()</a>. <sup><a href="https://github.com/arrayfire/arrayfire/issues/1664">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/issues/1664">2</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1666">3</a></sup></li>
+</ul>
+<h2>Installers </h2>
+<ul>
+<li>Major OS X installer fixes. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1629">1</a></sup><ul>
+<li>Fixed installation scripts.</li>
+<li>Fixed installation symlinks for libraries.</li>
+</ul>
+</li>
+<li>Windows installer now ships with more pre-built examples.</li>
+</ul>
+<h2>Examples </h2>
+<ul>
+<li>Added <a class="el" href="group__lapack__factor__func__cholesky.htm#ga7137da1ad3edd534fe4dffa77bb47f35" title="C++ Interface to perform in-place Cholesky decomposition.">af::choleskyInPlace()</a> calls to <code>cholesky.cpp</code> example. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1671">1</a></sup></li>
+</ul>
+<h2>Documentation </h2>
+<ul>
+<li>Added <code>u8</code> as supported data type in <code><a class="el" href="getting__started_8md.htm">getting_started.md</a></code>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1661">1</a></sup></li>
+<li>Fixed typos. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1652">1</a></sup></li>
+</ul>
+<h2>CUDA 8 on OSX </h2>
+<ul>
+<li><a href="https://developer.nvidia.com/cuda-toolkit">CUDA 8.0.55</a> supports Xcode 8. <sup><a href="https://github.com/arrayfire/arrayfire/issues/1664">1</a></sup></li>
+</ul>
+<h2>Known Issues </h2>
+<ul>
+<li>Known failures with CUDA 6.5. These include all functions that use sorting. As a result, sparse storage format conversion between <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa3798241f7c7fb19df683b868bdb089a4">AF_STORAGE_COO</a> and <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa33553814922263702c5a95695c988d8b">AF_STORAGE_CSR</a> has been disabled for CUDA 6.5.</li>
+</ul>
+<h1>v3.4.1 </h1>
+<h2>Installers </h2>
+<ul>
+<li>Installers for Linux, OS X and Windows<ul>
+<li>CUDA backend now uses <a href="https://developer.nvidia.com/cuda-toolkit">CUDA 8.0</a>.</li>
+<li>Uses <a href="https://software.intel.com/en-us/intel-mkl">Intel MKL 2017</a>.</li>
+<li>CUDA Compute 2.x (Fermi) is no longer compiled into the library.</li>
+</ul>
+</li>
+<li>Installer for OS X<ul>
+<li>The libraries shipping in the OS X Installer are now compiled with Apple Clang v7.3.1 (previously v6.1.0).</li>
+<li>The OS X version used is 10.11.6 (previously 10.10.5).</li>
+</ul>
+</li>
+<li>Installer for Jetson TX1 / Tegra X1<ul>
+<li>Requires <a href="https://developer.nvidia.com/embedded/jetpack">JetPack for L4T 2.3</a> (containing Linux for Tegra r24.2 for TX1).</li>
+<li>CUDA backend now uses <a href="https://developer.nvidia.com/cuda-toolkit">CUDA 8.0</a> 64-bit.</li>
+<li>Using CUDA's cusolver instead of CPU fallback.</li>
+<li>Uses OpenBLAS for CPU BLAS.</li>
+<li>All ArrayFire libraries are now 64-bit.</li>
+</ul>
+</li>
+</ul>
+<h2>Improvements </h2>
+<ul>
+<li>Add <a class="el" href="group__sparse__func.htm">sparse array</a> support to <a class="el" href="group__data__mat.htm#gaabf89285b7036427efe452491025567d">af::eval()</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1598">1</a></sup></li>
+<li>Add OpenCL-CPU fallback support for sparse <a class="el" href="group__blas__func__matmul.htm#gac061af289fcd39a07a3efba0f33fb17f">af::matmul()</a> when running on a unified memory device. Uses MKL Sparse BLAS.</li>
+<li>When using CUDA libdevice, pick the correct compute version based on device. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1612">1</a></sup></li>
+<li>OpenCL FFT now also supports prime factors 7, 11 and 13. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1383">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1619">2</a></sup></li>
+</ul>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Allow CUDA libdevice to be detected from custom directory.</li>
+<li>Fix <code>aarch64</code> detection on Jetson TX1 64-bit OS. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1593">1</a></sup></li>
+<li>Add missing definition of <code>af_set_fft_plan_cache_size</code> in unified backend. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1591">1</a></sup></li>
+<li>Fix intial values for <a class="el" href="group__reduce__func__min.htm#ga5c4c0c89dbc59ae5e20fb7e5438ceca5">af::min()</a> and <a class="el" href="group__reduce__func__max.htm#ga8487a88bf44e0c88af44fec99cc205b1">af::max()</a> operations. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1594">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1595">2</a></sup></li>
+<li>Fix distance calculation in <a class="el" href="group__cv__func__nearest__neighbour.htm#ga9973d0dd5241f71c2fafb9ebd5095d78">af::nearestNeighbour</a> for CUDA and OpenCL backend. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1596">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1595">2</a></sup></li>
+<li>Fix OpenCL bug where scalars where are passed incorrectly to compile options. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1595">1</a></sup></li>
+<li>Fix bug in <a class="el" href="group__gfx__func__draw.htm#ga1cdb8c3205d70d8feaddd8c30245393f">af::Window::surface()</a> with respect to dimensions and ranges. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1604">1</a></sup></li>
+<li>Fix possible double free corruption in <a class="el" href="group__index__func__assign.htm#ga3b201c3114941b6f8d0e344afcd18457">af_assign_seq()</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1605">1</a></sup></li>
+<li>Add missing eval for key in <a class="el" href="group__scan__func__scanbykey.htm#ga48d35dd5d7aeeb3c36d417100f456c6d">af::scanByKey</a> in CPU backend. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1605">1</a></sup></li>
+<li>Fixed creation of sparse values array using <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa3798241f7c7fb19df683b868bdb089a4">AF_STORAGE_COO</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1620">1</a></sup> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1621">1</a></sup></li>
+</ul>
+<h2>Examples </h2>
+<ul>
+<li>Add a <a class="el" href="benchmarks_2cg_8cpp-example.htm">Conjugate Gradient solver example</a> to demonstrate sparse and dense matrix operations. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1599">1</a></sup></li>
+</ul>
+<h2>CUDA Backend </h2>
+<ul>
+<li>When using <a href="https://developer.nvidia.com/cuda-toolkit">CUDA 8.0</a>, compute 2.x are no longer in default compute list.<ul>
+<li>This follows <a href="https://developer.nvidia.com/cuda-toolkit">CUDA 8.0</a> deprecating computes 2.x.</li>
+<li>Default computes for CUDA 8.0 will be 30, 50, 60.</li>
+</ul>
+</li>
+<li>When using CUDA pre-8.0, the default selection remains 20, 30, 50.</li>
+<li>CUDA backend now uses <code>-arch=sm_30</code> for PTX compilation as default.<ul>
+<li>Unless compute 2.0 is enabled.</li>
+</ul>
+</li>
+</ul>
+<h2>Known Issues </h2>
+<ul>
+<li><a class="el" href="group__lapack__factor__func__lu.htm#gab924fc338d4cb57fa91bed1517fece09">af::lu()</a> on CPU is known to give incorrect results when built run on OS X 10.11 or 10.12 and compiled with Accelerate Framework. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1617">1</a></sup><ul>
+<li>Since the OS X Installer libraries uses MKL rather than Accelerate Framework, this issue does not affect those libraries.</li>
+</ul>
+</li>
+</ul>
+<h1>v3.4.0 </h1>
+<h2>Major Updates </h2>
+<ul>
+<li><a class="el" href="group__sparse__func.htm">Sparse Matrix and BLAS</a>. <sup><a href="https://github.com/arrayfire/arrayfire/issues/821">1</a> <a href="https://github.com/arrayfire/arrayfire/pull/1319">2</a></sup></li>
+<li>Faster JIT for CUDA and OpenCL. <sup><a href="https://github.com/arrayfire/arrayfire/issues/1472">1</a> <a href="https://github.com/arrayfire/arrayfire/pull/1462">2</a></sup></li>
+<li>Support for <a class="el" href="classaf_1_1randomEngine.htm">random number generator engines</a>. <sup><a href="https://github.com/arrayfire/arrayfire/issues/868">1</a> <a href="https://github.com/arrayfire/arrayfire/pull/1551">2</a></sup></li>
+<li>Improvements to graphics. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1555">1</a> <a href="https://github.com/arrayfire/arrayfire/pull/1566">2</a></sup></li>
+</ul>
+<h2>Features </h2>
+<ul>
+<li><b><a class="el" href="group__sparse__func.htm">Sparse Matrix and BLAS</a></b> <sup><a href="https://github.com/arrayfire/arrayfire/issues/821">1</a> <a href="https://github.com/arrayfire/arrayfire/pull/1319">2</a></sup><ul>
+<li>Support for <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa33553814922263702c5a95695c988d8b">CSR</a> and <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa3798241f7c7fb19df683b868bdb089a4">COO</a> <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600f">storage types</a>.</li>
+<li>Sparse-Dense Matrix Multiplication and Matrix-Vector Multiplication as a part of <a class="el" href="group__blas__func__matmul.htm#gac061af289fcd39a07a3efba0f33fb17f" title="C++ Interface to multiply two matrices.">af::matmul()</a> using <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa33553814922263702c5a95695c988d8b">AF_STORAGE_CSR</a> format for sparse.</li>
+<li>Conversion to and from <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fac99c819e628693aed3c422d0656519c2">dense</a> matrix to <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa33553814922263702c5a95695c988d8b">CSR</a> and <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600fa3798241f7c7fb19df683b868bdb089a4">COO</a> <a class="el" href="defines_8h.htm#a75e1422a62a43dc1ce727ccfb850600f">storage types</a>.</li>
+</ul>
+</li>
+<li><b>Faster JIT</b> <sup><a href="https://github.com/arrayfire/arrayfire/issues/1472">1</a> <a href="https://github.com/arrayfire/arrayfire/pull/1462">2</a></sup><ul>
+<li>Performance improvements for CUDA and OpenCL JIT functions.</li>
+<li>Support for evaluating multiple outputs in a single kernel. See <a class="el" href="classaf_1_1array.htm#a6a8d7156cd3c66a9ca9f0f2688ee9f72" title="Evaluate any JIT expressions to generate data for the array.">af::array::eval()</a> for more.</li>
+</ul>
+</li>
+<li><b><a class="el" href="classaf_1_1randomEngine.htm">Random Number Generation</a></b> <sup><a href="https://github.com/arrayfire/arrayfire/issues/868">1</a> <a href="https://github.com/arrayfire/arrayfire/pull/1551">2</a></sup><ul>
+<li><a class="el" href="classaf_1_1randomEngine.htm" title="C++ Interface - Random Number Generation Engine Class.">af::randomEngine()</a>: A random engine class to handle setting the [type](af_random_type) and seed for random number generator engines.</li>
+<li>Supported engine types are (<a class="el" href="defines_8h.htm#a82a3bf91d6dd04661c63632d0fbf4934">af_random_engine_type</a>):<ul>
+<li><a href="http://www.thesalmons.org/john/random123/">Philox</a></li>
+<li><a href="http://www.thesalmons.org/john/random123/">Threefry</a></li>
+<li><a href="http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MTGP/">Mersenne Twister</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><b>Graphics</b> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1555">1</a> <a href="https://github.com/arrayfire/arrayfire/pull/1566">2</a></sup><ul>
+<li>Using <a href="https://github.com/arrayfire/forge/releases/tag/v0.9.0">Forge v0.9.0</a></li>
+<li><a class="el" href="group__gfx__func__draw.htm#ga6d3904749d501e6ee607566dc3e1ecc8">Vector Field</a> plotting functionality. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1566">1</a></sup></li>
+<li>Removed <a href="http://glew.sourceforge.net/">GLEW</a> and replaced with <a href="https://github.com/cginternals/glbinding">glbinding</a>.<ul>
+<li>Removed usage of GLEW after support for MX (multithreaded) was dropped in v2.0. <sup><a href="https://github.com/arrayfire/arrayfire/issues/1540">1</a></sup></li>
+</ul>
+</li>
+<li>Multiple overlays on the same window are now possible.<ul>
+<li>Overlays support for same type of object (2D/3D)</li>
+<li>Supported by <a class="el" href="group__gfx__func__draw.htm#gaed2e96201d07c5f90e430632de5e26f1" title="Renders the input arrays as a 2D or 3D plot to the window.">af::Window::plot</a>, <a class="el" href="group__gfx__func__draw.htm#gafd7d94aa8f5fd37fee0662a4906a38d7" title="Renders the input array as a histogram to the window.">af::Window::hist</a>, <a class="el" href="group__gfx__func__draw.htm#ga1cdb8c3205d70d8feaddd8c30245393f" title="Renders the input arrays as a 3D surface plot to the window.">af::Window::surface</a>, <a class="el" href="group__gfx__func__draw.htm#ga6d3904749d501e6ee607566dc3e1ecc8" title="Renders the input arrays as a 2D or 3D vector field plot to the window.">af::Window::vectorField</a>.</li>
+</ul>
+</li>
+<li>New API to set axes limits for graphs.<ul>
+<li>Draw calls do not automatically compute the limits. This is now under user control.</li>
+<li><a class="el" href="group__gfx__func__window.htm#ga1277bb007f5f2845eac09ead91ad36d2" title="Setup the axes limits for a 2D histogram/plot/vector field.">af::Window::setAxesLimits</a> can be used to set axes limits automatically or manually.</li>
+<li><a class="el" href="group__gfx__func__window.htm#gafed13c75a1462e5b7cbf3a78033efd44" title="Setup the axes titles for a plot/surface/vector field.">af::Window::setAxesTitles</a> can be used to set axes titles.</li>
+</ul>
+</li>
+<li>New API for plot and scatter:<ul>
+<li><a class="el" href="group__gfx__func__draw.htm#gaed2e96201d07c5f90e430632de5e26f1" title="Renders the input arrays as a 2D or 3D plot to the window.">af::Window::plot()</a> and <a class="el" href="group__gfx__func__draw.htm#gaf95ec84f9788b42fd443c9523792e4a4" title="Renders the input arrays as a 2D or 3D scatter-plot to the window.">af::Window::scatter()</a> now can handle 2D and 3D and determine appropriate order.</li>
+<li><a class="el" href="group__gfx__func__draw.htm#gaca0392f183fd41f862212d27921f1136" title="C Interface wrapper for drawing an array as a 2D or 3D plot.">af_draw_plot_nd()</a></li>
+<li><a class="el" href="group__gfx__func__draw.htm#ga6d447cda6c8fdcde33257b284a46acd4" title="C Interface wrapper for drawing an array as a 2D plot.">af_draw_plot_2d()</a></li>
+<li><a class="el" href="group__gfx__func__draw.htm#gab4daba1d60682cbef7f3bdf6ab2e83a2" title="C Interface wrapper for drawing an array as a 3D plot.">af_draw_plot_3d()</a></li>
+<li><a class="el" href="group__gfx__func__draw.htm#ga9991b93681e0c18693a5464458781d22" title="C Interface wrapper for drawing an array as a plot.">af_draw_scatter_nd()</a></li>
+<li><a class="el" href="group__gfx__func__draw.htm#ga79417722c69883e7a91282b138288010" title="C Interface wrapper for drawing an array as a 2D plot.">af_draw_scatter_2d()</a></li>
+<li><a class="el" href="group__gfx__func__draw.htm#ga2b3d0dd690ebcba4c4dbb09cdcaed304" title="C Interface wrapper for drawing an array as a 3D plot.">af_draw_scatter_3d()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><b>New <a class="el" href="defines_8h.htm#ac0b7c1cfd1fb146314d96f17bbfffa68">interpolation methods</a></b> <sup><a href="https://github.com/arrayfire/arrayfire/issues/1562">1</a></sup><ul>
+<li>Applies to<ul>
+<li><a class="el" href="group__transform__func__resize.htm#gaa80038ec7db0ce0836c79d2c8a75e788">af::resize()</a></li>
+<li><a class="el" href="group__transform__func__transform.htm#ga62d399998f63e3a919e6dde241ec6a08">af::transform()</a></li>
+<li><a class="el" href="group__signal__func__approx1.htm#gabd004f943d8a8df6d00064fd965680ee">af::approx1()</a></li>
+<li><a class="el" href="group__signal__func__approx2.htm#gae1caef95088d57fda2eafbd83b41a0c0">af::approx2()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><b>Support for <a class="el" href="group__mathfunc__mat.htm">complex mathematical functions</a></b> <sup><a href="https://github.com/arrayfire/arrayfire/issues/1507">1</a></sup><ul>
+<li>Add complex support for <a class="el" href="group__trig__mat.htm">Trigonometric functions</a>, <a class="el" href="group__arith__func__sqrt.htm#gabdfe0e5a01f91a1079451b1e094a6893">af::sqrt()</a>, <a class="el" href="group__arith__func__log.htm#ga706e8267880cf69e751ac197bc8aef30">af::log()</a>.</li>
+</ul>
+</li>
+<li><b><a class="el" href="group__image__func__medfilt.htm#gab6b0565d20e8bd4ce93ceaca92d6dcc4" title="C++ Interface for median filter.">af::medfilt1()</a>: Median filter for 1-d signals</b> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1479">1</a></sup></li>
+<li><b>Generalized scan functions: <a class="el" href="group__scan__func__scan.htm">scan</a> and <a class="el" href="group__scan__func__scanbykey.htm">scanByKey</a></b><ul>
+<li>Now supports inclusive or exclusive scans</li>
+<li>Supports binary operations defined by <a class="el" href="defines_8h.htm#a4de0054ea1c296a55a79691c21f19c6c">af_binary_op</a>. <sup><a href="https://github.com/arrayfire/arrayfire/issues/388">1</a></sup></li>
+</ul>
+</li>
+<li><b><a class="el" href="group__moments__mat.htm">Image Moments</a> functions</b> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1453">1</a></sup></li>
+<li><b>Add <a class="el" href="namespaceaf.htm#a9f61942066de7a396124871e8fd09b0c" title="Get the size of the type represented by an af_dtype enum.">af::getSizeOf()</a> function for <a class="el" href="defines_8h.htm#a023d8ac325fb14f1712a52fb0940b1d5">af_dtype</a></b> <sup><a href="https://github.com/arrayfire/arrayfire/pull/1404">1</a></sup></li>
+<li><b>Explicitly extantiate <a class="el" href="classaf_1_1array.htm#a64bf5e096ea250f57e4e90d228025c66">af::array::device()</a> for `void *</b> <sup><a href="https://github.com/arrayfire/arrayfire/issues/1503">1</a></sup></li>
+</ul>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Fixes to edge-cases in <a class="el" href="group__morph__mat.htm">Morphological Operations</a>. <sup><a href="https://github.com/arrayfire/arrayfire/issues/1564">1</a></sup></li>
+<li>Makes JIT tree size consistent between devices. <sup><a href="https://github.com/arrayfire/arrayfire/issues/1457">1</a></sup></li>
+<li>Delegate higher-dimension in <a class="el" href="group__convolve__mat.htm">Convolutions</a> to correct dimensions. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1445">1</a></sup></li>
+<li>Indexing fixes with C++11. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1426">1</a> <a href="https://github.com/arrayfire/arrayfire/pull/1426">2</a></sup></li>
+<li>Handle empty arrays as inputs in various functions. <sup><a href="https://github.com/arrayfire/arrayfire/issues/799">1</a></sup></li>
+<li>Fix bug when single element input to <a class="el" href="group__stat__func__median.htm#ga6c170573573ae397b18f4b3b38f13f29" title="C++ Interface for median.">af::median</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1423">1</a></sup></li>
+<li>Fix bug in calculation of time from <a class="el" href="namespaceaf.htm#a08955393264b77be242246c0b1148687">af::timeit()</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1414">1</a></sup></li>
+<li>Fix bug in floating point numbers in <a class="el" href="classaf_1_1seq.htm" title="seq is used to create sequences for indexing af::array">af::seq</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1404">1</a></sup></li>
+<li>Fixes for OpenCL graphics interop on NVIDIA devices. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1408/commits/e1f16e6">1</a></sup></li>
+<li>Fix bug when compiling large kernels for AMD devices. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1465">1</a></sup></li>
+<li>Fix bug in <a class="el" href="group__image__func__bilateral.htm#gabecce3d57eb1880bdfc680992b2c15f6" title="C++ Interface for bilateral filter.">af::bilateral</a> when shared memory is over the limit. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1478">1</a></sup></li>
+<li>Fix bug in kernel header compilation tool <code>bin2cpp</code>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1544">1</a></sup></li>
+<li>Fix inital values for <a class="el" href="group__morph__mat.htm">Morphological Operations</a> functions. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1547">1</a></sup></li>
+<li>Fix bugs in <a class="el" href="group__cv__func__homography.htm#gaa715595e3e68382edec95ebf90555b47" title="C++ Interface for Homography estimation.">af::homography()</a> CPU and OpenCL kernels. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1584">1</a></sup></li>
+<li>Fix bug in CPU TNJ. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1587">1</a></sup></li>
+</ul>
+<h2>Improvements </h2>
+<ul>
+<li>CUDA 8 and compute 6.x(Pascal) support, current installer ships with CUDA 7.5. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1432">1</a> <a href="https://github.com/arrayfire/arrayfire/pull/1487">2</a> <a href="https://github.com/arrayfire/arrayfire/pull/1539">3</a></sup></li>
+<li>User controlled FFT plan caching. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1448">1</a></sup></li>
+<li>CUDA performance improvements for <a class="el" href="group__image__func__wrap.htm">wrap</a>, <a class="el" href="group__image__func__unwrap.htm">unwrap</a> and <a class="el" href="group__approx__mat.htm">Interpolation and approximation</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1411">1</a></sup></li>
+<li>Fallback for CUDA-OpenGL interop when no devices does not support OpenGL. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1415">1</a></sup></li>
+<li>Additional forms of batching with the <a class="el" href="group__transform__func__transform.htm">transform</a> functions. <a href="https://github.com/arrayfire/arrayfire/pull/1412">New behavior defined here</a>. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1412">1</a></sup></li>
+<li>Update to OpenCL2 headers. <sup><a href="https://github.com/arrayfire/arrayfire/issues/1344">1</a></sup></li>
+<li>Support for integration with external OpenCL contexts. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1140">1</a></sup></li>
+<li>Performance improvements to interal copy in CPU Backend. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1440">1</a></sup></li>
+<li>Performance improvements to <a class="el" href="group__data__func__select.htm#ga1a2bf0110367961d084bc6b5d33f7555" title="C++ Interface to select elements based on a conditional array.">af::select</a> and <a class="el" href="group__data__func__replace.htm#ga21eeef8e69367938673753fafe539431" title="C++ Interface to replace elements of an array with elements of another array.">af::replace</a> CUDA kernels. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1587">1</a></sup></li>
+<li>Enable OpenCL-CPU offload by default for devices with Unified Host Memory. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1521">1</a></sup><ul>
+<li>To disable, use the environment variable <code>AF_OPENCL_CPU_OFFLOAD=0</code>.</li>
+</ul>
+</li>
+</ul>
+<h2>Build </h2>
+<ul>
+<li>Compilation speedups. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1526">1</a></sup></li>
+<li>Build fixes with MKL. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1526">1</a></sup></li>
+<li>Error message when CMake CUDA Compute Detection fails. <sup><a href="https://github.com/arrayfire/arrayfire/issues/1535">1</a></sup></li>
+<li>Several CMake build issues with Xcode generator fixed. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1493">1</a> <a href="https://github.com/arrayfire/arrayfire/pull/1499">2</a></sup></li>
+<li>Fix multiple OpenCL definitions at link time. <sup><a href="https://github.com/arrayfire/arrayfire/issues/1429">1</a></sup></li>
+<li>Fix lapacke detection in CMake. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1423">1</a></sup></li>
+<li>Update build tags of<ul>
+<li><a href="https://github.com/clMathLibraries/clBLAS">clBLAS</a></li>
+<li><a href="https://github.com/clMathLibraries/clFFT">clFFT</a></li>
+<li><a href="https://github.com/boostorg/compute">Boost.Compute</a></li>
+<li><a href="https://github.com/arrayfire/forge">Forge</a></li>
+<li><a href="https://github.com/cginternals/glbinding">glbinding</a></li>
+</ul>
+</li>
+<li>Fix builds with GCC 6.1.1 and GCC 5.3.0. <sup><a href="https://github.com/arrayfire/arrayfire/pull/1409">1</a></sup></li>
+</ul>
+<h2>Installers </h2>
+<ul>
+<li>All installers now ship with ArrayFire libraries build with MKL 2016.</li>
+<li>All installers now ship with Forge development files and examples included.</li>
+<li>CUDA Compute 2.0 has been removed from the installers. Please contact us directly if you have a special need.</li>
+</ul>
+<h2>Examples </h2>
+<ul>
+<li>Added <a class="el" href="graphics_2field_8cpp-example.htm">example simulating gravity</a> for demonstration of vector field.</li>
+<li>Improvements to <a class="el" href="financial_2black_scholes_options_8cpp-example.htm">financial/black_scholes_options.cpp</a> example.</li>
+<li>Improvements to <a class="el" href="graphics_2gravity_sim_8cpp-example.htm">graphics/gravity_sim.cpp</a> example.</li>
+<li>Fix graphics examples to use <a class="el" href="group__gfx__func__window.htm#ga1277bb007f5f2845eac09ead91ad36d2" title="Setup the axes limits for a 2D histogram/plot/vector field.">af::Window::setAxesLimits</a> and <a class="el" href="group__gfx__func__window.htm#gafed13c75a1462e5b7cbf3a78033efd44" title="Setup the axes titles for a plot/surface/vector field.">af::Window::setAxesTitles</a> functions.</li>
+</ul>
+<h2>Documentation &amp; Licensing </h2>
+<ul>
+<li><a href="http://arrayfire.com/trademark-policy">ArrayFire copyright and trademark policy</a></li>
+<li>Fixed grammar in license.</li>
+<li>Add license information for glbinding.</li>
+<li>Remove license infomation for GLEW.</li>
+<li>Random123 now applies to all backends.</li>
+<li>Random number functions are now under <a class="el" href="group__random__mat.htm">Random Number Generation</a>.</li>
+</ul>
+<h2>Deprecations </h2>
+<p >The following functions have been deprecated and may be modified or removed permanently from future versions of ArrayFire.</p><ul>
+<li><a class="el" href="group__gfx__func__draw.htm#ga8e04ec129034e9fe769f3e6b14cd087f">af::Window::plot3()</a>: Use <a class="el" href="group__gfx__func__draw.htm#gaed2e96201d07c5f90e430632de5e26f1">af::Window::plot</a> instead.</li>
+<li><a class="el" href="group__gfx__func__draw.htm#gada090c398764cbe1475bdb1a1e31b85a">af_draw_plot()</a>: Use <a class="el" href="group__gfx__func__draw.htm#gaca0392f183fd41f862212d27921f1136">af_draw_plot_nd</a> or <a class="el" href="group__gfx__func__draw.htm#ga6d447cda6c8fdcde33257b284a46acd4">af_draw_plot_2d</a> instead.</li>
+<li><a class="el" href="group__gfx__func__draw.htm#gab7a96f606051867f0734aaacedc1e275">af_draw_plot3()</a>: Use <a class="el" href="group__gfx__func__draw.htm#gaca0392f183fd41f862212d27921f1136">af_draw_plot_nd</a> or <a class="el" href="group__gfx__func__draw.htm#gab4daba1d60682cbef7f3bdf6ab2e83a2">af_draw_plot_3d</a> instead.</li>
+<li><a class="el" href="group__gfx__func__draw.htm#ga3bbfbe1b60741a259d2146b3ab50ace3">af::Window::scatter3()</a>: Use <a class="el" href="group__gfx__func__draw.htm#gaf95ec84f9788b42fd443c9523792e4a4">af::Window::scatter</a> instead.</li>
+<li><a class="el" href="group__gfx__func__draw.htm#ga2ef3c95d1a0ce0ed4fe003ed53808ca2">af_draw_scatter()</a>: Use <a class="el" href="group__gfx__func__draw.htm#ga9991b93681e0c18693a5464458781d22">af_draw_scatter_nd</a> or <a class="el" href="group__gfx__func__draw.htm#ga79417722c69883e7a91282b138288010">af_draw_scatter_2d</a> instead.</li>
+<li><a class="el" href="group__gfx__func__draw.htm#ga764410fbdf0cd60c7044c77e36fb2577">af_draw_scatter3()</a>: Use <a class="el" href="group__gfx__func__draw.htm#ga9991b93681e0c18693a5464458781d22">af_draw_scatter_nd</a> or <a class="el" href="group__gfx__func__draw.htm#ga2b3d0dd690ebcba4c4dbb09cdcaed304">af_draw_scatter_3d</a> instead.</li>
+</ul>
+<h2>Known Issues </h2>
+<p >Certain CUDA functions are known to be broken on Tegra K1. The following ArrayFire tests are currently failing:</p><ul>
+<li>assign_cuda</li>
+<li>harris_cuda</li>
+<li>homography_cuda</li>
+<li>median_cuda</li>
+<li>orb_cudasort_cuda</li>
+<li>sort_by_key_cuda</li>
+<li>sort_index_cuda</li>
+</ul>
+<h1>v3.3.2 </h1>
+<h2>Improvements </h2>
+<ul>
+<li>Family of <a class="el" href="group__sort__mat.htm">Sort</a> functions now support <a href="https://github.com/arrayfire/arrayfire/pull/1373">higher order dimensions</a>.</li>
+<li>Improved performance of batched sort on dim 0 for all <a class="el" href="group__sort__mat.htm">Sort</a> functions.</li>
+<li><a class="el" href="group__stat__func__median.htm">Median</a> now also supports higher order dimensions.</li>
+</ul>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Fixes to <a href="https://github.com/arrayfire/arrayfire/issues/1352">error handling</a> in C++ API for binary functions.</li>
+<li>Fixes to <a href="https://github.com/arrayfire/arrayfire/issues/1350">external OpenCL context management</a>.</li>
+<li>Fixes to <a href="https://github.com/arrayfire/arrayfire/issues/1360">JPEG_GREYSCALE</a> for FreeImage versions &lt;= 3.154.</li>
+<li>Fixed for <a href="https://github.com/arrayfire/arrayfire/issues/1386">non-float inputs</a> to <a class="el" href="group__image__func__rgb2gray.htm#ga96e322e3aba443889897b9bb45471bf4">af::rgb2gray()</a>.</li>
+</ul>
+<h2>Build </h2>
+<ul>
+<li><a href="https://github.com/arrayfire/arrayfire/issues/1378">Disable CPU Async</a> when building with GCC &lt; 4.8.4.</li>
+<li>Add option to <a href="https://github.com/arrayfire/arrayfire/issues/1369">disable CPUID</a> from CMake.</li>
+<li>More verbose message when <a href="https://github.com/arrayfire/arrayfire/issues/1362">CUDA Compute Detection fails</a>.</li>
+<li>Print message to use <a href="https://github.com/arrayfire/arrayfire/issues/1363">CUDA library stub</a> from CUDA Toolkit if CUDA Library is not found from default paths.</li>
+<li><a href="https://github.com/arrayfire/arrayfire/pull/1385">Build Fixes</a> on Windows.<ul>
+<li>For compiling tests our of source.</li>
+<li>For compiling ArrayFire with static MKL.</li>
+</ul>
+</li>
+<li><a href="https://github.com/arrayfire/arrayfire/pull/1368">Exclude &lt;sys/sysctl.h&gt;</a> when building on GNU Hurd.</li>
+<li>Add <a href="https://github.com/arrayfire/arrayfire/pull/1389">manual CMake options</a> to build DEB and RPM packages.</li>
+</ul>
+<h2>Documentation </h2>
+<ul>
+<li>Fixed documentation for <a class="el" href="group__data__func__replace.htm#ga21eeef8e69367938673753fafe539431">af::replace()</a>.</li>
+<li>Fixed images in <a class="el" href="using_on_osx.htm">Using on OSX</a> page.</li>
+</ul>
+<h2>Installer </h2>
+<ul>
+<li>Linux x64 installers will now be compiled with GCC 4.9.2.</li>
+<li>OSX installer gives better error messages on brew failures and now includes link to [Fixing OS X Installer Failures] (<a href="https://github.com/arrayfire/arrayfire/wiki/Fixing-Common-OS-X-Installer-Failures">https://github.com/arrayfire/arrayfire/wiki/Fixing-Common-OS-X-Installer-Failures</a>) for brew installation failures.</li>
+</ul>
+<h1>v3.3.1 </h1>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Fixes to <a class="el" href="classaf_1_1array.htm#a64bf5e096ea250f57e4e90d228025c66">af::array::device()</a><ul>
+<li>CPU Backend: <a href="https://github.com/arrayfire/arrayfire/issues/1316">evaluate arrays</a> before returning pointer with asynchronous calls in CPU backend.</li>
+<li>OpenCL Backend: <a href="https://github.com/arrayfire/arrayfire/issues/1324">fix segfaults</a> when requested for device pointers on empty arrays.</li>
+</ul>
+</li>
+<li>Fixed <a class="el" href="group__arith__func__mod.htm#gafcbb4f28a4d0d1493417fd1ae21f1ec4">af::operator%()</a> from using <a href="https://github.com/arrayfire/arrayfire/issues/1318">rem to mod</a>.</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1321">array destruction</a> when backends are switched in Unified API.</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1331">indexing</a> after <a class="el" href="group__manip__func__moddims.htm#ga13488a6c9e298fd44dd343347d7b156d">af::moddims()</a> is called.</li>
+<li>Fixes FFT calls for CUDA and OpenCL backends when used on <a href="https://github.com/arrayfire/arrayfire/issues/1332">multiple devices</a>.</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/commit/32965ef">unresolved external</a> for some functions from <a class="el" href="classaf_1_1array_1_1array__proxy.htm">af::array::array_proxy</a> class.</li>
+</ul>
+<h2>Build </h2>
+<ul>
+<li>CMake compiles files in alphabetical order.</li>
+<li>CMake fixes for BLAS and LAPACK on some Linux distributions.</li>
+</ul>
+<h2>Improvements </h2>
+<ul>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1323">OpenCL FFT performance</a> regression.</li>
+<li><a class="el" href="classaf_1_1array.htm#a64bf5e096ea250f57e4e90d228025c66">af::array::device()</a> on OpenCL backend <a href="https://github.com/arrayfire/arrayfire/issues/1311">returns</a> <code>cl_mem</code> instead of <code>(void*)cl::Buffer*</code>.</li>
+<li>In Unified backend, <a href="https://github.com/arrayfire/arrayfire/issues/1312">load versioned libraries</a> at runtime.</li>
+</ul>
+<h2>Documentation </h2>
+<ul>
+<li>Reorganized, cleaner README file.</li>
+<li>Replaced non-free lena image in assets with free-to-distribute lena image.</li>
+</ul>
+<h1>v3.3.0 </h1>
+<h2>Major Updates </h2>
+<ul>
+<li>CPU backend supports aysnchronous execution.</li>
+<li>Performance improvements to OpenCL BLAS and FFT functions.</li>
+<li>Improved performance of memory manager.</li>
+<li>Improvements to visualization functions.</li>
+<li>Improved sorted order for OpenCL devices.</li>
+<li>Integration with external OpenCL projects.</li>
+</ul>
+<h2>Features </h2>
+<ul>
+<li><a class="el" href="namespaceaf.htm#a7c4cd12a67eb27fc57129e4e7ff06a03">af::getActiveBackend()</a>: Returns the current backend being used.</li>
+<li><a href="https://github.com/arrayfire/arrayfire/pull/1116">Scatter plot</a> added to graphics.</li>
+<li><a class="el" href="group__transform__func__transform.htm#ga62d399998f63e3a919e6dde241ec6a08">af::transform()</a> now supports perspective transformation matrices.</li>
+<li><a class="el" href="group__device__func__info__string.htm#gac959f891fcff4d2525e9dbb270235500">af::infoString()</a>: Returns <code><a class="el" href="group__device__func__info.htm#ga3e22b6ff6e0940bb31577bea2863ca27">af::info()</a></code> as a string.</li>
+<li><a class="el" href="group__device__func__mem.htm#ga634fae04c76013ff79dac7b71c7ca6ef">af::printMemInfo()</a>: Print a table showing information about buffer from the memory manager<ul>
+<li>The <a class="el" href="macros_8h.htm#af5e9c364379ead9f305de7ddd1bba87e">AF_MEM_INFO</a> macro prints numbers and total sizes of all buffers (requires including <a class="el" href="macros_8h.htm">af/macros.h</a>)</li>
+</ul>
+</li>
+<li><a class="el" href="group__device__func__alloc__host.htm#gaa0638e5ea6142e47290e6703095d045d">af::allocHost()</a>: Allocates memory on host.</li>
+<li><a class="el" href="group__device__func__free__host.htm#ga5eca016a830211c6b0b6dcddf57d8236">af::freeHost()</a>: Frees host side memory allocated by arrayfire.</li>
+<li>OpenCL functions can now use CPU implementation.<ul>
+<li>Currently limited to Unified Memory devices (CPU and On-board Graphics).</li>
+<li>Functions: <a class="el" href="group__blas__func__matmul.htm#gac061af289fcd39a07a3efba0f33fb17f" title="C++ Interface to multiply two matrices.">af::matmul()</a> and all <a class="el" href="group__linalg__mat.htm">LAPACK</a> functions.</li>
+<li>Takes advantage of optimized libraries such as MKL without doing memory copies.</li>
+<li>Use the environment variable <code>AF_OPENCL_CPU_OFFLOAD=1</code> to take advantage of this feature.</li>
+</ul>
+</li>
+<li>Functions specific to OpenCL backend.<ul>
+<li><a class="el" href="group__opencl__mat.htm#gaf7e693dfd1cd1184ae9aacbfc4c205d7">afcl::addDevice()</a>: Adds an external device and context to ArrayFire's device manager.</li>
+<li><a class="el" href="group__opencl__mat.htm#ga77a9ffbe313593ccdbf592a4b3e34dda">afcl::deleteDevice()</a>: Removes an external device and context from ArrayFire's device manager.</li>
+<li><a class="el" href="group__opencl__mat.htm#ga4b483dae24064656c8049e907a77d4a9">afcl::setDevice()</a>: Sets an external device and context from ArrayFire's device manager.</li>
+<li><a class="el" href="group__opencl__mat.htm#ga847fa1f0ef9ae77d611f41f4f8da69e9">afcl::getDeviceType()</a>: Gets the device type of the current device.</li>
+<li><a class="el" href="group__opencl__mat.htm#ga64f1c58dca87e57afc48a4381d6ee59a">afcl::getPlatform()</a>: Gets the platform of the current device.</li>
+</ul>
+</li>
+<li><a class="el" href="group__internal__func__create.htm#ga168e1dd7b337f3d1569f92ddabe76092">af::createStridedArray()</a> allows <a href="https://github.com/arrayfire/arrayfire/issues/1177">array creation user-defined strides</a> and device pointer.</li>
+<li><a href="https://github.com/arrayfire/arrayfire/issues/1131">Expose functions</a> that provide information about memory layout of Arrays.<ul>
+<li><a class="el" href="group__internal__func__strides.htm#gad2d889503eada0f27b4cefd78291550a">af::getStrides()</a>: Gets the strides for each dimension of the array.</li>
+<li><a class="el" href="group__internal__func__offset.htm#ga474305cc5ff71416139089ddb8d75afa">af::getOffset()</a>: Gets the offsets for each dimension of the array.</li>
+<li><a class="el" href="namespaceaf.htm#a0f08b894e170a2ee882e6072af2f52c8">af::getRawPtr()</a>: Gets raw pointer to the location of the array on device.</li>
+<li><a class="el" href="group__internal__func__linear.htm#ga796bcf5896163aebf740b84dbc52dd94">af::isLinear()</a>: Returns true if all elements in the array are contiguous.</li>
+<li><a class="el" href="group__internal__func__owner.htm#ga7ae6931a2af65ecfc6b6803bc3ad0891">af::isOwner()</a>: Returns true if the array owns the raw pointer, false if it is a sub-array.</li>
+<li><a class="el" href="group__internal__func__strides.htm#gad2d889503eada0f27b4cefd78291550a">af::getStrides()</a>: Gets the strides of the array.</li>
+<li><a class="el" href="group__internal__func__strides.htm#gad2d889503eada0f27b4cefd78291550a">af::getStrides()</a>: Gets the strides of the array.</li>
+</ul>
+</li>
+<li><a class="el" href="group__unified__func__getdeviceid.htm#ga5213425c1fc7aa9f96901292f4092f24">af::getDeviceId()</a>: Gets the device id on which the array resides.</li>
+<li><a class="el" href="group__imageio__func__available.htm#gacd858a64f9c2dc1055a1722aefe7ce14">af::isImageIOAvailable()</a>: Returns true if ArrayFire was compiled with Freeimage enabled</li>
+<li><a class="el" href="group__lapack__helper__func__available.htm#gaedc7cb96aee53e92ab2174bbe26efb17">af::isLAPACKAvailable()</a>: Returns true if ArrayFire was compiled with LAPACK functions enabled</li>
+</ul>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/pull/1251">errors when using 3D / 4D arrays</a> in select and replace</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/pull/1238">JIT errors on AMD devices</a> for OpenCL backend.</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/pull/1229">imageio bugs</a> for 16 bit images.</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/pull/1228">bugs when loading and storing images</a> natively.</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/615">bug in FFT for NVIDIA GPUs</a> when using OpenCL backend.</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/pull/1241">bug when using external context</a> with OpenCL backend.</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1269">memory leak</a> in <a class="el" href="group__stat__func__median.htm#ga82b3d518bb7838eb6795af4a92c08b92">af_median_all()</a>.</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/pull/1274">memory leaks and performance</a> in graphics functions.</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1275">bugs when indexing followed by moddims</a>.</li>
+<li><a class="el" href="util_8h.htm#a9b83e6f2f78c4cdec6f2c029be63ea5c">af_get_revision()</a> now returns actual commit rather than AF_REVISION.</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1282">releasing arrays</a> when using different backends.</li>
+<li>OS X OpenCL: <a class="el" href="group__linalg__mat.htm">LAPACK functions</a> on CPU devices use OpenCL offload (previously threw errors).</li>
+<li><a href="https://github.com/arrayfire/arrayfire/pull/1287">Add support for 32-bit integer image types</a> in Image IO.</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1300">set operations for row vectors</a></li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1243">bugs</a> in <a class="el" href="group__image__func__mean__shift.htm#gac19e2d4cf301ef9f0293bf62aed584e6">af::meanShift()</a> and <a class="el" href="group__cv__func__orb.htm#ga1657fbfc6cb751537e7d0d09c11f8bbb" title="C++ Interface for ORB feature descriptor.">af::orb()</a>.</li>
+</ul>
+<h2>Improvements </h2>
+<ul>
+<li>Optionally <a href="https://github.com/arrayfire/arrayfire/pull/1221">offload BLAS and LAPACK</a> functions to CPU implementations to improve performance.</li>
+<li>Performance improvements to the memory manager.</li>
+<li>Error messages are now more detailed.</li>
+<li>Improved sorted order for OpenCL devices.</li>
+<li>JIT heuristics can now be tweaked using environment variables. See <a class="el" href="configuring_environment.htm">Environment Variables</a> tutorial.</li>
+<li>Add <code>BUILD_&lt;BACKEND&gt;</code> <a href="https://github.com/arrayfire/arrayfire/issues/1286">options to examples and tests</a> to toggle backends when compiling independently.</li>
+</ul>
+<h2>Examples </h2>
+<ul>
+<li>New visualization <a class="el" href="graphics_2gravity_sim_8cpp-example.htm">example simulating gravity</a>.</li>
+</ul>
+<h2>Build </h2>
+<ul>
+<li>Support for Intel <code>icc</code> compiler</li>
+<li>Support to compile with Intel MKL as a BLAS and LAPACK provider</li>
+<li>Tests are now available for building as standalone (like examples)</li>
+<li>Tests can now be built as a single file for each backend</li>
+<li>Better handling of NONFREE build options</li>
+<li><a href="https://github.com/arrayfire/arrayfire/pull/1292">Searching for GLEW in CMake default paths</a></li>
+<li>Fixes for compiling with MKL on OSX.</li>
+</ul>
+<h2>Installers </h2>
+<ul>
+<li>Improvements to OSX Installer<ul>
+<li>CMake config files are now installed with libraries</li>
+<li>Independent options for installing examples and documentation components</li>
+</ul>
+</li>
+</ul>
+<h2>Deprecations </h2>
+<ul>
+<li><code>af_lock_device_arr</code> is now deprecated to be removed in v4.0.0. Use <a class="el" href="group__device__func__mem.htm#ga825e21412e9c8e3609c759f8106fd384">af_lock_array()</a> instead.</li>
+<li><code>af_unlock_device_arr</code> is now deprecated to be removed in v4.0.0. use <a class="el" href="group__device__func__mem.htm#ga07151f8b3d69c1afe3cbd860fd98c36f">af_unlock_array()</a> instead.</li>
+</ul>
+<h2>Documentation </h2>
+<ul>
+<li>Fixes to documentation for <a class="el" href="group__cv__func__match__template.htm#ga52aea5e045417d33eb8ed8037da48d3c">af::matchTemplate()</a>.</li>
+<li>Improved documentation for deviceInfo.</li>
+<li>Fixes to documentation for <a class="el" href="group__arith__func__exp.htm#ga583acbad8eb6db6ee6b8b363e2c38710">af::exp()</a>.</li>
+</ul>
+<h2>Known Issues </h2>
+<ul>
+<li><a href="https://github.com/arrayfire/arrayfire/issues/1246">Solve OpenCL fails on NVIDIA Maxwell devices</a> for f32 and c32 when M &gt; N and K % 4 is 1 or 2.</li>
+</ul>
+<h1>v3.2.2 </h1>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/pull/1145">memory leak</a> in CUDA Random number generators</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1157">bug</a> in <a class="el" href="group__data__func__select.htm#ga1a2bf0110367961d084bc6b5d33f7555" title="C++ Interface to select elements based on a conditional array.">af::select()</a> and <a class="el" href="group__data__func__replace.htm#ga21eeef8e69367938673753fafe539431" title="C++ Interface to replace elements of an array with elements of another array.">af::replace()</a> tests</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1164">exception</a> thrown when printing empty arrays with <a class="el" href="group__print__func__print.htm#gadbb054980a05dbe4755bae9a4046fcac">af::print()</a></li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1170">bug</a> in CPU random number generation. Changed the generator to <a href="http://en.cppreference.com/w/cpp/numeric/random">mt19937</a></li>
+<li>Fixed exception handling (internal)<ul>
+<li><a href="https://github.com/arrayfire/arrayfire/issues/1188">Exceptions</a> now show function, short file name and line number</li>
+<li>Added <a href="https://github.com/arrayfire/arrayfire/issues/1186">AF_RETURN_ERROR</a> macro to handle returning errors.</li>
+<li>Removed THROW macro, and renamed AF_THROW_MSG to AF_THROW_ERR.</li>
+</ul>
+</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/commit/9459c6">bug</a> in <a class="el" href="group__data__func__identity.htm#ga1dcf8d1baa51e7b343d43b57e0760df1">af::identity()</a> that may have affected CUDA Compute 5.2 cards</li>
+</ul>
+<h2>Build </h2>
+<ul>
+<li>Added a <a href="https://github.com/arrayfire/arrayfire/issues/1193">MIN_BUILD_TIME</a> option to build with minimum optimization compiler flags resulting in faster compile times</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1143">issue</a> in CBLAS detection by CMake</li>
+<li>Fixed tests failing for builds without optional components <a href="https://github.com/arrayfire/arrayfire/issues/1143">FreeImage</a> and <a href="https://github.com/arrayfire/arrayfire/issues/1167">LAPACK</a></li>
+<li>Added a <a href="https://github.com/arrayfire/arrayfire/issues/1192">test</a> for unified backend</li>
+<li>Only <a href="https://github.com/arrayfire/arrayfire/issues/1192">info and backend tests</a> are now built for unified backend</li>
+<li><a href="https://github.com/arrayfire/arrayfire/issues/1199">Sort tests</a> execution alphabetically</li>
+<li>Fixed compilation flags and errors in tests and examples</li>
+<li><a href="https://github.com/arrayfire/arrayfire/commit/2287c5">Moved AF_REVISION and AF_COMPILER_STR</a> into src/backend. This is because as revision is updated with every commit, entire ArrayFire would have to be rebuilt in the old code.<ul>
+<li>v3.3 will add a <a class="el" href="util_8h.htm#a9b83e6f2f78c4cdec6f2c029be63ea5c" title="Get the revision (commit) information of the library.">af_get_revision()</a> function to get the revision string.</li>
+</ul>
+</li>
+<li><a href="https://github.com/arrayfire/arrayfire/pull/1158">Clean up examples</a><ul>
+<li>Remove getchar for Windows (this will be handled by the installer)</li>
+<li>Other miscellaneous code cleanup</li>
+<li>Fixed bug in <a class="el" href="graphics_2plot3_8cpp-example.htm">plot3.cpp</a> example</li>
+</ul>
+</li>
+<li><a href="https://github.com/arrayfire/arrayfire/commit/35f0fc2">Rename</a> clBLAS/clFFT external project suffix from external -&gt; ext</li>
+<li><a href="https://github.com/arrayfire/arrayfire/pull/1197">Add OpenBLAS</a> as a lapack/lapacke alternative</li>
+</ul>
+<h2>Improvements </h2>
+<ul>
+<li>Added <a class="el" href="macros_8h.htm#af5e9c364379ead9f305de7ddd1bba87e">AF_MEM_INFO</a> macro to print memory info from ArrayFire's memory manager (<a href="https://github.com/arrayfire/arrayfire/issues/1172">cross issue</a>)</li>
+<li>Added <a href="https://github.com/arrayfire/arrayfire/issues/1184">additional paths</a> for searching for <code>libaf*</code> for Unified backend on unix-style OS.<ul>
+<li>Note: This still requires dependencies such as forge, CUDA, NVVM etc to be in <code>LD_LIBRARY_PATH</code> as described in <a class="el" href="unifiedbackend.htm">Unified Backend</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/arrayfire/arrayfire/commit/ed0373f">Create streams</a> for devices only when required in CUDA Backend</li>
+</ul>
+<h2>Documentation </h2>
+<ul>
+<li><a href="https://github.com/arrayfire/arrayfire/commit/9d218a5">Hide scrollbars</a> appearing for pre and code styles</li>
+<li>Fix <a href="https://github.com/arrayfire/arrayfire/commit/ac09f91">documentation</a> for <a class="el" href="group__data__func__replace.htm#ga21eeef8e69367938673753fafe539431" title="C++ Interface to replace elements of an array with elements of another array.">af::replace</a></li>
+<li>Add <a href="https://github.com/arrayfire/arrayfire/commit/4e06483">code sample</a> for converting the output of <a class="el" href="group__unified__func__getavailbackends.htm#ga713d8092be09d225c62c9917deb35673" title="Returns a flag of all available backends.">af::getAvailableBackends()</a> into bools</li>
+<li>Minor fixes in documentation</li>
+</ul>
+<h1>v3.2.1 </h1>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/pull/1136">bug</a> in homography()</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1135">bug</a> in behavior of <a class="el" href="classaf_1_1array.htm#a64bf5e096ea250f57e4e90d228025c66" title="Get the device pointer from the array and lock the buffer in memory manager.">af::array::device()</a></li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1129">bug</a> when indexing with span along trailing dimension</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1127">bug</a> when indexing in <a class="el" href="page_gfor.htm#gfor">GFor</a></li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1122">bug</a> in CPU information fetching</li>
+<li>Fixed compilation <a href="https://github.com/arrayfire/arrayfire/issues/1117">bug</a> in unified backend caused by missing link library</li>
+<li>Add <a href="https://github.com/arrayfire/arrayfire/pull/1114">missing symbol</a> for <a class="el" href="group__gfx__func__draw.htm#gaaee14e457272b2cd1bd4ed1228370229" title="C Interface wrapper for drawing array&#39;s as a surface.">af_draw_surface()</a></li>
+</ul>
+<h2>Build </h2>
+<ul>
+<li>Tests can now be used as a <a href="https://github.com/arrayfire/arrayfire/pull/1120">standalone project</a><ul>
+<li>Tests can now be built using pre-compiled libraries</li>
+<li>Similar to how the examples are built</li>
+</ul>
+</li>
+<li>The install target now installs the examples source irrespective of the BUILD_EXAMPLES value<ul>
+<li>Examples are not built if BUILD_EXAMPLES is off</li>
+</ul>
+</li>
+</ul>
+<h2>Documentation </h2>
+<ul>
+<li>HTML documentation is now <a href="https://github.com/arrayfire/arrayfire/pull/1109">built and installed</a> in docs/html</li>
+<li>Added documentation for <a class="el" href="classaf_1_1seq.htm">af::seq</a> class</li>
+<li>Updated <a class="el" href="matrixmanipulation.htm">Matrix Manipulation</a> tutorial</li>
+<li>Examples list is now generated by CMake<ul>
+<li><a href="examples.htm">Examples</a> are now listed as dir/example.cpp</li>
+</ul>
+</li>
+<li>Removed dummy groups used for indexing documentation (affcted doxygen &lt; 1.8.9)</li>
+</ul>
+<h1>v3.2.0 </h1>
+<h2>Major Updates </h2>
+<ul>
+<li>Added Unified backend<ul>
+<li>Allows switching backends at runtime</li>
+<li>Read <a class="el" href="unifiedbackend.htm">Unified Backend</a> for more.</li>
+</ul>
+</li>
+<li>Support for 16-bit integers (<a class="el" href="defines_8h.htm#a023d8ac325fb14f1712a52fb0940b1d5a98085990ff18bf438d3c839ea4c80bb4">s16</a> and <a class="el" href="defines_8h.htm#a023d8ac325fb14f1712a52fb0940b1d5ae817c8a85914a5f150f2739df6b76c57">u16</a>)<ul>
+<li>All functions that support 32-bit interger types (<a class="el" href="defines_8h.htm#a023d8ac325fb14f1712a52fb0940b1d5a1bd64190677c261a61c640017dbaddf1">s32</a>, <a class="el" href="defines_8h.htm#a023d8ac325fb14f1712a52fb0940b1d5a05ef7b967bac0eef5d9712a6803b9f1a">u32</a>), now also support 16-bit interger types</li>
+</ul>
+</li>
+</ul>
+<h2>Function Additions </h2>
+<ul>
+<li>Unified Backend<ul>
+<li><a class="el" href="group__unified__func__setbackend.htm#gac807fa17346b6c4d05acef85d4f7c00e">af::setBackend()</a> - Sets a backend as active</li>
+<li><a class="el" href="group__unified__func__getbackendcount.htm#ga73e1330a23f5c72a2ad7b073bb4f1226">af::getBackendCount()</a> - Gets the number of backends available for use</li>
+<li><a class="el" href="group__unified__func__getavailbackends.htm#ga713d8092be09d225c62c9917deb35673">af::getAvailableBackends()</a> - Returns information about available backends</li>
+<li><a class="el" href="group__unified__func__getbackendid.htm#ga1ef4d377f243223d435f3e298c5b8dc9">af::getBackendId()</a> - Gets the backend enum for an array</li>
+</ul>
+</li>
+<li>Vision<ul>
+<li><a class="el" href="group__cv__func__homography.htm#gaa715595e3e68382edec95ebf90555b47">af::homography()</a> - Homography estimation</li>
+<li><a class="el" href="group__cv__func__sift.htm#ga612b989d65258643a4d42e071a87b317">af::gloh()</a> - GLOH Descriptor for SIFT</li>
+</ul>
+</li>
+<li>Image Processing<ul>
+<li><a class="el" href="group__imageio__func__load.htm#ga6a0bf2412867519de8dcd3aa63d27a16">af::loadImageNative()</a> - Load an image as native data without modification</li>
+<li><a class="el" href="group__imageio__func__save.htm#ga7692b88458a5df179ab6590151bf2999">af::saveImageNative()</a> - Save an image without modifying data or type</li>
+</ul>
+</li>
+<li>Graphics<ul>
+<li><a class="el" href="group__gfx__func__draw.htm#ga8e04ec129034e9fe769f3e6b14cd087f">af::Window::plot3()</a> - 3-dimensional line plot</li>
+<li><a class="el" href="group__gfx__func__draw.htm#ga1cdb8c3205d70d8feaddd8c30245393f">af::Window::surface()</a> - 3-dimensional curve plot</li>
+</ul>
+</li>
+<li>Indexing<ul>
+<li><a class="el" href="group__index__func__index.htm#ga3e10cf2a97a2880b5872ec658af4169f">af_create_indexers()</a></li>
+<li><a class="el" href="group__index__func__index.htm#gae109f51eb0b4fcfcbf5d10c737355f40">af_set_array_indexer()</a></li>
+<li><a class="el" href="group__index__func__index.htm#gaec0df3f1ee8624870f6bec55f6ec4bad">af_set_seq_indexer()</a></li>
+<li><a class="el" href="group__index__func__index.htm#ga84fa7d63b756329b02d03cc56c65f699">af_set_seq_param_indexer()</a></li>
+<li><a class="el" href="group__index__func__index.htm#gac382e89701583a173935262e741d4c7d">af_release_indexers()</a></li>
+</ul>
+</li>
+<li>CUDA Backend Specific<ul>
+<li><a class="el" href="group__cuda__mat.htm#ga9def381dcf53190315f27a478a165b8b">afcu::setNativeId()</a> - Set the CUDA device with given native id as active<ul>
+<li>ArrayFire uses a modified order for devices. The native id for a device can be retreived using <code>nvidia-smi</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>OpenCL Backend Specific<ul>
+<li><a class="el" href="group__opencl__mat.htm#ga41c55e4133120d2f0d1afe6efaf77efe">afcl::setDeviceId()</a> - Set the OpenCL device using the <code>clDeviceId</code></li>
+</ul>
+</li>
+</ul>
+<h2>Other Improvements </h2>
+<ul>
+<li>Added <a class="el" href="defines_8h.htm#a023d8ac325fb14f1712a52fb0940b1d5a994ac20239e3eba6122cafb2eb21f23f">c32</a> and <a class="el" href="defines_8h.htm#a023d8ac325fb14f1712a52fb0940b1d5a782bca2d24c98bee3e5f1787c4165198">c64</a> support for <a class="el" href="group__arith__func__isnan.htm#ga462cf8505197a9ad3e12a48f530bba31">af::isNaN()</a>, <a class="el" href="group__arith__func__isinf.htm#ga7b657f1911a16abbaf7c8211bc27ae45">af::isInf()</a> and <a class="el" href="group__arith__func__iszero.htm#ga0b76c8e189148a555cbd5634f16f3da5">af::iszero()</a></li>
+<li>Added CPU information for <code>x86</code> and <code>x86_64</code> architectures in CPU backend's <a class="el" href="group__device__func__info.htm#ga3e22b6ff6e0940bb31577bea2863ca27">af::info()</a></li>
+<li>Batch support for <a class="el" href="group__signal__func__approx1.htm#gabd004f943d8a8df6d00064fd965680ee">af::approx1()</a> and <a class="el" href="group__signal__func__approx2.htm#gae1caef95088d57fda2eafbd83b41a0c0">af::approx2()</a><ul>
+<li>Now can be used with gfor as well</li>
+</ul>
+</li>
+<li>Added <a class="el" href="defines_8h.htm#a023d8ac325fb14f1712a52fb0940b1d5a2fb596fb851c71689624894525c069e4">s64</a> and <a class="el" href="defines_8h.htm#a023d8ac325fb14f1712a52fb0940b1d5a1b18b7885e1360b6696142284b4b4928">u64</a> support to:<ul>
+<li><a class="el" href="group__sort__func__sort.htm#ga2f74f8a10ffa77dd348676e2366e2c5e">af::sort()</a> (along with sort index and sort by key)</li>
+<li><a class="el" href="group__set__func__unique.htm#gaf09723158ed9d22aba6dd63c2f33c88c">af::setUnique()</a>, <a class="el" href="group__set__func__union.htm#ga4ff9b187c331b6961b03060f3af9ccff">af::setUnion()</a>, <a class="el" href="group__set__func__intersect.htm#ga4e3116fd981e45f3267bbc404d6487cc">af::setIntersect()</a></li>
+<li><a class="el" href="group__signal__func__convolve.htm#ga801b0f4a09a017ccb196fac3c0dc417b">af::convolve()</a> and <a class="el" href="group__signal__func__convolve.htm#ga95cc430f1c610ed4409ebdd83156b278">af::fftConvolve()</a></li>
+<li><a class="el" href="group__image__func__histogram.htm#gaf97fd7eb81e8ec41c816eeda9104ae24">af::histogram()</a> and <a class="el" href="group__image__func__histequal.htm#gac9f1fae4807432e9f1710ec745d2b25d">af::histEqual()</a></li>
+<li><a class="el" href="group__index__func__lookup.htm#gae2c89b3f3b1e644ca1c445c1eff64b35">af::lookup()</a></li>
+<li><a class="el" href="group__stat__func__mean.htm#ga4cc3ee9a9aa91806d52ba6bca6288b04">af::mean()</a></li>
+</ul>
+</li>
+<li>Added <a class="el" href="macros_8h.htm#acdc2d26f4e456a7d46b9fc04ed4c71d8">AF_MSG</a> macro</li>
+</ul>
+<h2>Build Improvements </h2>
+<ul>
+<li>Submodules update is now automatically called if not cloned recursively</li>
+<li><a href="https://github.com/arrayfire/arrayfire/issues/766">Fixes for compilation</a> on Visual Studio 2015</li>
+<li>Option to use <a href="https://github.com/arrayfire/arrayfire/pull/1053">fallback to CPU LAPACK</a> for linear algebra functions in case of CUDA 6.5 or older versions.</li>
+</ul>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/pull/1096">memory leak</a> in <a class="el" href="group__cv__func__susan.htm#ga983c12db4a95d063ed7a802ae488be70">af::susan()</a></li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/commit/144a2db">failing test</a> in <a class="el" href="group__data__func__lower.htm#ga66eb3da220db252236c6d48e3a6811f1">af::lower()</a> and <a class="el" href="group__data__func__upper.htm#gaf31c8b029aa632a17995a2f018f0da0f">af::upper()</a> for CUDA compute 53</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1092">bug</a> in CUDA for indexing out of bounds</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/commit/6975da8">dims check</a> in <a class="el" href="group__data__func__iota.htm#ga440f01f3a85d20f5adc677ed1c9f0deb">af::iota()</a></li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/commit/7fc3856">out-of-bounds access</a> in <a class="el" href="group__cv__func__sift.htm#gaa28a7bba69ed97169c181699d325656a">af::sift()</a></li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/commit/5e88e4a">memory allocation</a> in <a class="el" href="group__cv__func__fast.htm#gac54efa48b057138403fd18cf697e0bd3">af::fast()</a> OpenCL</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/pull/994">memory leak</a> in image I/O functions</li>
+<li><a class="el" href="group__cv__func__dog.htm#ga280a0c1c41b0b5fc85f84431ff9de01b">af::dog()</a> now returns float-point type arrays</li>
+</ul>
+<h2>Documentation Updates </h2>
+<ul>
+<li>Improved tutorials documentation<ul>
+<li>More detailed Using on <a class="el" href="using_on_linux.htm">Linux</a>, <a class="el" href="using_on_osx.htm">OSX</a>, <a class="el" href="using_on_windows.htm">Windows</a> pages.</li>
+</ul>
+</li>
+<li>Added return type information for functions that return different type arrays</li>
+</ul>
+<h2>New Examples </h2>
+<ul>
+<li>Graphics<ul>
+<li><a class="el" href="graphics_2plot3_8cpp-example.htm">Plot3</a></li>
+<li><a class="el" href="graphics_2surface_8cpp-example.htm">Surface</a></li>
+</ul>
+</li>
+<li><a class="el" href="pde_2swe_8cpp-example.htm">Shallow Water Equation</a></li>
+<li><a class="el" href="unified_2basic_8cpp-example.htm">Basic</a> as a Unified backend example</li>
+</ul>
+<h2>Installers </h2>
+<ul>
+<li>All installers now include the Unified backend and corresponding CMake files</li>
+<li>Visual Studio projects include Unified in the Platform Configurations</li>
+<li>Added installer for Jetson TX1</li>
+<li>SIFT and GLOH do not ship with the installers as SIFT is protected by patents that do not allow commercial distribution without licensing.</li>
+</ul>
+<h1>v3.1.3 </h1>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1042">bugs</a> in various OpenCL kernels without offset additions</li>
+<li>Remove ARCH_32 and ARCH_64 flags</li>
+<li>Fix <a href="https://github.com/arrayfire/arrayfire/issues/1040">missing symbols</a> when freeimage is not found</li>
+<li>Use CUDA driver version for Windows</li>
+<li>Improvements to SIFT</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1045">memory leak</a> in median</li>
+<li>Fixes for Windows compilation when not using MKL <a href="https://github.com/arrayfire/arrayfire/issues/1047">#1047</a></li>
+<li>Fixed for building without LAPACK</li>
+</ul>
+<h2>Other </h2>
+<ul>
+<li>Documentation: Fixed documentation for select and replace</li>
+<li>Documentation: Fixed documentation for af_isnan</li>
+</ul>
+<h1>v3.1.2 </h1>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/commit/4698f12">bug</a> in assign that was causing test to fail</li>
+<li>Fixed bug in convolve. Frequency condition now depends on kernel size only</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1005">bug</a> in indexed reductions for complex type in OpenCL backend</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1006">bug</a> in kernel name generation in ireduce for OpenCL backend</li>
+<li>Fixed non-linear to linear indices in ireduce</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1011">bug</a> in reductions for small arrays</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1010">bug</a> in histogram for indexed arrays</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1015">compiler error</a> CPUID for non-compliant devices</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/1008">failing tests</a> on i386 platforms</li>
+<li>Add missing AFAPI</li>
+</ul>
+<h2>Other </h2>
+<ul>
+<li>Documentation: Added missing examples and other corrections</li>
+<li>Documentation: Fixed warnings in documentation building</li>
+<li>Installers: Send error messages to log file in OSX Installer</li>
+</ul>
+<h1>v3.1.1 </h1>
+<h2>Installers </h2>
+<ul>
+<li>CUDA backend now depends on CUDA 7.5 toolkit</li>
+<li>OpenCL backend now require OpenCL 1.2 or greater</li>
+</ul>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/981">bug</a> in reductions after indexing</li>
+<li>Fixed <a href="https://github.com/arrayfire/arrayfire/issues/976">bug</a> in indexing when using reverse indices</li>
+</ul>
+<h2>Build </h2>
+<ul>
+<li><code>cmake</code> now includes <code>PKG_CONFIG</code> in the search path for CBLAS and LAPACKE libraries</li>
+<li><a class="el" href="financial_2heston_model_8cpp-example.htm">heston_model.cpp</a> example now builds with the default ArrayFire cmake files after installation</li>
+</ul>
+<h2>Other </h2>
+<ul>
+<li>Fixed bug in <a class="el" href="image_processing_2image_editing_8cpp-example.htm">image_editing.cpp</a></li>
+</ul>
+<h1>v3.1.0 </h1>
+<h2>Function Additions </h2>
+<ul>
+<li>Computer Vision Functions<ul>
+<li><a class="el" href="group__cv__func__nearest__neighbour.htm#ga9973d0dd5241f71c2fafb9ebd5095d78">af::nearestNeighbour()</a> - Nearest Neighbour with SAD, SSD and SHD distances</li>
+<li><a class="el" href="group__cv__func__harris.htm#gab4853cd2b2d177a13a1e49fe6738398c">af::harris()</a> - Harris Corner Detector</li>
+<li><a class="el" href="group__cv__func__susan.htm#ga983c12db4a95d063ed7a802ae488be70">af::susan()</a> - Susan Corner Detector</li>
+<li><a class="el" href="group__cv__func__sift.htm#gaa28a7bba69ed97169c181699d325656a">af::sift()</a> - Scale Invariant Feature Transform (SIFT)<ul>
+<li>Method and apparatus for identifying scale invariant features"
+          "in an image and use of same for locating an object in an image," David"
+          "G. Lowe, US Patent 6,711,293 (March 23, 2004). Provisional application"
+          "filed March 8, 1999. Asignee: The University of British Columbia. For"
+          "further details, contact David Lowe (<a href="#" onclick="location.href='mai'+'lto:'+'low'+'e@'+'cs.'+'ub'+'c.c'+'a'; return false;">lowe@<span class="obfuscator">.nosp@m.</span>cs.u<span class="obfuscator">.nosp@m.</span>bc.ca</a>) or the"
+          "University-Industry Liaison Office of the University of British"
+          "Columbia.")
+        * SIFT is available for compiling but does not ship with ArrayFire
+          hosted installers/pre-built libraries
+    * \ref af::dog() -  Difference of Gaussians
+
+* Image Processing Functions
+    * \ref ycbcr2rgb() and \ref rgb2ycbcr() - RGB &lt;-&gt;YCbCr color space conversion
+    * \ref wrap() and \ref unwrap() Wrap and Unwrap
+    * \ref sat() - Summed Area Tables
+    * \ref loadImageMem() and \ref saveImageMem() - Load and Save images to/from memory
+        * \ref af_image_format - Added imageFormat (af_image_format) enum
+
+* Array &amp; Data Handling
+    * \ref copy() - Copy
+    * array::lock() and array::unlock() - Lock and Unlock
+    * \ref select() and \ref replace() - Select and Replace
+    * Get array reference count (af_get_data_ref_count)
+
+* Signal Processing
+    * \ref fftInPlace() - 1D in place FFT
+    * \ref fft2InPlace() - 2D in place FFT
+    * \ref fft3InPlace() - 3D in place FFT
+    * \ref ifftInPlace() - 1D in place Inverse FFT
+    * \ref ifft2InPlace() - 2D in place Inverse FFT
+    * \ref ifft3InPlace() - 3D in place Inverse FFT
+    * \ref fftR2C() - Real to complex FFT
+    * \ref fftC2R() - Complex to Real FFT
+
+* Linear Algebra
+    * \ref svd() and \ref svdInPlace() - Singular Value Decomposition
+
+* Other operations
+    * \ref sigmoid() - Sigmoid
+    * Sum (with option to replace NaN values)
+    * Product (with option to replace NaN values)
+
+* Graphics
+    * Window::setSize() - Window resizing using Forge API
+
+* Utility
+    * Allow users to set print precision (print, af_print_array_gen)
+    * \ref saveArray() and \ref readArray() - Stream arrays to binary files
+    * \ref toString() - toString function returns the array and data as a string
+
+* CUDA specific functionality
+    * \ref getStream() - Returns default CUDA stream ArrayFire uses for the current device
+    * \ref getNativeId() - Returns native id of the CUDA device
+
+&lt;h2&gt;Improvements
+&lt;/h2&gt;
+* dot
+    * Allow complex inputs with conjugate option
+* AF_INTERP_LOWER interpolation
+    * For resize, rotate and transform based functions
+* 64-bit integer support
+    * For reductions, random, iota, range, diff1, diff2, accum, join, shift
+      and tile
+* convolve
+    * Support for non-overlapping batched convolutions
+* Complex Arrays
+    * Fix binary ops on complex inputs of mixed types
+    * Complex type support for exp
+* tile
+    * Performance improvements by using JIT when possible.
+* Add AF_API_VERSION macro
+    * Allows disabling of API to maintain consistency with previous versions
+* Other Performance Improvements
+    * Use reference counting to reduce unnecessary copies
+* CPU Backend
+    * Device properties for CPU
+    * Improved performance when all buffers are indexed linearly
+* CUDA Backend
+    * Use streams in CUDA (no longer using default stream)
+    * Using async cudaMem ops
+    * Add 64-bit integer support for JIT functions
+    * Performance improvements for CUDA JIT for non-linear 3D and 4D arrays
+* OpenCL Backend
+    * Improve compilation times for OpenCL backend
+    * Performance improvements for non-linear JIT kernels on OpenCL
+    * Improved shared memory load/store in many OpenCL kernels (PR 933)
+    * Using cl.hpp v1.2.7
+
+&lt;h2&gt;Bug Fixes
+&lt;/h2&gt;
+* Common
+    * Fix compatibility of c32/c64 arrays when operating with scalars
+    * Fix median for all values of an array
+    * Fix double free issue when indexing (30cbbc7)
+    * Fix &lt;a href="<a href="https://github.com/arrayfire/arrayfire/issues/901">https://github.com/arrayfire/arrayfire/issues/901</a>" &gt;bug&lt;/a&gt; in rank
+    * Fix default values for scale throwing exception
+    * Fix conjg raising exception on real input
+    * Fix bug when using conjugate transpose for vector input
+    * Fix issue with const input for array_proxy::get()
+* CPU Backend
+    * Fix randn generating same sequence for multiple calls
+    * Fix setSeed for randu
+    * Fix casting to and from complex
+    * Check NULL values when allocating memory
+    * Fix &lt;a href="<a href="https://github.com/arrayfire/arrayfire/issues/923">https://github.com/arrayfire/arrayfire/issues/923</a>" &gt;offset issue for CPU element-wise operations</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>New Examples </h2>
+<ul>
+<li>Match Template</li>
+<li>Susan</li>
+<li>Heston Model (contributed by Michael Nowotny)</li>
+</ul>
+<h2>Installer </h2>
+<ul>
+<li>Fixed bug in automatic detection of ArrayFire when using with CMake in Windows</li>
+<li>The Linux libraries are now compiled with static version of FreeImage</li>
+</ul>
+<h2>Known Issues </h2>
+<ul>
+<li>OpenBlas can cause issues with QR factorization in CPU backend</li>
+<li>FreeImage older than 3.10 can cause issues with loadImageMem and saveImageMem</li>
+<li>OpenCL backend issues on OSX<ul>
+<li>AMD GPUs not supported because of driver issues</li>
+<li>Intel CPUs not supported</li>
+<li>Linear algebra functions do not work on Intel GPUs.</li>
+</ul>
+</li>
+<li>Stability and correctness issues with open source OpenCL implementations such as Beignet, GalliumCompute.</li>
+</ul>
+<h1>v3.0.2 </h1>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Added missing symbols from the compatible API</li>
+<li>Fixed a bug affecting corner rows and elements in <a class="el" href="group__calc__func__grad.htm#ga98d1d8b7f0cd46065014f3bf4d73adda">af::grad()</a></li>
+<li>Fixed linear interpolation bugs affecting large images in the following:<ul>
+<li><a class="el" href="group__signal__func__approx1.htm#gabd004f943d8a8df6d00064fd965680ee">af::approx1()</a></li>
+<li><a class="el" href="group__signal__func__approx2.htm#gae1caef95088d57fda2eafbd83b41a0c0">af::approx2()</a></li>
+<li><a class="el" href="group__transform__func__resize.htm#gaa80038ec7db0ce0836c79d2c8a75e788">af::resize()</a></li>
+<li><a class="el" href="group__transform__func__rotate.htm#ga7bc5a84bcc12ec50800f918f2fc7da5d">af::rotate()</a></li>
+<li><a class="el" href="group__transform__func__scale.htm#ga0f7deb928b92209e0ef2c2371b1ad51b">af::scale()</a></li>
+<li><a class="el" href="group__transform__func__skew.htm#gaef2efb5088584ad9896a7c89af1bea69">af::skew()</a></li>
+<li><a class="el" href="group__transform__func__transform.htm#ga62d399998f63e3a919e6dde241ec6a08">af::transform()</a></li>
+</ul>
+</li>
+</ul>
+<h2>Documentation </h2>
+<ul>
+<li>Added missing documentation for <a class="el" href="group__data__func__constant.htm#ga0db7363474e85542f16e4bbcf57fe842">af::constant()</a></li>
+<li>Added missing documentation for <code>array::scalar()</code></li>
+<li>Added supported input types for functions in <code><a class="el" href="arith_8h.htm">arith.h</a></code></li>
+</ul>
+<h1>v3.0.1 </h1>
+<h2>Bug Fixes </h2>
+<ul>
+<li>Fixed header to work in Visual Studio 2015</li>
+<li>Fixed a bug in batched mode for FFT based convolutions</li>
+<li>Fixed graphics issues on OSX</li>
+<li>Fixed various bugs in visualization functions</li>
+</ul>
+<h2>Other improvements </h2>
+<ul>
+<li>Improved fractal example</li>
+<li>New OSX installer</li>
+<li>Improved Windows installer<ul>
+<li>Default install path has been changed</li>
+</ul>
+</li>
+<li>Fixed bug in machine learning examples</li>
+</ul>
+<p ><br  />
+</p>
+<h1>v3.0.0 </h1>
+<h2>Major Updates </h2>
+<ul>
+<li>ArrayFire is now open source</li>
+<li>Major changes to the visualization library</li>
+<li>Introducing handle based C API</li>
+<li>New backend: CPU fallback available for systems without GPUs</li>
+<li>Dense linear algebra functions available for all backends</li>
+<li>Support for 64 bit integers</li>
+</ul>
+<h2>Function Additions </h2>
+<ul>
+<li>Data generation functions<ul>
+<li>range()</li>
+<li>iota()</li>
+</ul>
+</li>
+<li>Computer Vision Algorithms<ul>
+<li>features()<ul>
+<li>A data structure to hold features</li>
+</ul>
+</li>
+<li>fast()<ul>
+<li>FAST feature detector</li>
+</ul>
+</li>
+<li>orb()<ul>
+<li>ORB A feature descriptor extractor</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Image Processing<ul>
+<li>convolve1(), convolve2(), convolve3()<ul>
+<li>Specialized versions of convolve() to enable better batch support</li>
+</ul>
+</li>
+<li>fftconvolve1(), fftconvolve2(), fftconvolve3()<ul>
+<li>Convolutions in frequency domain to support larger kernel sizes</li>
+</ul>
+</li>
+<li>dft(), idft()<ul>
+<li>Unified functions for calling multi dimensional ffts.</li>
+</ul>
+</li>
+<li>matchTemplate()<ul>
+<li>Match a kernel in an image</li>
+</ul>
+</li>
+<li>sobel()<ul>
+<li>Get sobel gradients of an image</li>
+</ul>
+</li>
+<li>rgb2hsv(), hsv2rgb(), rgb2gray(), gray2rgb()<ul>
+<li>Explicit function calls to colorspace conversions</li>
+</ul>
+</li>
+<li>erode3d(), dilate3d()<ul>
+<li>Explicit erode and dilate calls for image morphing</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Linear Algebra<ul>
+<li>matmulNT(), matmulTN(), matmulTT()<ul>
+<li>Specialized versions of matmul() for transposed inputs</li>
+</ul>
+</li>
+<li>luInPlace(), choleskyInPlace(), qrInPlace()<ul>
+<li>In place factorizations to improve memory requirements</li>
+</ul>
+</li>
+<li>solveLU()<ul>
+<li>Specialized solve routines to improve performance</li>
+</ul>
+</li>
+<li>OpenCL backend now Linear Algebra functions</li>
+</ul>
+</li>
+<li>Other functions<ul>
+<li>lookup() - lookup indices from a table</li>
+<li>batchFunc() - helper function to perform batch operations</li>
+</ul>
+</li>
+<li>Visualization functions<ul>
+<li>Support for multiple windows</li>
+<li>window.hist()<ul>
+<li>Visualize the output of the histogram</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>C API<ul>
+<li>Removed old pointer based C API</li>
+<li>Introducing handle base C API</li>
+<li>Just In Time compilation available in C API</li>
+<li>C API has feature parity with C++ API</li>
+<li>bessel functions removed</li>
+<li>cross product functions removed</li>
+<li>Kronecker product functions removed</li>
+</ul>
+</li>
+</ul>
+<h2>Performance Improvements </h2>
+<ul>
+<li>Improvements across the board for OpenCL backend</li>
+</ul>
+<h2>API Changes </h2>
+<ul>
+<li><code>print</code> is now <a class="el" href="util_8h.htm#a6de8e7f9eb3914d1cea66e55e7b791d3">af_print()</a></li>
+<li>seq(): The step parameter is now the third input<ul>
+<li>seq(start, step, end) changed to seq(start, end, step)</li>
+</ul>
+</li>
+<li><a class="el" href="gfor_8h.htm#a6d6cd11d53daad217fd0b92f5a7ceec6">gfor()</a>: The iterator now needs to be seq()</li>
+</ul>
+<h2>Deprecated Function APIs </h2>
+<p >Deprecated APIs are in <a class="el" href="compatible_8h.htm">af/compatible.h</a></p>
+<ul>
+<li>devicecount() changed to getDeviceCount()</li>
+<li>deviceset() changed to setDevice()</li>
+<li>deviceget() changed to getDevice()</li>
+<li>loadimage() changed to loadImage()</li>
+<li>saveimage() changed to saveImage()</li>
+<li>gaussiankernel() changed to gaussianKernel()</li>
+<li>alltrue() changed to allTrue()</li>
+<li>anytrue() changed to anyTrue()</li>
+<li>setunique() changed to setUnique()</li>
+<li>setunion() changed to setUnion()</li>
+<li>setintersect() changed to setIntersect()</li>
+<li>histequal() changed to histEqual()</li>
+<li>colorspace() changed to colorSpace()</li>
+<li>filter() deprecated. Use convolve1() and convolve2()</li>
+<li>mul() changed to product()</li>
+<li>deviceprop() changed to deviceProp()</li>
+</ul>
+<h2>Known Issues </h2>
+<ul>
+<li>OpenCL backend issues on OSX<ul>
+<li>AMD GPUs not supported because of driver issues</li>
+<li>Intel CPUs not supported</li>
+<li>Linear algebra functions do not work on Intel GPUs.</li>
+</ul>
+</li>
+<li>Stability and correctness issues with open source OpenCL implementations such as Beignet, GalliumCompute. </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -133,7 +1806,7 @@ $(document).ready(function(){initNavTree('releasenotes.htm',''); initResizable()
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
     <ul>
-        <li class="footer">Generated on Wed Aug 30 2023 15:41:55 for ArrayFire by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+        <li class="footer">Generated on Mon Sep 25 2023 12:35:28 for ArrayFire by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
     </ul>
 </div>
 </body>
