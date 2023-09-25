@@ -45,13 +45,13 @@ var NAVTREEINDEX =
 "group__arith__func__shiftr.htm#gaa90474e2828f9906f37dc7d91c9ed228",
 "group__array__mem__operator__minus__eq.htm#gacf7fe8d296a09775219a83773087a5a5",
 "group__cv__func__match__template.htm#ga52aea5e045417d33eb8ed8037da48d3c",
-"group__device__func__mem.htm#ga825e21412e9c8e3609c759f8106fd384",
-"group__image__func__iterative__deconv.htm#gaf716e895be65781a1d046619409716b7",
-"group__lapack__helper__func__available.htm#gaedc7cb96aee53e92ab2174bbe26efb17",
-"group__random__func__randu.htm#ga412e2c2f5135bdda218c3487c487d3b5",
-"group__signal__func__approx1.htm#gabd004f943d8a8df6d00064fd965680ee",
-"group__sparse__func__row__idx.htm",
-"modules.htm"
+"group__device__func__info__string.htm#gacc0f17e14982d390284347d4dc82b461",
+"group__image__func__histogram.htm",
+"group__lapack__factor__func__qr.htm#ga159ac5755f9c9a02c2fde107242ebeb4",
+"group__random__func__random__engine.htm",
+"group__scan__func__where.htm",
+"group__sparse__func__col__idx.htm#ga857fb62f5012a895070668a134cd2fd2",
+"group__unified__func__getdeviceid.htm#ga5213425c1fc7aa9f96901292f4092f24"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
